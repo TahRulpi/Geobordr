@@ -13,6 +13,24 @@ MonoBehaviour:
   m_Name: GridInfo
   m_EditorClassIdentifier: 
   countryInfo:
+  - gridImage: {fileID: 1771865733, guid: a1c407fa37db1e14bb4372e1afbf5e97, type: 3}
+    optionsPrefabs:
+    - {fileID: 3723331936742794062, guid: f97fd1ecef606ec4cb0a9c98a81b13fe, type: 3}
+    - {fileID: 3723331936742794062, guid: f97fd1ecef606ec4cb0a9c98a81b13fe, type: 3}
+    - {fileID: 3723331936742794062, guid: f97fd1ecef606ec4cb0a9c98a81b13fe, type: 3}
+    countryName:
+    - Russia
+    - USA
+    - Denmark
   - gridImage: {fileID: 0}
-    options: []
+    optionsPrefabs: []
+    countryName: []
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countryName: []
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countryName: []
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
     countryName: []

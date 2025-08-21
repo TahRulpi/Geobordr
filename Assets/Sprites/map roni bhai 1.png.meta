@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1000
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,10 +126,10 @@ TextureImporter:
       name: map roni bhai 1_0
       rect:
         serializedVersion: 2
-        x: 140
-        y: 911
-        width: 262
-        height: 155
+        x: 233
+        y: 549
+        width: 549
+        height: 536
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,8 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b3108f9ea09498428c9d02ab7467d9a
-      internalID: -520209348
+      spriteID: d489c5b0c02f8ba48b235002047657c3
+      internalID: 1771865733
       vertices: []
       indices: 
       edges: []
@@ -147,10 +147,10 @@ TextureImporter:
       name: map roni bhai 1_1
       rect:
         serializedVersion: 2
-        x: 584
-        y: 911
-        width: 262
-        height: 155
+        x: 938
+        y: 549
+        width: 549
+        height: 536
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,8 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6092c9a5e5ac6645ba6e9906eb24064
-      internalID: 1319145200
+      spriteID: 7145e55512579144eab72116dd2397c9
+      internalID: -752141471
       vertices: []
       indices: 
       edges: []
@@ -168,10 +168,10 @@ TextureImporter:
       name: map roni bhai 1_2
       rect:
         serializedVersion: 2
-        x: 1028
-        y: 911
-        width: 262
-        height: 155
+        x: 1643
+        y: 549
+        width: 549
+        height: 536
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0199e978050f3348a7a22825ee7ad69
-      internalID: 626183507
+      spriteID: 5c3999d45b81aa44badd22039ed0f83b
+      internalID: 595205546
       vertices: []
       indices: 
       edges: []
@@ -189,10 +189,10 @@ TextureImporter:
       name: map roni bhai 1_3
       rect:
         serializedVersion: 2
-        x: 1472
-        y: 911
-        width: 262
-        height: 155
+        x: 233
+        y: 13
+        width: 549
+        height: 536
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,8 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a6ebb80e9cc84a4c8b36e3cb23800d2
-      internalID: 490484340
+      spriteID: e6244863539b3ce468fede711fd7406f
+      internalID: 2120182588
       vertices: []
       indices: 
       edges: []
@@ -210,10 +210,10 @@ TextureImporter:
       name: map roni bhai 1_4
       rect:
         serializedVersion: 2
-        x: 1916
-        y: 911
-        width: 262
-        height: 155
+        x: 938
+        y: 13
+        width: 549
+        height: 536
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,8 +221,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e81a71fda53e37e47ac335eafce14fd0
-      internalID: -669541808
+      spriteID: cac61cf58f6554a4a841ded7f58a1562
+      internalID: 202750649
       vertices: []
       indices: 
       edges: []
@@ -231,10 +231,10 @@ TextureImporter:
       name: map roni bhai 1_5
       rect:
         serializedVersion: 2
-        x: 140
-        y: 724
-        width: 262
-        height: 155
+        x: 1643
+        y: 13
+        width: 549
+        height: 536
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,407 +242,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b7fa398c09e08d41a13f587f07d0b4c
-      internalID: 1931320878
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: map roni bhai 1_6
-      rect:
-        serializedVersion: 2
-        x: 584
-        y: 724
-        width: 262
-        height: 155
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eea6c5e8848c7e24aab95ab7892161c7
-      internalID: -1992293148
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: map roni bhai 1_7
-      rect:
-        serializedVersion: 2
-        x: 1028
-        y: 724
-        width: 262
-        height: 155
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3e2ebb180b1c1b744b9b4548dc6cadbe
-      internalID: 2037869886
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: map roni bhai 1_8
-      rect:
-        serializedVersion: 2
-        x: 1472
-        y: 724
-        width: 262
-        height: 155
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 30ba8d8c7bd5f9e4f967e2b9cad31e1d
-      internalID: 800345903
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: map roni bhai 1_9
-      rect:
-        serializedVersion: 2
-        x: 1916
-        y: 724
-        width: 262
-        height: 155
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 52cd15aa274872f43a54de0c444ecb6f
-      internalID: -924962944
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: map roni bhai 1_10
-      rect:
-        serializedVersion: 2
-        x: 140
-        y: 537
-        width: 262
-        height: 155
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8ebca737c75404344b2e029375908e99
-      internalID: 1250357767
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: map roni bhai 1_11
-      rect:
-        serializedVersion: 2
-        x: 584
-        y: 537
-        width: 262
-        height: 155
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 32f220c3e09d2fb4382019c0113e8822
-      internalID: 1483133487
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: map roni bhai 1_12
-      rect:
-        serializedVersion: 2
-        x: 1028
-        y: 537
-        width: 262
-        height: 155
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fe401069a2ebbcc47b2c69c958f3afdd
-      internalID: 203005279
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: map roni bhai 1_13
-      rect:
-        serializedVersion: 2
-        x: 1472
-        y: 537
-        width: 262
-        height: 155
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 80927ce3f0a07cc428ce77e19d55fd26
-      internalID: -1116125252
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: map roni bhai 1_14
-      rect:
-        serializedVersion: 2
-        x: 1916
-        y: 537
-        width: 262
-        height: 155
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b9d3d8b930f23a4438199111facc793d
-      internalID: 2125045068
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: map roni bhai 1_15
-      rect:
-        serializedVersion: 2
-        x: 140
-        y: 350
-        width: 262
-        height: 155
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1e62acdaef2fad548bc76fc3d32abacd
-      internalID: -473852866
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: map roni bhai 1_16
-      rect:
-        serializedVersion: 2
-        x: 584
-        y: 350
-        width: 262
-        height: 155
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a9f4e72a14fd2424d8356e6f65f82fbc
-      internalID: -1787817884
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: map roni bhai 1_17
-      rect:
-        serializedVersion: 2
-        x: 1028
-        y: 350
-        width: 262
-        height: 155
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cd28ac00965ed8c4c9ea38f670fef429
-      internalID: -1716243074
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: map roni bhai 1_18
-      rect:
-        serializedVersion: 2
-        x: 1472
-        y: 350
-        width: 262
-        height: 155
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: da6c3391125c6e2408c30f08e126a8a9
-      internalID: 61717558
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: map roni bhai 1_19
-      rect:
-        serializedVersion: 2
-        x: 1916
-        y: 350
-        width: 262
-        height: 155
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7e2fbfde00d64bc459da35d9a4e0c1e2
-      internalID: 1685406120
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: map roni bhai 1_20
-      rect:
-        serializedVersion: 2
-        x: 140
-        y: 163
-        width: 262
-        height: 155
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6c831f19091711142b16b31da14f522f
-      internalID: -1761128130
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: map roni bhai 1_21
-      rect:
-        serializedVersion: 2
-        x: 584
-        y: 163
-        width: 262
-        height: 155
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 89dd671d79de0cb4584f7212db495fbe
-      internalID: -1220311149
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: map roni bhai 1_22
-      rect:
-        serializedVersion: 2
-        x: 1028
-        y: 163
-        width: 262
-        height: 155
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ed5c690c86983884f81966a627e1ff56
-      internalID: -587579145
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: map roni bhai 1_23
-      rect:
-        serializedVersion: 2
-        x: 1472
-        y: 163
-        width: 262
-        height: 155
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1316a6627bfa1dd41badfbd481d83f8f
-      internalID: -1519337393
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: map roni bhai 1_24
-      rect:
-        serializedVersion: 2
-        x: 1916
-        y: 163
-        width: 262
-        height: 155
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6e908353b24a9b246afbdb99892b177a
-      internalID: -2042188637
+      spriteID: b6b61394058399e46b9c9ac0925c93dc
+      internalID: -759999896
       vertices: []
       indices: 
       edges: []
@@ -658,31 +259,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      map roni bhai 1_0: -520209348
-      map roni bhai 1_1: 1319145200
-      map roni bhai 1_10: 1250357767
-      map roni bhai 1_11: 1483133487
-      map roni bhai 1_12: 203005279
-      map roni bhai 1_13: -1116125252
-      map roni bhai 1_14: 2125045068
-      map roni bhai 1_15: -473852866
-      map roni bhai 1_16: -1787817884
-      map roni bhai 1_17: -1716243074
-      map roni bhai 1_18: 61717558
-      map roni bhai 1_19: 1685406120
-      map roni bhai 1_2: 626183507
-      map roni bhai 1_20: -1761128130
-      map roni bhai 1_21: -1220311149
-      map roni bhai 1_22: -587579145
-      map roni bhai 1_23: -1519337393
-      map roni bhai 1_24: -2042188637
-      map roni bhai 1_3: 490484340
-      map roni bhai 1_4: -669541808
-      map roni bhai 1_5: 1931320878
-      map roni bhai 1_6: -1992293148
-      map roni bhai 1_7: 2037869886
-      map roni bhai 1_8: 800345903
-      map roni bhai 1_9: -924962944
+      map roni bhai 1_0: 1771865733
+      map roni bhai 1_1: -752141471
+      map roni bhai 1_2: 595205546
+      map roni bhai 1_3: 2120182588
+      map roni bhai 1_4: 202750649
+      map roni bhai 1_5: -759999896
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
