@@ -19,12 +19,12 @@ public class CountryObject : MonoBehaviour
         {
             // Set the sprite of the GameObject to match the one in the Scriptable Object.
             // (This is redundant if you dragged the sprite directly, but good practice).
-            GetComponent<SpriteRenderer>().sprite = countryData.countrySprite;
+            //GetComponent<SpriteRenderer>().sprite = countryData.countrySprite;
 
             // If you have a Text component, update it with the country name.
             if (nameText != null)
             {
-                nameText.text = countryData.countryName;
+                //nameText.text = countryData.countryName;
             }
         }
     }
@@ -34,7 +34,7 @@ public class CountryObject : MonoBehaviour
     {
         if (countryData != null)
         {
-            Debug.Log("Clicked on " + countryData.countryName);
+            //Debug.Log("Clicked on " + countryData.countryName);
            
         }
     }

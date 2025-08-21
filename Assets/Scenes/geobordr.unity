@@ -6769,7 +6769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allCountries:
-  - {fileID: 11400000, guid: b903e7459d858af479b508a21b5f65e5, type: 2}
+  - {fileID: 11400000, guid: 2afc12c3d17aeb34685cdce337749485, type: 2}
 --- !u!4 &1565120731
 Transform:
   m_ObjectHideFlags: 0

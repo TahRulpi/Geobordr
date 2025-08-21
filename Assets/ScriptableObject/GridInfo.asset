@@ -10,6 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 296b30e44822f554f85677481328a10d, type: 3}
-  m_Name: Russia Data
+  m_Name: GridInfo
   m_EditorClassIdentifier: 
-  countryInfo: []
+  countryInfo:
+  - gridImage: {fileID: 0}
+    options: []
+    countryName: []
