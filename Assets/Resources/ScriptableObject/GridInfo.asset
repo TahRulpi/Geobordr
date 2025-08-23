@@ -22,15 +22,23 @@ MonoBehaviour:
     - Russia
     - USA
     - Denmark
-  - gridImage: {fileID: 0}
-    optionsPrefabs: []
-    countryName: []
-  - gridImage: {fileID: 0}
-    optionsPrefabs: []
-    countryName: []
-  - gridImage: {fileID: 0}
-    optionsPrefabs: []
-    countryName: []
-  - gridImage: {fileID: 0}
-    optionsPrefabs: []
-    countryName: []
+  - gridImage: {fileID: -752141471, guid: a1c407fa37db1e14bb4372e1afbf5e97, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Greenland
+    - Libya
+    - Algeria
+    - Sudan
+    - Nigeria
+  - gridImage: {fileID: 595205546, guid: a1c407fa37db1e14bb4372e1afbf5e97, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Germany
+    - France
