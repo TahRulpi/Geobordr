@@ -18,6 +18,9 @@ public class RoundManager : MonoBehaviour
 
     public void LoadRound(int roundIndex)
     {
+        // Clear previous round first
+        ClearCurrentRound();
+        
         if (CountryData == null || CountryData.countryInfo.Length <= roundIndex)
         {
             Debug.LogError("? CountryData not assigned or index out of range!");
