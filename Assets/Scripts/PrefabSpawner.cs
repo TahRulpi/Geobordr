@@ -1,35 +1,43 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class PrefabSpawner : MonoBehaviour
 {
-    public CountryData myCountryData; // Assign your CountryData asset here in the Inspector
-    public Transform parentPanel;    // A UI parent transform for your prefabs
+    [Header("Data Source")]
+    public CountryData countryData;   // Assign your ScriptableObject here
+    public int countryIndex = 0;      // Which country info to use
+
+    [Header("Spacing Settings")]
+    public float verticalSpacing = 200f;   // distance between each field
+    public Vector3 startPosition = Vector3.zero;
 
     void Start()
     {
-        // Example of how to access and instantiate a prefab
-        if (myCountryData != null && myCountryData.countryInfo.Length > 0)
+        SpawnInputFields();
+    }
+
+    void SpawnInputFields()
+    {
+        // safety check
+        if (countryData == null || countryData.countryInfo.Length <= countryIndex)
         {
-            // Get the first country's info
-            CountryInfo firstCountryInfo = myCountryData.countryInfo[0];
+            Debug.LogError("CountryData not assigned or index out of range!");
+            return;
+        }
 
-            // Loop through the array of prefabs
-            foreach (GameObject prefab in firstCountryInfo.optionsPrefabs)
-            {
-                if (prefab != null)
-                {
-                    // Instantiate the prefab. We cast to GameObject just to be clear.
-                    GameObject newPrefabInstance = Instantiate(prefab, parentPanel);
+        CountryInfo info = countryData.countryInfo[countryIndex];
 
-                    // You can now access the InputField component on the instantiated object
-                    InputField inputField = newPrefabInstance.GetComponent<InputField>();
-                    if (inputField != null)
-                    {
-                        Debug.Log("Instantiated a prefab with an InputField component!");
-                    }
-                }
-            }
+        if (info.optionsPrefabs == null || info.optionsPrefabs.Length == 0)
+        {
+            Debug.LogWarning("No input field prefabs assigned in ScriptableObject!");
+            return;
+        }
+
+        for (int i = 0; i < info.optionsPrefabs.Length; i++)
+        {
+            Vector3 spawnPos = startPosition + new Vector3(0, -i * verticalSpacing, 0);
+
+            GameObject field = Instantiate(info.optionsPrefabs[i], transform);
+            field.transform.localPosition = spawnPos;
         }
     }
 }

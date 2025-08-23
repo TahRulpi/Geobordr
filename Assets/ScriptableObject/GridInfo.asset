@@ -15,9 +15,9 @@ MonoBehaviour:
   countryInfo:
   - gridImage: {fileID: 1771865733, guid: a1c407fa37db1e14bb4372e1afbf5e97, type: 3}
     optionsPrefabs:
-    - {fileID: 3723331936742794062, guid: f97fd1ecef606ec4cb0a9c98a81b13fe, type: 3}
-    - {fileID: 3723331936742794062, guid: f97fd1ecef606ec4cb0a9c98a81b13fe, type: 3}
-    - {fileID: 3723331936742794062, guid: f97fd1ecef606ec4cb0a9c98a81b13fe, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     countryName:
     - Russia
     - USA
