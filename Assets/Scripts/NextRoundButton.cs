@@ -81,13 +81,13 @@ public class NextRoundButton : MonoBehaviour
             string playerAnswer = "";
             bool foundInputComponent = false;
 
-            // Try to find CountryDropdown component first
-            CountryDropdown countryDropdown = spawnedPrefab.GetComponentInChildren<CountryDropdown>();
-            if (countryDropdown != null)
+            // Try to find AutocompleteInputField component first
+            AutocompleteInputField autocompleteInput = spawnedPrefab.GetComponentInChildren<AutocompleteInputField>();
+            if (autocompleteInput != null)
             {
-                playerAnswer = countryDropdown.GetSelectedCountry();
+                playerAnswer = autocompleteInput.GetSelectedCountry();
                 foundInputComponent = true;
-                Debug.Log($"Found dropdown component - selected: '{playerAnswer}'");
+                Debug.Log($"Found autocomplete component - text: '{playerAnswer}'");
             }
             else
             {
@@ -103,7 +103,7 @@ public class NextRoundButton : MonoBehaviour
 
             if (!foundInputComponent)
             {
-                Debug.LogError($"? FATAL ERROR: The spawned object at index {i} ('{spawnedPrefab.name}') is missing both CountryDropdown and TMP_InputField components. You must add one of them to the prefab.");
+                Debug.LogError($"? FATAL ERROR: The spawned object at index {i} ('{spawnedPrefab.name}') is missing AutocompleteInputField or TMP_InputField components. You must add one of them to the prefab.");
                 return false;
             }
 
