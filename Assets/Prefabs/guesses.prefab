@@ -402,7 +402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.8632076, b: 0.9925088, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -529,12 +529,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a887de00327cfd49bb5f8b5cc3c792f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputField: {fileID: 0}
-  suggestionPanel: {fileID: 0}
-  suggestionItemPrefab: {fileID: 0}
   maxSuggestions: 5
-  suggestionItemHeight: 30
-  highlightColor: {r: 0, g: 1, b: 1, a: 1}
   availableCountries: []
-  suggestionItems: []
-  selectedCountry: 
+  suggestionButtons: []
