@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -18,6 +19,7 @@ public class CountryGameManager : MonoBehaviour
     public TextMeshProUGUI roundDisplayText; // Reference to your "Round -" text
     public TextMeshProUGUI gameOverText; // Reference to your game over text
     public TextMeshProUGUI chanceLeftText; // Reference to your "Chance Left: " text
+    public NextRoundButton nextRoundButton; // Reference to reset input field colors
     
     [Header("Current Round Info")]
     [SerializeField] private int currentRoundIndex;
@@ -101,6 +103,9 @@ public class CountryGameManager : MonoBehaviour
         
         // Use your existing RoundManager to load the round (always index 0 for filtered data)
         roundManager.LoadRound(0);
+        
+        // Reset input field colors after objects are spawned
+        StartCoroutine(ResetColorsAfterDelay());
         
         // Display the map image
         DisplayMapImage();
@@ -271,6 +276,11 @@ public class CountryGameManager : MonoBehaviour
         return maxTotalAttempts;
     }
 
+    public List<string> GetCurrentRoundCountries()
+    {
+        return currentRoundCountries;
+    }
+
     // Helper method to get available countries count
     public int GetTotalAvailableRounds()
     {
@@ -291,5 +301,17 @@ public class CountryGameManager : MonoBehaviour
     {
         minCountriesPerRound = Mathf.Max(1, minCountriesPerRound);
         maxCountriesPerRound = Mathf.Max(minCountriesPerRound, maxCountriesPerRound);
+    }
+
+    private IEnumerator ResetColorsAfterDelay()
+    {
+        // Wait one frame to ensure objects are spawned
+        yield return null;
+        
+        // Reset input field colors for the new round
+        if (nextRoundButton != null)
+        {
+            nextRoundButton.ResetInputFieldColors();
+        }
     }
 }

@@ -1,13 +1,45 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
-// You need to add this line to use TextMeshPro components!
 using TMPro;
-
+ 
 public class NextRoundButton : MonoBehaviour
 {
     public RoundManager roundManager;
     public CountryGameManager countryGameManager; // This is all you need now!
+
+    public void ResetInputFieldColors()
+    {
+        if (roundManager == null || roundManager.SpawnedObjects == null)
+        {
+            Debug.LogWarning("Cannot reset colors: RoundManager or SpawnedObjects is null");
+            return;
+        }
+
+        // Reset all input fields to default white color and reset validation state
+        int resetCount = 0;
+        foreach (GameObject spawnedPrefab in roundManager.SpawnedObjects)
+        {
+            // Reset AutocompleteInputField validation state
+            AutocompleteInputField autocompleteInput = spawnedPrefab.GetComponentInChildren<AutocompleteInputField>();
+            if (autocompleteInput != null)
+            {
+                autocompleteInput.ResetValidationState();
+                resetCount++;
+            }
+            else
+            {
+                // Fallback for regular TMP_InputField
+                TMP_InputField inputField = spawnedPrefab.GetComponentInChildren<TMP_InputField>();
+                if (inputField != null)
+                {
+                    SetInputFieldColor(inputField, Color.white);
+                    resetCount++;
+                }
+            }
+        }
+        Debug.Log($"Reset colors and validation state for {resetCount} input fields");
+    }
 
     public void OnNextRoundClicked()
     {
@@ -24,7 +56,9 @@ public class NextRoundButton : MonoBehaviour
         {
             Debug.Log("✅ All answers are correct! Moving to the next round.");
             
-            // Notify CountryGameManager of correct answer
+            // No color feedback needed - auto-validation handles colors
+            
+            // Notify CountryGameManager of correct answer (no point deduction needed)
             if (countryGameManager != null)
             {
                 countryGameManager.OnCorrectAnswer();
@@ -34,13 +68,10 @@ public class NextRoundButton : MonoBehaviour
         }
         else
         {
-            Debug.Log("❌ Some answers are wrong! Please try again.");
+            Debug.Log("❌ Some answers are wrong or missing! Complete all fields to proceed.");
             
-            // Notify CountryGameManager of wrong answer
-            if (countryGameManager != null)
-            {
-                countryGameManager.OnWrongAnswer();
-            }
+            // No color feedback - auto-validation already handles colors
+            // Don't call OnWrongAnswer() since points are deducted in real-time
         }
     }
 
@@ -155,5 +186,52 @@ public class NextRoundButton : MonoBehaviour
         }
 
         return allCorrect;
+    }
+    // ApplyVisualFeedback removed — auto-validation handles per-field coloring now.
+
+    private void SetInputFieldColor(TMP_InputField inputField, Color color)
+    {
+        bool colorApplied = false;
+        
+        // Try to color the input field's background image
+        Image backgroundImage = inputField.GetComponent<Image>();
+        if (backgroundImage != null)
+        {
+            backgroundImage.color = color;
+            colorApplied = true;
+            Debug.Log($"Applied color to main Image component: {color}");
+        }
+        
+        // Also try to color any child image components (in case the background is a child)
+        Image[] childImages = inputField.GetComponentsInChildren<Image>();
+        foreach (Image img in childImages)
+        {
+            // Only color images that look like backgrounds (not icons or other decorative elements)
+            if (img.gameObject.name.ToLower().Contains("background") || 
+                img.gameObject.name.ToLower().Contains("field") ||
+                img.gameObject == inputField.gameObject)
+            {
+                img.color = color;
+                colorApplied = true;
+                Debug.Log($"Applied color to child Image '{img.gameObject.name}': {color}");
+            }
+        }
+        
+        // If no suitable image found, try parent components
+        if (!colorApplied)
+        {
+            Image parentImage = inputField.GetComponentInParent<Image>();
+            if (parentImage != null)
+            {
+                parentImage.color = color;
+                colorApplied = true;
+                Debug.Log($"Applied color to parent Image component: {color}");
+            }
+        }
+        
+        if (!colorApplied)
+        {
+            Debug.LogWarning($"Could not find suitable Image component to color for input field: {inputField.gameObject.name}");
+        }
     }
 }

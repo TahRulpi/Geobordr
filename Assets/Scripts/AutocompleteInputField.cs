@@ -17,12 +17,13 @@ public class AutocompleteInputField : MonoBehaviour
     private CountryGameManager countryGameManager;
     private GameObject suggestionPanel;
     private bool isShowingSuggestions = false;
+    private string lastValidatedAnswer = ""; // Track last validated answer to prevent duplicate point deductions
 
     private void Start()
     {
         // Find components automatically
         inputField = GetComponent<TMP_InputField>();
-        countryGameManager = FindObjectOfType<CountryGameManager>();
+    countryGameManager = FindObjectOfType<CountryGameManager>();
         
         if (inputField == null)
         {
@@ -39,6 +40,7 @@ public class AutocompleteInputField : MonoBehaviour
         inputField.onValueChanged.AddListener(OnInputChanged);
         inputField.onSelect.AddListener(OnInputSelected);
         inputField.onDeselect.AddListener(OnInputDeselected);
+        // Removed onEndEdit listener - only validate on dropdown selection
         
         // Initialize country list
         PopulateCountryList();
@@ -285,6 +287,9 @@ public class AutocompleteInputField : MonoBehaviour
         // Hide suggestions
         HideSuggestions();
         
+        // Perform real-time validation
+        ValidateSelectionRealTime(countryName);
+        
         Debug.Log($"✅ Selected country: {countryName}");
     }
 
@@ -323,13 +328,17 @@ public class AutocompleteInputField : MonoBehaviour
         return "";
     }
 
-    // Public method to validate the input
-    public bool ValidateSelection(string correctAnswer)
+    public void ResetValidationState()
     {
-        string currentText = GetSelectedCountry();
-        return string.Equals(currentText, correctAnswer.Trim(), 
-                           System.StringComparison.OrdinalIgnoreCase);
+        lastValidatedAnswer = "";
+        // Reset color to white
+        if (inputField != null)
+        {
+            SetInputFieldColor(Color.white);
+        }
     }
+
+    // (removed) public bool ValidateSelection(string) — not used anymore; real-time validation used instead
 
     // Public method to reset the input
     public void ResetInput()
@@ -365,6 +374,105 @@ public class AutocompleteInputField : MonoBehaviour
             inputField.onValueChanged.RemoveAllListeners();
             inputField.onSelect.RemoveAllListeners();
             inputField.onDeselect.RemoveAllListeners();
+            // Removed onEndEdit cleanup since we don't use it anymore
+        }
+    }
+
+    private void ValidateSelectionRealTime(string selectedCountry)
+    {
+        if (countryGameManager == null)
+        {
+            Debug.LogWarning("Cannot validate selection: CountryGameManager not found");
+            return;
+        }
+
+        // Only validate if the text matches exactly one of the available countries
+        // This prevents validation of partial typing like "Th" for "Thailand"
+        string trimmedCountry = selectedCountry.Trim();
+        bool isCompleteCountryName = availableCountries.Any(country => 
+            string.Equals(country, trimmedCountry, System.StringComparison.OrdinalIgnoreCase));
+
+        if (!isCompleteCountryName)
+        {
+            Debug.Log($"Skipping validation - '{trimmedCountry}' is not a complete country name from dropdown");
+            return;
+        }
+
+        // Don't validate the same answer twice
+        if (string.Equals(lastValidatedAnswer, trimmedCountry, System.StringComparison.OrdinalIgnoreCase))
+        {
+            Debug.Log($"Skipping validation - already validated: '{trimmedCountry}'");
+            return;
+        }
+
+        // Get current round's correct answers
+        var currentRoundCountries = countryGameManager.GetCurrentRoundCountries();
+        if (currentRoundCountries == null || currentRoundCountries.Count == 0)
+        {
+            Debug.LogWarning("No current round countries available for validation");
+            return;
+        }
+
+        // Check if the selected country is correct (case insensitive)
+        bool isCorrect = currentRoundCountries.Any(country => 
+            string.Equals(country.Trim(), trimmedCountry, System.StringComparison.OrdinalIgnoreCase));
+
+        // Apply visual feedback
+        if (isCorrect)
+        {
+            // Green for correct
+            SetInputFieldColor(new Color(0.7f, 1f, 0.7f, 1f));
+            Debug.Log($"✅ CORRECT: '{trimmedCountry}' is valid for this round");
+        }
+        else
+        {
+            // Red for incorrect + deduct attempt
+            SetInputFieldColor(new Color32(253, 104, 104, 255));
+            Debug.Log($"❌ INCORRECT: '{trimmedCountry}' is not valid for this round");
+            
+            // Deduct attempt immediately (only for incorrect answers)
+            countryGameManager.OnWrongAnswer();
+        }
+
+        // Update last validated answer
+        lastValidatedAnswer = trimmedCountry;
+    }
+
+    private void SetInputFieldColor(Color color)
+    {
+        // Use the same logic as NextRoundButton
+        bool colorApplied = false;
+        
+        // Try to color the input field's background image
+        Image backgroundImage = inputField.GetComponent<Image>();
+        if (backgroundImage != null)
+        {
+            backgroundImage.color = color;
+            colorApplied = true;
+        }
+        
+        // Also try to color any child image components
+        Image[] childImages = inputField.GetComponentsInChildren<Image>();
+        foreach (Image img in childImages)
+        {
+            if (img.gameObject.name.ToLower().Contains("background") || 
+                img.gameObject.name.ToLower().Contains("field") ||
+                img.gameObject == inputField.gameObject)
+            {
+                img.color = color;
+                colorApplied = true;
+            }
+        }
+        
+        // If no suitable image found, try parent components
+        if (!colorApplied)
+        {
+            Image parentImage = inputField.GetComponentInParent<Image>();
+            if (parentImage != null)
+            {
+                parentImage.color = color;
+                colorApplied = true;
+            }
         }
     }
 }
