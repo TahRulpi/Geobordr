@@ -154,7 +154,9 @@ public class AutocompleteInputField : MonoBehaviour
     {
         if (string.IsNullOrEmpty(inputText) || inputText.Length < 1)
         {
+            // If user cleared the input, hide suggestions and reset any validation/visual feedback
             HideSuggestions();
+            ResetValidationState();
             return;
         }
 
