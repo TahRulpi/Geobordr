@@ -13,151 +13,51 @@ MonoBehaviour:
   m_Name: CountryData
   m_EditorClassIdentifier: 
   countryInfo:
-  - gridImage: {fileID: 21300000, guid: b0cd19bc9c278ca4fb0763bcd22e0cba, type: 3}
+  - gridImage: {fileID: 21300000, guid: 643212c2098c62947b42becc73b86a39, type: 3}
     optionsPrefabs:
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     countryName:
-    - Angola
-    - Democratic Republic of the Congo
-    sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: 6769bb413bd2321438406b533111065e, type: 3}
-    optionsPrefabs:
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    countryName:
-    - Kyrgyzstan
-    - Uzbekistan
-    - Kazakhstan
-    sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: 54cbbe571e9698b4387a9d85d15ecf36, type: 3}
-    optionsPrefabs:
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    countryName:
-    - Chile
-    - Argentina
-    - Peru
-    - Uruguay
-    sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: b901fa90ad68e1f48a320bd8c8c55703, type: 3}
-    optionsPrefabs:
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    countryName:
-    - Angola
-    - Zambia
-    sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: f3b34ea34fa3576458dd1fdd6eece9e8, type: 3}
-    optionsPrefabs:
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    countryName:
-    - Guinea
+    - Sierra Leone
     - Liberia
-    - Mali
     sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: 3dd0dcd365d4e9542af168db4fa88e62, type: 3}
-    optionsPrefabs:
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    countryName:
-    - Laos
-    - China
-    - Thailand
-    - Cambodia
-    sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: 645122a0895db194498f5decfee7bc13, type: 3}
-    optionsPrefabs:
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    countryName:
-    - Finland
-    - Norway
-    - Sweden
-    sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: 4d03547ac2dcac34d826fdd19b5c5ec7, type: 3}
-    optionsPrefabs:
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    countryName:
-    - Chad
-    - Central African Republic
-    - South Sudan
-    - Libya
-    sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: 54c424182a95cf547bc391fc95d30084, type: 3}
-    optionsPrefabs:
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    countryName:
-    - Jordan
-    - Palestine
-    - Iraq
-    - Syria
-    sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: 3584096a26dde9d4fa76e9621753866e, type: 3}
-    optionsPrefabs:
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    countryName:
-    - Bhutan
-    - India
-    - China
-    sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: 316f98c3d9dfe7c4bad748054c675def, type: 3}
+  - gridImage: {fileID: 21300000, guid: 92e7d7645113a5d4d95a4da44e28245c, type: 3}
     optionsPrefabs:
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     countryName:
-    - Equatorial Guinea
-    - Cameroon
-    sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: b73d521c8225a2d47b1b9020653bb51f, type: 3}
-    optionsPrefabs:
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    countryName:
-    - Libya
+    - Saudi Arabia
     - Sudan
-    - Eritrea
     sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: 91e9c082cf5c7a94481a58c9a953476e, type: 3}
+  - gridImage: {fileID: 21300000, guid: 448ce8595e1a71140b48b797de2f01e5, type: 3}
     optionsPrefabs:
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     countryName:
-    - Mozambique
-    - Zimbabwe
-    - South Africa
+    - Malaysia
+    - Indonesia
+    - Brunei
     sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: d996985d9db465e4fbb5e6c9be1fdea7, type: 3}
+  - gridImage: {fileID: 21300000, guid: 702399844eaba9045a78958e2a1ccaef, type: 3}
     optionsPrefabs:
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Morocco
+    - Western Sahara
+    - Mauritania
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: af25393de2f8f3e4e952265e7f34ec8a, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     countryName:
-    - Bosnia and Herzegovina
-    - Croatia
-    - Montenegro
-    - Albania
+    - Malaysia
+    - Indonesia
     sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: ab2f99cb0362d98459419880b19d53c5, type: 3}
+  - gridImage: {fileID: 21300000, guid: 8c0046de557d3bf4a91ae356ba5b72f8, type: 3}
     optionsPrefabs:
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
@@ -165,181 +65,1395 @@ MonoBehaviour:
     - Canada
     - United States of America
     sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: b54d03d08c07d4549a7a36c1783501e3, type: 3}
+  - gridImage: {fileID: 21300000, guid: 4dc6d984a8a17d8428f0fffe14498b76, type: 3}
     optionsPrefabs:
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     countryName:
-    - Vietnam
-    - Laos
-    - Cambodia
-    - Thailand
+    - Oman
+    - Saudi Arabia
+    - Yemen
     sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: 71c8593ffffc4e742a330120cd0b7e93, type: 3}
+  - gridImage: {fileID: 21300000, guid: 5ca64535f977e174897f5135b8582b90, type: 3}
     optionsPrefabs:
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Albania
+    - Italy
+    - Greece
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 4af3a2f60c89255449f40d4e6c9fc7eb, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Yemen
+    - Saudi Arabia
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: e5fdce6553a835d47b2e310e22379406, type: 3}
+    optionsPrefabs:
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     countryName:
     - Kuwait
     - Iraq
-    - Turkey
     - Iran
     sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: 608570527dbb53a4b8a58c12b818b689, type: 3}
+  - gridImage: {fileID: 21300000, guid: 0db9ef7930a5d04459496d0c69383f6c, type: 3}
     optionsPrefabs:
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     countryName:
-    - Somaliland
-    - Ethiopia
+    - Ukraine
+    - Romania
+    - Bulgaria
     sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: 60872248a6a85e14dbe7c148a08c9513, type: 3}
+  - gridImage: {fileID: 21300000, guid: 4451802d55663714a8a2bc53b8c1861e, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Nigeria
+    - Cameroon
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 378c146110060724f8960d23719f639c, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Argentina
+    - Chile
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 1799a0b9de6078f44a71951fba10aa0d, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Guyana
+    - Venezuela
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: d963ee6d88aa9d742a30a116dd32c0d3, type: 3}
     optionsPrefabs:
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     countryName:
-    - Portugal
+    - Georgia
+    - Russia
+    - Armenia
+    - Azerbaijan
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: f151fef95af39e54e80e526276c7f92e, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Colombia
+    - Ecuador
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: e60ceeba871c10b48a4fd7236514f54b, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Georgia
+    - Russia
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: f00a0d1112a95de45bd4e40fad82fbd7, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Togo
+    - Nigeria
+    - Ghana
+    - Benin
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 900954b39b43c4b4dab025b016c05156, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - United States of America
+    - Russia
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 6f23becd5b756f34494837903eadb93b, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Papua New Guinea
+    - Indonesia
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: f5d58fd204ec50a479fcefd164f28394, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Argentina
+    - Uruguay
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 912935dc666efaf4e9def322ba318e48, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Morocco
     - Spain
-    - France
     sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: 933073f259ae12949b9c8db744000081, type: 3}
+  - gridImage: {fileID: 21300000, guid: e5e2eee918c78b84b8a8acd48a923997, type: 3}
     optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - United Republic of Tanzania
+    - Mozambique
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 860efea9e5da1ce4e9a9d60415bbad32, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - China
+    - Taiwan
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 7b968eb5838badd448c5dac893104589, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Brazil
+    - Uruguay
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 4510289f8c3d2cc4b94e638e8251c0a8, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Sweden
+    - Finland
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 4bd7912161d24b54bae07f63f2247756, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Sweden
+    - Norway
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 44084255cb9db1e4284ef57675087c60, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Germany
+    - Denmark
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: eaf296ddcf62007449fc9638070c6879, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Saudi Arabia
+    - Egypt
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 5b384a94bf66f4f499905ac82e5ffbb0, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - China
+    - Laos
+    - Vietnam
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: dc9b4a7d11c99be4e8189778a2cb761b, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Laos
+    - Vietnam
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 587f61da5c3f8bf47b754c752abef1e3, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Canada
+    - Greenland
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 1194586a7788d5244b69f3d591ebc067, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Ukraine
+    - Romania
+    - Russia
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: f21d85ecca8d56a4eb26688e4cbcda36, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Egypt
+    - Jordan
+    - Israel
+    - Saudi Arabia
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 4922ec10af5c016459181ad346049883, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Costa Rica
+    - Nicaragua
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: ac8d98bc7d6925b418c7b61cd4097cb3, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Yemen
+    - Ethiopia
+    - Eritrea
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 4b764e11921b1894a866d3c696402485, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     countryName:
     - Guatemala
     - Honduras
+    - El Salvador
+    - Nicaragua
     sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: 158bc78c393beb448a2eb7b024460867, type: 3}
-    optionsPrefabs:
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    countryName:
-    - Cyprus
-    - Northern Cyprus
-    sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: 11a4b1cddc70b194a8b373a56c006ea1, type: 3}
-    optionsPrefabs:
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    countryName:
-    - Rwanda
-    - United Republic of Tanzania
-    - Democratic Republic of the Congo
-    - Burundi
-    sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: 7d6dfd020c691c24c8360aa1273e3260, type: 3}
-    optionsPrefabs:
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    countryName:
-    - Malawi
-    - Mozambique
-    - United Republic of Tanzania
-    sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: 5531e1501dac32441895b89390c0564b, type: 3}
-    optionsPrefabs:
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    countryName:
-    - Pakistan
-    - China
-    - Vietnam
-    sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: a0199bf4985736f4bb121bd407745a97, type: 3}
-    optionsPrefabs:
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    countryName:
-    - Cambodia
-    - Thailand
-    sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: 5064f84ba4249374a8f7ee20719cc537, type: 3}
-    optionsPrefabs:
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    countryName:
-    - Bhutan
-    - India
-    - Bangladesh
-    sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: 6144c1bfac5050d49ab8b911ddbe3efb, type: 3}
-    optionsPrefabs:
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    countryName:
-    - Greece
-    - Turkey
-    - Azerbaijan
-    - Syria
-    sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: 7e09d75ab36927c4aa9a9f88fe62b390, type: 3}
+  - gridImage: {fileID: 21300000, guid: c478d099a85b1ac4492e5be5f7af6b58, type: 3}
     optionsPrefabs:
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     countryName:
     - e Swatini
+    - South Africa
     - Mozambique
-    - Zimbabwe
     sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: 7435736e2bb0cc94d8e55725a8895e0f, type: 3}
+  - gridImage: {fileID: 21300000, guid: bbc246e7e372bb24dac0f32e70ade48b, type: 3}
     optionsPrefabs:
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Italy
+    - France
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 09d61466448c7684fad754ce82ae62ce, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Cyprus
+    - Israel
+    - Lebanon
+    - Syria
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 5cee3a127e7a37d4e957bb9a569bdf37, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Solomon Islands
+    - Papua New Guinea
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 8ddc2740b14baa94eaaeb6e4030ec469, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - United Republic of Tanzania
+    - Kenya
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 4996b0abbe1595f47ace85e97a48a94e, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Thailand
+    - Myanmar
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: b19d5c60a08e20442bc850c92f56ece3, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Kazakhstan
+    - Russia
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: e613d838d1b1a5e4d8639b3964d0f8bc, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Kazakhstan
+    - Uzbekistan
+    - Turkmenistan
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 3ed599f01f0f6ea418381f3db5160ce2, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Colombia
+    - Venezuela
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: c4b2325ee5412a541a202e104110bfb2, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - United Kingdom
+    - Ireland
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 9861e242ec3f06f449cf6785aff6b396, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Lesotho
+    - South Africa
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 21e637c2234e6ad488cabcf42e174bf5, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Ethiopia
+    - Somalia
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 84297d229e3757a4195ea2d26c831add, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Sierra Leone
+    - Guinea
+    - Liberia
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 2fee6cd2b71ae8f49b525c1d177e93f7, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Colombia
+    - Panama
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: aef6bea6e87fab34a81a45e5fb070e92, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Guatemala
+    - Honduras
+    - Belize
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: e3894b9e16ffb124f9700808ec268a0d, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Peru
+    - Ecuador
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 585a9393f1719384fa11f466e7331451, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - France
+    - Suriname
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 1a652f0afddddff41b1b73d4faf6b30e, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - United States of America
+    - Mexico
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 1907a6b7df3386a4ea0df492e4b85276, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Guatemala
+    - Belize
+    - Mexico
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: ffefa591686766649983322218881b32, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Oman
+    - Iran
+    - United Arab Emirates
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 1cfcfe654b494d74485af0d625be17e6, type: 3}
+    optionsPrefabs:
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     countryName:
     - Liberia
     - Ivory Coast
-    - Burkina Faso
-    - Mali
     sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: 6c946dcd935d89e4ba694b8b9794e9db, type: 3}
+  - gridImage: {fileID: 21300000, guid: 4ca980a86e34aab44b666c78f62f7b46, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Sweden
+    - Finland
+    - Norway
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: b173438ad06235942acf3d03e0f613fd, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Lithuania
+    - Latvia
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 8a8a376528502fe4b8ceee466dfa4ec9, type: 3}
     optionsPrefabs:
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     countryName:
-    - Netherlands
-    - Belgium
-    - Germany
-    - Denmark
+    - Cyprus
+    - Syria
+    - Turkey
+    - Northern Cyprus
     sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: 4064e403f87aec84bb84c615b3e6cdfd, type: 3}
+  - gridImage: {fileID: 21300000, guid: 054d51f6d44507f41a18968c1a70e805, type: 3}
     optionsPrefabs:
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Saudi Arabia
+    - United Arab Emirates
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: f616ac27f11d92c4d81da976a8dea046, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Bolivia
+    - Chile
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: d74335b1f6d8c6849b75e65ade8cb1b6, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - India
+    - Sri Lanka
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 4df4a3f819b400b428867191989244cc, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Bangladesh
+    - India
+    - Myanmar
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 3213e95b82f7181469b29487b96a03d3, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Jamaica
+    - Haiti
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 38d3c5d5a4aeeb94b98389b8cde0da89, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Morocco
+    - Algeria
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 9f2bf18d592aa2d4b9a0101c2aa66629, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Saudi Arabia
+    - Qatar
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: f8558a469f1508c499976ebc04d2319c, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Oman
+    - Saudi Arabia
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: a92034a2a96b1b14fb8717aeb3e57a2c, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Iran
+    - Azerbaijan
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: a4dd92c2a3b195d40be6c42bd63572ea, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Oman
+    - Iran
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: fd273ddfdca276340a026fa45404b9ce, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Ukraine
+    - Russia
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: c5465eb446118714bbf95f5d064e4871, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Algeria
+    - Spain
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 79fce20bf4d41c14483bf659c777c938, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Poland
+    - Lithuania
+    - Russia
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: fa091ba332c067e4bb17ab9cb4b31d4a, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Pakistan
+    - India
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: e0e6b0b57a48a3847aafe72dd5efc2a1, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - China
+    - North Korea
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 21d8cc168ebc8d44fb7801c787c0f04b, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Togo
+    - Ghana
+    - Benin
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 9760fee07185da848a492ee2e476b65e, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Malaysia
+    - Thailand
+    - Indonesia
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: db0d4a1457b34bf4191f1f7dc3a5f8ea, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Cameroon
+    - Equatorial Guinea
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 20a80d711bcc5dc45b1ee4298db1ca30, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - South Africa
+    - Namibia
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 71a6ffd88a28d8e47b2372a13349ed05, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Cambodia
+    - Vietnam
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 3e480b6cea289dd4c8b4ba2c36ca37bf, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Somalia
+    - Somaliland
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: d1951f35210c3c94a89408c056bb1aeb, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Algeria
+    - Tunisia
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 165bc95483e690c47a41332647279ae2, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Zimbabwe
+    - Mozambique
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: fe3d2ba795663a448bf09fc7a875d954, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Saudi Arabia
+    - Kuwait
+    - Iraq
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 6a2ac193f443b874b91676003a7d1365, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Bolivia
+    - Argentina
+    - Chile
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: c5d5392df6772984eb0f71477fbe20a5, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Kenya
+    - Somalia
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 9c83447c64188d64c9e1f1e5536d6fb7, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Costa Rica
+    - Panama
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 651c4cf91e9c5f945ae7800f5e71a358, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Portugal
+    - Spain
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 784005ccc6cd7594482fe139ae866ead, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - United Kingdom
+    - France
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 84d5ba94a1e1a1b4889a4b8fc209fdf0, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Latvia
+    - Estonia
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 94e7c4db3d3149a48b7c2615242390f9, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Poland
+    - Russia
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 7bcad3026c55da2499991e48877e867b, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Senegal
+    - Guinea-Bissau
+    - Gambia
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 21c983b9af9446b4082b6bc30f8b733f, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Palestine
+    - Israel
+    - Jordan
+    - Egypt
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: a52e12f4fe37686458d92709728e63eb, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Morocco
+    - Western Sahara
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 73bf2832ec0054e4fb9673b01fbaeb9e, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - The Bahamas
+    - United States of America
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 8451fba47ed61e54da24a4f57d9a276e, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Malaysia
+    - Brunei
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 9bc3ca7cce4cb6f488bebd5a948a03f2, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Ethiopia
+    - Somaliland
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 83f494eda8a3af74c984beb415c94e01, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Brazil
+    - France
+    - Suriname
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 24144fb1c4045ff4eb0508d2987cd690, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Guyana
+    - France
+    - Suriname
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: feb9399bec2df6a43ba2372713e7b379, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Thailand
+    - Myanmar
+    - Cambodia
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: f6f02b4d07dd0e54e908164adbca22f7, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Oman
+    - Saudi Arabia
+    - United Arab Emirates
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 08c53e2fb715fec4b939ba033f346f4f, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Albania
+    - Greece
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: a45423645e5d1024ab6194bd61341108, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Poland
+    - Germany
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: db406b2e39126d34dba64df0055150b9, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Pakistan
+    - Iran
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: f5cf713c90345d6479e9c75a51b77cbc, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Honduras
+    - Nicaragua
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: bab4f93eb75b8844e8b5fd204b99d4e8, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Republic of the Congo
+    - Gabon
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 3c02abfbc42698d489e9a0694f160a32, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Honduras
+    - El Salvador
+    - Nicaragua
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: b4093bcb9efdd454a811e1c00968649f, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Trinidadand Tobago
+    - Venezuela
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 540b073fa51ba27489507368e22d7cb8, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Yemen
+    - Eritrea
+    - Djibouti
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: c65dfe3840054b04e828c33292431601, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Eritrea
+    - Sudan
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 3b839ffaba62e4449910bc288b774d94, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - South Korea
+    - North Korea
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 6a569f3fef0018c41a021a2f8322604b, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Russia
+    - Norway
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 496fae0c5e357bf439c55d84b3ba10c0, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Republic of the Congo
+    - Gabon
+    - Cameroon
+    - Equatorial Guinea
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 59baea002b69eca4185709ba3f9fcf64, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Libya
+    - Egypt
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: f5bfe93e657b11943b84a593b183a43e, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - El Salvador
+    - Guatemala
+    - Honduras
+    - Mexico
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 828fbed4d2dea1946a6ee99b7edac9aa, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Finland
+    - Russia
+    - Estonia
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 80a2c0d5e04ac5a40ab92e27a1f2ebbc, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Guatemala
+    - Mexico
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: a6f1ce3e4dd38ab40bc68491b73fce96, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Kazakhstan
+    - Uzbekistan
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 08a34e5e8369e234fa4f4821153748c4, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - China
+    - Russia
+    - North Korea
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: aabb9fb9b618199428b6888783df31f8, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Guinea
+    - Sierra Leone
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 9a6a0ff2a8675ea4a8ce74decf8f75db, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Japan
+    - Russia
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: f118c2ef17f9fc54eaa9db9972903dab, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Thailand
+    - Laos
+    - Vietnam
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: f02a6e978529db84f916fbbac4b64b5d, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Malaysia
+    - Thailand
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: a10289b50f4298742b9e17e33307aa6d, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Guinea-Bissau
+    - Guinea
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 81ced637ce01398478d5d78296d337ee, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Haiti
+    - Dominican Republic
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 3d59785e4d201e64b9478faa58c8b530, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Guatemala
+    - El Salvador
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 0722d9b123d777541b16f95e105df063, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Ukraine
+    - Romania
+    - Moldova
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: d236d0b70e73c13409fe6fe16a0302a4, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Kazakhstan
+    - Turkmenistan
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 1351e5ee2ef477d4e9029d4a2adafa2c, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Lithuania
+    - Latvia
+    - Estonia
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 7835252ed670d6c4cbe57948a540725f, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Bangladesh
+    - Myanmar
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 11728f4ffd425874080eeedaeff9dfa5, type: 3}
+    optionsPrefabs:
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     countryName:
     - Ghana
-    - Burkina Faso
-    - Togo
-    - Mali
+    - Ivory Coast
     sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: e051206aafebea94fa8cdc670696477c, type: 3}
+  - gridImage: {fileID: 21300000, guid: b3e74c9fc22393c488b3221039211954, type: 3}
     optionsPrefabs:
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     countryName:
-    - Denmark
+    - France
+    - Spain
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 5442140ccc517f942b4a0c54066885b2, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Yemen
+    - Saudi Arabia
+    - Eritrea
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 25769f3aa77cac7419482aaa6d521fce, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Democratic Republic of the Congo
+    - Angola
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 6f240a48717f2784eac2d5ff215fec9f, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Laos
+    - Cambodia
+    - Vietnam
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 3b20cd3fad75d9f4184806bd1101bc04, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - United Kingdom
+    - Belgium
+    - France
+    - Netherlands
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 88669678bcab7d34b8d63421f0abe8fa, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Turkey
+    - Bulgaria
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 004164e471aadc34ca7555a0aeecc78d, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Finland
+    - Russia
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 99a3160435020634ea92d68176a39ade, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Georgia
+    - Turkey
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 6ca9c9b3b91ec4e48b8838c5817810ab, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Turkey
+    - Greece
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 49eab0a4a2819cb419ac52e94889b110, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Libya
+    - Algeria
+    - Tunisia
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: a07e62a5b7d73cf4cbf225efe80d442c, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Poland
+    - Sweden
     - Germany
     sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: b312e3e8fc82ede468b7a066f1a88143, type: 3}
+  - gridImage: {fileID: 21300000, guid: fdcabef85b1e3e143900b58f9e6d1e8f, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Ethiopia
+    - Eritrea
+    - Sudan
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: a30919d6d6a076d489be22b5e4613e3c, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Angola
+    - Namibia
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 81d4aa219b90ebb4687083e9cf6a868d, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Finland
+    - Estonia
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 6868b5fc20d54f84ca64d73062b3e8c0, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Syria
+    - Turkey
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: d35b6117c93fe8d4dbe2f8ba916839f2, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - China
+    - Vietnam
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 933b7b5ee3d2ecc469829f6e8883869e, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Japan
+    - South Korea
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 4ba644f7a4644404d9f3384870296618, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Poland
+    - Sweden
+    - Germany
+    - Denmark
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: bf96540bf2592ce43b71a1bc3322870c, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Brazil
+    - France
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: ea29b8f03789cc64493a6f4682486213, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Saudi Arabia
+    - Iran
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: d49f5d9dc09666e45978bed037a0b914, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Bangladesh
+    - India
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 06389728577fce649aa31fe1c31d1523, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Germany
+    - Netherlands
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: a0e535a9cefe3434babc1cf9c5b1016d, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Djibouti
+    - Ethiopia
+    - Somaliland
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 4afd12da35d0c2e4fbd7b74b531d72b4, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Sweden
+    - Latvia
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: c411dbd12263e4348b21bf6eee2ef8ad, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Sweden
+    - Denmark
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 8fec8ddeed883524b8ca0ec2706e0036, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Georgia
+    - Turkey
+    - Armenia
+    - Azerbaijan
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: da40348d548e5004e93d33448338255a, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Democratic Republic of the Congo
+    - Angola
+    - Republic of the Congo
+    - Gabon
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 4e47a902491375c49b376f10b24c1ed6, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Sierra Leone
+    - Liberia
+    - Ivory Coast
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: ae777b5a85eb81f41ac8e07f09834356, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Oman
+    - Yemen
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: c6aca0be220ad7146a2be24909ed5e75, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Dominican Republic
+    - Puerto Rico
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: fb4efa30d3848994c805589d12b21458, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Guatemala
+    - Honduras
+    - El Salvador
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 03e1bfbca3c55d249a7c9ea4b3a7ce23, type: 3}
     optionsPrefabs:
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
@@ -347,57 +1461,281 @@ MonoBehaviour:
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     countryName:
     - Turkey
-    - Syria
-    - Georgia
-    - Israel
+    - Greece
+    - North Macedonia
+    - Bulgaria
     sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: 00afbd24990a2b74abea4bdf4bb70731, type: 3}
+  - gridImage: {fileID: 21300000, guid: 173bb8e0a25f18c44b64a57903a619fd, type: 3}
     optionsPrefabs:
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - South Africa
+    - Mozambique
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: fa3ed9a21758ee74ca77abedf2d31922, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Sweden
+    - Denmark
+    - Norway
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: e0ab53c84dad3914e987bc3cfa3cea57, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Italy
+    - Croatia
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: cc21f688d8f58a0469891c80203bd638, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Finland
+    - Norway
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 425f4e5b01a14aa4e8ab995b97f2e491, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Senegal
+    - Mauritania
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 459b022d0b974154e8ed35a8b13162a2, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Egypt
+    - Sudan
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: b05b3e1882a316249912a0318619be53, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Saudi Arabia
+    - Egypt
+    - Sudan
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: bec0db350119f8640b780827a51b1ac9, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Guatemala
+    - Honduras
+    - Belize
+    - Mexico
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 371539281c2854e4c993fc634492a4e9, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Italy
+    - Croatia
+    - Bosnia and Herzegovina
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 0412282cbb4d38d478e6f7fa28895daa, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Haiti
+    - Dominican Republic
+    - Cuba
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 5488dba6e36bbf04ab90203ded9b4011, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - China
+    - Russia
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 192475645b82ce648a460932534f12bc, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Sweden
+    - Germany
+    - Denmark
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: db50531dfb0e70a48bf5e6eab949565d, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Iran
+    - Turkmenistan
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 94aece421a1706642b33481968a63338, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Peru
+    - Chile
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: f8597aa66c48729488b1fdd659df70d8, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Libya
+    - Tunisia
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: f3563462c33d4fe4eb615d856c073665, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - East Timor
+    - Indonesia
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 7ce7bbe26b01aaf4aa00c8ecf76cba49, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Ethiopia
+    - Somalia
+    - Somaliland
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 703b83b5161a9e74cba7a8d2801dc47c, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Saudi Arabia
+    - Kuwait
+    - Iran
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: e9d0d68c7ebf1dc4f88f0a0ec7534a82, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Belgium
+    - Germany
+    - France
+    - Netherlands
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: bc2071b7ec5eb8d42a6d5cdda07e2759, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Guyana
+    - Suriname
+    - Venezuela
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: adaa9fb83429eb44ca81c71d6468c930, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Belgium
+    - France
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: a51b6e08117e17648a1a7db8be58f4b6, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Saudi Arabia
+    - Eritrea
+    - Sudan
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 4a37bb9f13b10e0478c962d00a455c3b, type: 3}
+    optionsPrefabs:
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     countryName:
     - Republic of Serbia
     - Croatia
-    - Romania
     - Bosnia and Herzegovina
     sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: 478683bc0b6b84f4f98739fef439e623, type: 3}
-    optionsPrefabs:
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    countryName:
-    - Sweden
-    - Norway
-    sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: eef0d1241ea2b814fa19cf20e89dc3ae, type: 3}
-    optionsPrefabs:
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    countryName:
-    - France
-    - Switzerland
-    sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: 1b2b7a2e404fed846a6c446e0e07ca6d, type: 3}
+  - gridImage: {fileID: 21300000, guid: fe39762141b89a74789984775647ef01, type: 3}
     optionsPrefabs:
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     countryName:
-    - Finland
-    - Norway
-    - Sweden
+    - China
+    - South Korea
+    - North Korea
     sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: 4fc0a5f87d5fe184c9e249eb4bcc17d3, type: 3}
+  - gridImage: {fileID: 21300000, guid: 275ee86ca8053bc41b040cf4b09ecbbf, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Turkey
+    - Greece
+    - Bulgaria
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 2c7061207b1ce354a8acd2ce66953927, type: 3}
     optionsPrefabs:
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     countryName:
-    - Botswana
-    - Zambia
+    - Oman
+    - United Arab Emirates
     sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: 5ed48f330fbd37f499f3c7c95d5b77a7, type: 3}
+  - gridImage: {fileID: 21300000, guid: 377153412ce193d4c82eb298b0185e1f, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Thailand
+    - Cambodia
+    - Vietnam
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 229a330b18f0c604b9118cdbfd9cbf7b, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Mexico
+    - Cuba
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: c37c30789584f0448a49cc75c96085a7, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
+    - Yemen
+    - Ethiopia
+    - Eritrea
+    - Djibouti
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: 8b8276d501accdd44b0ae79f026b388e, type: 3}
     optionsPrefabs:
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
@@ -405,69 +1743,59 @@ MonoBehaviour:
     - Malawi
     - Mozambique
     sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: 2aabc3c52fab2984db162164630a504c, type: 3}
+  - gridImage: {fileID: 21300000, guid: 876d38f68b1806045899b2e1d866a027, type: 3}
     optionsPrefabs:
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     countryName:
-    - Dominican Republic
+    - Italy
+    - Tunisia
+    sourceFileName: 
+  - gridImage: {fileID: 21300000, guid: f11eeac81a1de1a4fbfb79a797b6a284, type: 3}
+    optionsPrefabs:
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
+    countryName:
     - Haiti
+    - Cuba
     sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: 831790836440d7c40831b02ff5c95e95, type: 3}
+  - gridImage: {fileID: 21300000, guid: ac7d75f62f978144fb8c211850df4b97, type: 3}
     optionsPrefabs:
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     countryName:
-    - Vietnam
-    - Cambodia
-    - Thailand
-    - Malaysia
+    - Kazakhstan
+    - Turkmenistan
+    - Azerbaijan
     sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: fac0233c76eb3b84ba6348be7fd0aada, type: 3}
+  - gridImage: {fileID: 21300000, guid: b0b644d6918d0104d89a1b8d012481ee, type: 3}
     optionsPrefabs:
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     countryName:
-    - Colombia
-    - Venezuela
-    - Panama
-    - Guyana
+    - Iran
+    - Armenia
+    - Azerbaijan
     sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: d1139aa6b85beb345a002c7efc378248, type: 3}
-    optionsPrefabs:
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    countryName:
-    - South Africa
-    - Lesotho
-    sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: 26b72b13d0f667246aa1e08cee548278, type: 3}
+  - gridImage: {fileID: 21300000, guid: 6135264cc228224449f873444f0ca75f, type: 3}
     optionsPrefabs:
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     countryName:
-    - Belize
-    - Guatemala
-    - Mexico
-    - Honduras
+    - Finland
+    - Russia
+    - Norway
     sourceFileName: 
-  - gridImage: {fileID: 21300000, guid: 597b2743a1127d647be191e93b18dd29, type: 3}
+  - gridImage: {fileID: 21300000, guid: b5871b1f4a9b8ad4e9da87a586e2b69c, type: 3}
     optionsPrefabs:
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
-    - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     countryName:
-    - Romania
-    - Bulgaria
-    - Republic of Serbia
-    - North Macedonia
+    - The Bahamas
+    - Cuba
     sourceFileName: 
   minCountriesPerRound: 2
   maxCountriesPerRound: 5
