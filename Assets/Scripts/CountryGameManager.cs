@@ -11,7 +11,7 @@ public class CountryGameManager : MonoBehaviour
     public int minCountriesPerRound = 2;
     public int maxCountriesPerRound = 5;
     public int maxRounds = 10; // Total number of rounds
-    public int maxAttempts = 3; // Maximum attempts per round
+    public int maxTotalAttempts = 6; // Total attempts across all rounds
     
     [Header("UI References")]
     public UnityEngine.UI.Image mapDisplayImage;
@@ -22,7 +22,7 @@ public class CountryGameManager : MonoBehaviour
     [Header("Current Round Info")]
     [SerializeField] private int currentRoundIndex;
     [SerializeField] private int currentGameRound = 1; // Track which round we're on (1-10)
-    [SerializeField] private int currentAttempts = 0; // Track attempts in current round
+    [SerializeField] private int totalAttempts = 0; // Track total attempts across all rounds
     [SerializeField] private CountryInfo currentRoundInfo;
     [SerializeField] private List<string> currentRoundCountries;
     [SerializeField] private bool isGameOver = false;
@@ -66,8 +66,8 @@ public class CountryGameManager : MonoBehaviour
             return;
         }
 
-        // Reset attempts for new round
-        currentAttempts = 0;
+        // Reset attempts for new round - REMOVED since attempts carry across rounds
+        // currentAttempts = 0;
         HideGameOverText();
 
         // Update the round display text
@@ -149,9 +149,9 @@ public class CountryGameManager : MonoBehaviour
     {
         if (chanceLeftText != null)
         {
-            int chancesRemaining = maxAttempts - currentAttempts;
+            int chancesRemaining = maxTotalAttempts - totalAttempts;
             chanceLeftText.text = $"Chance Left: {chancesRemaining}";
-            Debug.Log($"Updated chance left: {chancesRemaining}");
+            Debug.Log($"Updated chance left: {chancesRemaining} (Total attempts: {totalAttempts}/{maxTotalAttempts})");
         }
         else
         {
@@ -183,33 +183,27 @@ public class CountryGameManager : MonoBehaviour
 
     public void OnWrongAnswer()
     {
-        currentAttempts++;
-        int attemptsLeft = maxAttempts - currentAttempts;
+        totalAttempts++;
+        int attemptsLeft = maxTotalAttempts - totalAttempts;
         
-        Debug.Log($"Wrong answer! Attempt {currentAttempts}/{maxAttempts}. {attemptsLeft} attempts remaining.");
+        Debug.Log($"Wrong answer! Total attempts: {totalAttempts}/{maxTotalAttempts}. {attemptsLeft} attempts remaining across all rounds.");
         
         // Update chance left display
         UpdateChanceLeftDisplay();
         
-        if (currentAttempts >= maxAttempts)
+        if (totalAttempts >= maxTotalAttempts)
         {
-            // Game Over - Failed 3 times
-            Debug.LogError($"💀 GAME OVER! Failed {maxAttempts} times in Round {currentGameRound}");
-            ShowGameOverText($"💀 GAME OVER! 💀\nFailed {maxAttempts} times in Round {currentGameRound}\n\nCorrect answers were:\n{string.Join(", ", currentRoundCountries)}");
+            // Game Over - Used all total attempts
+            Debug.LogError($"💀 GAME OVER! Used all {maxTotalAttempts} attempts across all rounds");
+            ShowGameOverText($"💀 GAME OVER! 💀\nUsed all {maxTotalAttempts} attempts\n\nCorrect answers were:\n{string.Join(", ", currentRoundCountries)}");
             isGameOver = true;
-        }
-        else
-        {
-            // Still have attempts left
-            UpdateRoundDisplay($"Round - {currentGameRound} (Attempt {currentAttempts + 1}/{maxAttempts})");
         }
     }
 
     public void OnCorrectAnswer()
     {
-        Debug.Log($"✅ Correct! Moving to next round. Attempts used: {currentAttempts + 1}/{maxAttempts}");
-        // Reset attempts counter since round was completed successfully
-        currentAttempts = 0;
+        Debug.Log($"✅ Correct! Moving to next round. Total attempts used so far: {totalAttempts}/{maxTotalAttempts}");
+        // Note: We don't reset totalAttempts since they carry across rounds
         UpdateChanceLeftDisplay();
     }
 
@@ -253,7 +247,7 @@ public class CountryGameManager : MonoBehaviour
     public void RestartGame()
     {
         currentGameRound = 1;
-        currentAttempts = 0;
+        totalAttempts = 0;
         isGameOver = false;
         HideGameOverText();
         UpdateRoundDisplay($"Round - {currentGameRound}");
@@ -269,12 +263,12 @@ public class CountryGameManager : MonoBehaviour
 
     public int GetCurrentAttempts()
     {
-        return currentAttempts;
+        return totalAttempts;
     }
 
     public int GetMaxAttempts()
     {
-        return maxAttempts;
+        return maxTotalAttempts;
     }
 
     // Helper method to get available countries count
