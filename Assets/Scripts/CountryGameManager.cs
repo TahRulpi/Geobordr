@@ -31,6 +31,12 @@ public class CountryGameManager : MonoBehaviour
     
     private System.Random random;
 
+
+
+    [Header("Panels")]
+    public GameObject gamePanel;   // The main gameplay panel
+    public GameObject resultPanel; // The result screen panel
+
     private void Start()
     {
         random = new System.Random();
@@ -158,11 +164,8 @@ public class CountryGameManager : MonoBehaviour
             chanceLeftText.text = $"Chance Left: {chancesRemaining}";
             Debug.Log($"Updated chance left: {chancesRemaining} (Total attempts: {totalAttempts}/{maxTotalAttempts})");
         }
-        else
-        {
-            Debug.LogWarning("Chance Left Text not assigned! Please assign your TextMeshPro component in the inspector.");
-        }
     }
+
 
     private void ShowGameOverText(string message)
     {
@@ -190,20 +193,25 @@ public class CountryGameManager : MonoBehaviour
     {
         totalAttempts++;
         int attemptsLeft = maxTotalAttempts - totalAttempts;
-        
+
         Debug.Log($"Wrong answer! Total attempts: {totalAttempts}/{maxTotalAttempts}. {attemptsLeft} attempts remaining across all rounds.");
-        
+
         // Update chance left display
         UpdateChanceLeftDisplay();
-        
+
         if (totalAttempts >= maxTotalAttempts)
         {
             // Game Over - Used all total attempts
             Debug.LogError($"💀 GAME OVER! Used all {maxTotalAttempts} attempts across all rounds");
             ShowGameOverText($"💀 GAME OVER! 💀\nUsed all {maxTotalAttempts} attempts\n\nCorrect answers were:\n{string.Join(", ", currentRoundCountries)}");
             isGameOver = true;
+
+            // ✅ Hide gameplay panel & show result panel
+            if (gamePanel != null) gamePanel.SetActive(false);
+            if (resultPanel != null) resultPanel.SetActive(true);
         }
     }
+
 
     public void OnCorrectAnswer()
     {
@@ -249,7 +257,7 @@ public class CountryGameManager : MonoBehaviour
         Debug.Log($"Round {currentGameRound}/{maxRounds} - Answers: {string.Join(", ", currentRoundCountries)}");
     }
 
-    public void RestartGame()
+    /*public void RestartGame()
     {
         currentGameRound = 1;
         totalAttempts = 0;
@@ -258,7 +266,42 @@ public class CountryGameManager : MonoBehaviour
         UpdateRoundDisplay($"Round - {currentGameRound}");
         UpdateChanceLeftDisplay();
         StartNewRound();
+    }*/
+
+    public void RestartGame()
+    {
+        Debug.Log("🔄 Restarting Game...");
+
+        // ✅ Reset values
+        totalAttempts = 0;
+        currentGameRound = 1;
+        isGameOver = false;
+        currentRoundCountries = new List<string>();
+
+        // ✅ Reset RoundManager state
+        if (roundManager != null)
+        {
+            roundManager.ResetManager();
+        }
+
+        // ✅ Reset UI & Panels
+        if (gamePanel != null) gamePanel.SetActive(true);
+        if (resultPanel != null) resultPanel.SetActive(false);
+
+        HideGameOverText();
+        UpdateRoundDisplay($"Round - {currentGameRound}");
+        UpdateChanceLeftDisplay(); // will show "Chance Left: 6"
+
+        // ✅ Start new round fresh
+        StartNewRound();
+
+        Debug.Log($"Game restarted: Round {currentGameRound}, Attempts {totalAttempts}/{maxTotalAttempts}");
     }
+
+
+
+
+
 
     // Getter methods for external scripts
     public bool IsGameOver()

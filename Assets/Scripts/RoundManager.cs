@@ -3,24 +3,19 @@ using System.Collections.Generic;
 
 public class RoundManager : MonoBehaviour
 {
-    // ScriptableObject reference
     public CountryData CountryData;
-    public Transform spawnParent;        // Where prefabs will appear
-    public float verticalSpacing = 100f; // Spacing between input fields
+    public Transform spawnParent;
+    public float verticalSpacing = 100f;
 
-    // --- NOW USING SPRITE INSTEAD OF IMAGE ---
     public Sprite gridSpriteDisplay;
 
     private List<GameObject> _spawnedObjects = new List<GameObject>();
     public List<GameObject> SpawnedObjects { get { return _spawnedObjects; } }
 
-
-
     public void LoadRound(int roundIndex)
     {
-        // Clear previous round first
         ClearCurrentRound();
-        
+
         if (CountryData == null || CountryData.countryInfo.Length <= roundIndex)
         {
             Debug.LogError("? CountryData not assigned or index out of range!");
@@ -29,18 +24,12 @@ public class RoundManager : MonoBehaviour
 
         CountryInfo roundInfo = CountryData.countryInfo[roundIndex];
 
-        // ? Now you just store sprite, no Image component needed
         if (roundInfo.gridImage != null)
         {
             gridSpriteDisplay = roundInfo.gridImage;
             Debug.Log($"? Loaded new sprite for round {roundIndex}.");
         }
-        else
-        {
-            Debug.LogWarning("?? Missing Sprite for this round in ScriptableObject data.");
-        }
 
-        // Spawn objects as before
         for (int i = 0; i < roundInfo.optionsPrefabs.Length; i++)
         {
             Vector3 spawnPos = new Vector3(0, -i * verticalSpacing, 0);
@@ -54,8 +43,17 @@ public class RoundManager : MonoBehaviour
     {
         foreach (GameObject obj in _spawnedObjects)
         {
-            Destroy(obj);
+            if (obj != null) Destroy(obj);
         }
         _spawnedObjects.Clear();
+    }
+
+    // ? Completely reset round manager when restarting
+    public void ResetManager()
+    {
+        ClearCurrentRound();
+        gridSpriteDisplay = null;
+        CountryData = null; // so new filtered data is reassigned later
+        Debug.Log("?? RoundManager fully reset.");
     }
 }
