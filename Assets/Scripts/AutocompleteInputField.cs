@@ -425,6 +425,7 @@ public class AutocompleteInputField : MonoBehaviour
             // Green for correct
             SetInputFieldColor(new Color(0.7f, 1f, 0.7f, 1f));
             Debug.Log($"✅ CORRECT: '{trimmedCountry}' is valid for this round");
+            FindObjectOfType<CountryGameManager>().IncrementCorrectGuesses();
         }
         else
         {

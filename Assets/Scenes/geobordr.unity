@@ -420,7 +420,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &55628995
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3654,7 +3654,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1016385376
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4859,7 +4859,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1311851794
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5759,6 +5759,7 @@ MonoBehaviour:
   gameOverText: {fileID: 0}
   chanceLeftText: {fileID: 2020022931}
   nextRoundButton: {fileID: 0}
+  finalScoreText: {fileID: 16010728}
   currentRoundIndex: 0
   currentGameRound: 1
   totalAttempts: 0
@@ -5769,6 +5770,7 @@ MonoBehaviour:
     sourceFileName: 
   currentRoundCountries: []
   isGameOver: 0
+  totalCorrectGuesses: 0
   gamePanel: {fileID: 55628994}
   resultPanel: {fileID: 1416547947}
 --- !u!1 &1641289813

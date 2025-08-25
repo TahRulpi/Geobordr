@@ -56,4 +56,9 @@ public class RoundManager : MonoBehaviour
         CountryData = null; // so new filtered data is reassigned later
         Debug.Log("?? RoundManager fully reset.");
     }
+
+    public int GetSpawnedObjectsCount()
+    {
+        return _spawnedObjects.Count;
+    }
 }
