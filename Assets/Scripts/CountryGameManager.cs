@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using TMPro; // Add this for TextMeshPro support
+using DG.Tweening;
 
 public class CountryGameManager : MonoBehaviour
 {
@@ -213,9 +214,13 @@ public class CountryGameManager : MonoBehaviour
 
             // ✅ Hide gameplay panel & show result panel
             if (gamePanel != null) gamePanel.SetActive(false);
-            if (resultPanel != null) resultPanel.SetActive(true);
 
+            // ✅ Animate popup
+            ShowResultPopup();
+
+            // ✅ Update final score text
             UpdateFinalScoreDisplay();
+
 
         }
     }
@@ -396,4 +401,23 @@ public class CountryGameManager : MonoBehaviour
             Debug.Log($"Final Score Displayed: {totalCorrectGuesses} correct guesses.");
         }
     }
+
+    private void ShowResultPopup()
+    {
+        if (resultPanel == null) return;
+
+        resultPanel.SetActive(true);
+
+        // Reset state
+        resultPanel.transform.localScale = Vector3.zero;
+        CanvasGroup canvasGroup = resultPanel.GetComponent<CanvasGroup>();
+        if (canvasGroup == null) canvasGroup = resultPanel.AddComponent<CanvasGroup>();
+        canvasGroup.alpha = 0f;
+
+        // Animate: fade + scale
+        Sequence popupSequence = DOTween.Sequence();
+        popupSequence.Append(resultPanel.transform.DOScale(1f, 0.4f).SetEase(Ease.OutBack));
+        popupSequence.Join(canvasGroup.DOFade(1f, 0.4f));
+    }
+
 }
