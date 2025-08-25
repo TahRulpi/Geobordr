@@ -85,7 +85,7 @@ public class CountryGameManager : MonoBehaviour
         HideGameOverText();
 
         // Update the round display text
-        UpdateRoundDisplay($"Round - {currentGameRound}");
+        UpdateRoundDisplay($"Round:{currentGameRound}");
         
         // Update the chance left display
         UpdateChanceLeftDisplay();
@@ -318,7 +318,7 @@ public class CountryGameManager : MonoBehaviour
         }
 
         HideGameOverText();
-        UpdateRoundDisplay($"Round - {currentGameRound}");
+        UpdateRoundDisplay($"Round:{currentGameRound}");
         UpdateChanceLeftDisplay(); // will show "Chance Left: 6"
 
         // ✅ Start new round fresh
