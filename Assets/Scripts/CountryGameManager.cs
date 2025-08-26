@@ -2,46 +2,44 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using TMPro; // Add this for TextMeshPro support
+using TMPro;
 using DG.Tweening;
 
 public class CountryGameManager : MonoBehaviour
 {
     [Header("Game Configuration")]
     public CountryData countryData;
-    public RoundManager roundManager; // Use your existing RoundManager
+    public RoundManager roundManager;
     public int minCountriesPerRound = 2;
     public int maxCountriesPerRound = 5;
-    public int maxRounds = 10; // Total number of rounds
-    public int maxTotalAttempts = 6; // Total attempts across all rounds
-    
+    public int maxRounds = 10;
+    public int maxTotalAttempts = 6;
+
     [Header("UI References")]
     public UnityEngine.UI.Image mapDisplayImage;
-    public TextMeshProUGUI roundDisplayText; // Reference to your "Round -" text
-    public TextMeshProUGUI gameOverText; // Reference to your game over text
-    public TextMeshProUGUI chanceLeftText; // Reference to your "Chance Left: " text
-    public NextRoundButton nextRoundButton; // Reference to reset input field colors
+    public TextMeshProUGUI roundDisplayText;
+    public TextMeshProUGUI gameOverText;
+    public TextMeshProUGUI chanceLeftText;
+    public NextRoundButton nextRoundButton;
 
-    [Header("Result Panel UI")] // Add this new header
+    [Header("Result Panel UI")]
     public TextMeshProUGUI finalScoreText;
 
     [Header("Current Round Info")]
     [SerializeField] private int currentRoundIndex;
-    [SerializeField] private int currentGameRound = 1; // Track which round we're on (1-10)
-    [SerializeField] private int totalAttempts = 0; // Track total attempts across all rounds
+    [SerializeField] private int currentGameRound = 1;
+    [SerializeField] private int totalAttempts = 0;
     [SerializeField] private CountryInfo currentRoundInfo;
     [SerializeField] private List<string> currentRoundCountries;
     [SerializeField] private bool isGameOver = false;
 
-
     [SerializeField] private int totalCorrectGuesses = 0;
+    [SerializeField] private int correctGuessesThisRound = 0;
     private System.Random random;
 
-
-
     [Header("Panels")]
-    public GameObject gamePanel;   // The main gameplay panel
-    public GameObject resultPanel; // The result screen panel
+    public GameObject gamePanel;
+    public GameObject resultPanel;
 
     private void Start()
     {
@@ -51,14 +49,12 @@ public class CountryGameManager : MonoBehaviour
 
     public void StartNewRound()
     {
-        // Check if game is over
         if (isGameOver)
         {
             Debug.Log("Game is over! Cannot start new round.");
             return;
         }
 
-        // Check if we've completed all rounds
         if (currentGameRound > maxRounds)
         {
             Debug.Log($"🎉 GAME COMPLETED! You finished all {maxRounds} rounds! 🎉");
@@ -80,52 +76,42 @@ public class CountryGameManager : MonoBehaviour
             return;
         }
 
-        // Reset attempts for new round - REMOVED since attempts carry across rounds
-        // currentAttempts = 0;
-        HideGameOverText();
+        if (nextRoundButton != null)
+        {
+            nextRoundButton.gameObject.SetActive(false);
+        }
 
-        // Update the round display text
+        HideGameOverText();
         UpdateRoundDisplay($"Round:{currentGameRound}");
-        
-        // Update the chance left display
         UpdateChanceLeftDisplay();
 
-        // Select a random country cluster
         currentRoundIndex = random.Next(0, countryData.countryInfo.Length);
         currentRoundInfo = countryData.countryInfo[currentRoundIndex];
-        
-        // Determine how many countries to show (between min and max)
+
         int totalCountries = currentRoundInfo.countryName.Count;
         int countriesToShow = Mathf.Clamp(
-            random.Next(minCountriesPerRound, maxCountriesPerRound + 1), 
-            minCountriesPerRound, 
+            random.Next(minCountriesPerRound, maxCountriesPerRound + 1),
+            minCountriesPerRound,
             totalCountries
         );
-        
-        // Randomly select which countries to show
+
         currentRoundCountries = currentRoundInfo.countryName
             .OrderBy(x => random.Next())
             .Take(countriesToShow)
             .ToList();
-        
+
         Debug.Log($"Round {currentGameRound}/{maxRounds} started with {countriesToShow} countries: {string.Join(", ", currentRoundCountries)}");
-        
-        // Create a temporary CountryData with only the selected countries
+
         CreateFilteredCountryData(countriesToShow);
-        
-        // Use your existing RoundManager to load the round (always index 0 for filtered data)
         roundManager.LoadRound(0);
-        
-        // Reset input field colors after objects are spawned
         StartCoroutine(ResetColorsAfterDelay());
-        
-        // Display the map image
         DisplayMapImage();
+
+        correctGuessesThisRound = 0;
     }
 
     private void CreateFilteredCountryData(int countriesToShow)
     {
-        // Create a temporary CountryInfo with only the selected countries and prefabs
         CountryInfo filteredInfo = new CountryInfo
         {
             gridImage = currentRoundInfo.gridImage,
@@ -133,19 +119,14 @@ public class CountryGameManager : MonoBehaviour
             optionsPrefabs = new GameObject[countriesToShow]
         };
 
-        // Take only the number of prefabs we need
         for (int i = 0; i < countriesToShow && i < currentRoundInfo.optionsPrefabs.Length; i++)
         {
             filteredInfo.optionsPrefabs[i] = currentRoundInfo.optionsPrefabs[i];
         }
 
-        // Create temporary CountryData
         CountryData tempCountryData = ScriptableObject.CreateInstance<CountryData>();
         tempCountryData.countryInfo = new CountryInfo[] { filteredInfo };
-
-        // Temporarily assign this filtered data to RoundManager
         roundManager.CountryData = tempCountryData;
-
         Debug.Log($"Created filtered CountryData with {filteredInfo.countryName.Count} countries and {filteredInfo.optionsPrefabs.Length} prefabs");
     }
 
@@ -171,7 +152,6 @@ public class CountryGameManager : MonoBehaviour
             Debug.Log($"Updated chance left: {chancesRemaining} (Total attempts: {totalAttempts}/{maxTotalAttempts})");
         }
     }
-
 
     private void ShowGameOverText(string message)
     {
@@ -199,47 +179,52 @@ public class CountryGameManager : MonoBehaviour
     {
         totalAttempts++;
         int attemptsLeft = maxTotalAttempts - totalAttempts;
-
         Debug.Log($"Wrong answer! Total attempts: {totalAttempts}/{maxTotalAttempts}. {attemptsLeft} attempts remaining across all rounds.");
-
-        // Update chance left display
         UpdateChanceLeftDisplay();
 
         if (totalAttempts >= maxTotalAttempts)
         {
-            // Game Over - Used all total attempts
             Debug.LogError($"💀 GAME OVER! Used all {maxTotalAttempts} attempts across all rounds");
             ShowGameOverText($"💀 GAME OVER! 💀\nUsed all {maxTotalAttempts} attempts\n\nCorrect answers were:\n{string.Join(", ", currentRoundCountries)}");
             isGameOver = true;
 
-            // ✅ Hide gameplay panel & show result panel
             if (gamePanel != null) gamePanel.SetActive(false);
-
-            // ✅ Animate popup
             ShowResultPopup();
-
-            // ✅ Update final score text
             UpdateFinalScoreDisplay();
-
-
         }
     }
 
-
+    // RE-ADDED: This method is called from NextRoundButton to signal a correct round completion
     public void OnCorrectAnswer()
     {
-        Debug.Log($"✅ Correct! Moving to next round. Total attempts used so far: {totalAttempts}/{maxTotalAttempts}");
-
-        // Just update chance display, don’t increment score here
-        UpdateChanceLeftDisplay();
+        Debug.Log($"✅ All answers were correct for this round! Moving to the next round.");
     }
-
 
     public void IncrementCorrectGuesses()
     {
         totalCorrectGuesses++;
         Debug.Log($"Correct guess! Total correct guesses: {totalCorrectGuesses}");
     }
+
+    public void IncrementCorrectGuessesThisRound()
+    {
+        correctGuessesThisRound++;
+        Debug.Log($"Correct guess for this round! Total: {correctGuessesThisRound}");
+    }
+
+    public void CheckRoundCompletion()
+    {
+        if (nextRoundButton == null) return;
+
+        int countriesRequired = GetCurrentRoundCountries().Count;
+
+        if (correctGuessesThisRound >= countriesRequired)
+        {
+            Debug.Log("✅ All answers for this round are correct! Displaying Next button.");
+            nextRoundButton.gameObject.SetActive(true);
+        }
+    }
+
     private void DisplayMapImage()
     {
         if (mapDisplayImage != null && currentRoundInfo.gridImage != null)
@@ -253,12 +238,11 @@ public class CountryGameManager : MonoBehaviour
         }
     }
 
-    // Public methods for UI buttons
     public void NextRound()
     {
         if (!isGameOver)
         {
-            currentGameRound++; // Increment round counter
+            currentGameRound++;
             StartNewRound();
         }
     }
@@ -267,51 +251,33 @@ public class CountryGameManager : MonoBehaviour
     {
         if (!isGameOver)
         {
-            currentGameRound++; // Increment round counter
+            currentGameRound++;
             StartNewRound();
         }
     }
-    
+
     public void ShowAnswers()
     {
         Debug.Log($"Round {currentGameRound}/{maxRounds} - Answers: {string.Join(", ", currentRoundCountries)}");
     }
 
-    /*public void RestartGame()
-    {
-        currentGameRound = 1;
-        totalAttempts = 0;
-        isGameOver = false;
-        HideGameOverText();
-        UpdateRoundDisplay($"Round - {currentGameRound}");
-        UpdateChanceLeftDisplay();
-        StartNewRound();
-    }*/
-
-    // Inside CountryGameManager.cs
-
     public void RestartGame()
     {
         Debug.Log("🔄 Restarting Game...");
-
-        // ✅ Reset values
         totalAttempts = 0;
         currentGameRound = 1;
         isGameOver = false;
         currentRoundCountries = new List<string>();
-        totalCorrectGuesses = 0; // Add this line to reset the score
+        totalCorrectGuesses = 0;
 
-        // ✅ Reset RoundManager state
         if (roundManager != null)
         {
             roundManager.ResetManager();
         }
 
-        // ✅ Reset UI & Panels
         if (gamePanel != null) gamePanel.SetActive(true);
         if (resultPanel != null) resultPanel.SetActive(false);
 
-        // Clear the final score text to prevent it from showing on the restart
         if (finalScoreText != null)
         {
             finalScoreText.text = "";
@@ -319,20 +285,11 @@ public class CountryGameManager : MonoBehaviour
 
         HideGameOverText();
         UpdateRoundDisplay($"Round:{currentGameRound}");
-        UpdateChanceLeftDisplay(); // will show "Chance Left: 6"
-
-        // ✅ Start new round fresh
+        UpdateChanceLeftDisplay();
         StartNewRound();
-
         Debug.Log($"Game restarted: Round {currentGameRound}, Attempts {totalAttempts}/{maxTotalAttempts}");
     }
 
-
-
-
-
-
-    // Getter methods for external scripts
     public bool IsGameOver()
     {
         return isGameOver;
@@ -353,13 +310,11 @@ public class CountryGameManager : MonoBehaviour
         return currentRoundCountries;
     }
 
-    // Helper method to get available countries count
     public int GetTotalAvailableRounds()
     {
         return countryData != null ? countryData.countryInfo.Length : 0;
     }
 
-    // Helper method to get current round info for debugging
     public string GetCurrentRoundInfo()
     {
         if (currentRoundCountries != null && currentRoundCountries.Count > 0)
@@ -377,26 +332,17 @@ public class CountryGameManager : MonoBehaviour
 
     private IEnumerator ResetColorsAfterDelay()
     {
-        // Wait one frame to ensure objects are spawned
         yield return null;
-        
-        // Reset input field colors for the new round
         if (nextRoundButton != null)
         {
             nextRoundButton.ResetInputFieldColors();
         }
     }
 
-    // Inside CountryGameManager.cs
-
     private void UpdateFinalScoreDisplay()
     {
         if (finalScoreText != null)
         {
-            // Get the current number of countries in the round
-            int countriesInRound = currentRoundCountries.Count;
-
-            // Display the total correct guesses on the result panel
             finalScoreText.text = $"YOUR CORRECT GUESSES\n<size=150%>{totalCorrectGuesses}</size>";
             Debug.Log($"Final Score Displayed: {totalCorrectGuesses} correct guesses.");
         }
@@ -405,19 +351,13 @@ public class CountryGameManager : MonoBehaviour
     private void ShowResultPopup()
     {
         if (resultPanel == null) return;
-
         resultPanel.SetActive(true);
-
-        // Reset state
         resultPanel.transform.localScale = Vector3.zero;
         CanvasGroup canvasGroup = resultPanel.GetComponent<CanvasGroup>();
         if (canvasGroup == null) canvasGroup = resultPanel.AddComponent<CanvasGroup>();
         canvasGroup.alpha = 0f;
-
-        // Animate: fade + scale
         Sequence popupSequence = DOTween.Sequence();
         popupSequence.Append(resultPanel.transform.DOScale(1f, 0.4f).SetEase(Ease.OutBack));
         popupSequence.Join(canvasGroup.DOFade(1f, 0.4f));
     }
-
 }
