@@ -3,8 +3,9 @@ using UnityEngine;
 using TMPro;
 using System.Linq;
 using UnityEngine.UI;
+using UnityEngine.EventSystems; // Required for IPointerDownHandler
 
-public class AutocompleteInputField : MonoBehaviour
+public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
 {
     [Header("Settings")]
     public int maxSuggestions = 5;
@@ -12,12 +13,14 @@ public class AutocompleteInputField : MonoBehaviour
     [Header("Debug Info")]
     [SerializeField] private List<string> availableCountries = new List<string>();
     [SerializeField] private List<GameObject> suggestionButtons = new List<GameObject>();
+    [SerializeField] private string lastValidatedAnswer = ""; // Track last validated answer to prevent duplicate point deductions
 
     private TMP_InputField inputField;
     private CountryGameManager countryGameManager;
-    private GameObject suggestionPanel;
+    private GameObject scrollView; // Reference to the new ScrollView parent
+    private GameObject suggestionPanel; // Reference to the content panel
     private bool isShowingSuggestions = false;
-    private string lastValidatedAnswer = ""; // Track last validated answer to prevent duplicate point deductions
+
 
     private void Start()
     {
@@ -39,12 +42,14 @@ public class AutocompleteInputField : MonoBehaviour
         // Set up listeners
         inputField.onValueChanged.AddListener(OnInputChanged);
         inputField.onSelect.AddListener(OnInputSelected);
-        inputField.onDeselect.AddListener(OnInputDeselected);
+
+        // No longer using onDeselect to hide suggestions
+        // inputField.onDeselect.AddListener(OnInputDeselected);
 
         // Initialize country list
         PopulateCountryList();
 
-        // Create suggestion panel automatically
+        // Create scrollable suggestion panel automatically
         CreateSuggestionPanel();
 
         Debug.Log($"✅ AutocompleteInputField initialized with {availableCountries.Count} countries");
@@ -52,32 +57,54 @@ public class AutocompleteInputField : MonoBehaviour
 
     private void CreateSuggestionPanel()
     {
-        // Create the suggestion panel as a child of this GameObject
-        suggestionPanel = new GameObject("AutoSuggestionPanel");
-        suggestionPanel.transform.SetParent(transform, false);
+        // Create the main ScrollView container
+        scrollView = new GameObject("AutoSuggestionScrollView");
+        scrollView.transform.SetParent(transform, false);
 
         // Add RectTransform
-        RectTransform panelRect = suggestionPanel.AddComponent<RectTransform>();
-
-        // Position it below the input field
+        RectTransform scrollViewRect = scrollView.AddComponent<RectTransform>();
         RectTransform inputRect = inputField.GetComponent<RectTransform>();
-        panelRect.anchorMin = new Vector2(0, 0);
-        panelRect.anchorMax = new Vector2(1, 0);
-        panelRect.pivot = new Vector2(0.5f, 1f);
-        panelRect.anchoredPosition = new Vector2(0, -5f);
-        panelRect.sizeDelta = new Vector2(0, 150);
+        scrollViewRect.anchorMin = new Vector2(0, 0);
+        scrollViewRect.anchorMax = new Vector2(1, 0);
+        scrollViewRect.pivot = new Vector2(0.5f, 1f);
+        scrollViewRect.anchoredPosition = new Vector2(0, -5f);
+        scrollViewRect.sizeDelta = new Vector2(0, 150); // Set a fixed height for the scroll area
 
-        // Add Canvas component with high sort order to ensure it appears above other UI elements
-        Canvas panelCanvas = suggestionPanel.AddComponent<Canvas>();
-        panelCanvas.overrideSorting = true;
-        panelCanvas.sortingOrder = 1000; // High value to appear above other UI elements
+        // Add ScrollRect component
+        ScrollRect scrollRect = scrollView.AddComponent<ScrollRect>();
+        scrollRect.horizontal = false; // Disable horizontal scrolling
+        scrollRect.vertical = true; // Enable vertical scrolling
 
-        // Add GraphicRaycaster for UI interaction
-        GraphicRaycaster raycaster = suggestionPanel.AddComponent<GraphicRaycaster>();
+        // Create the Viewport GameObject
+        GameObject viewport = new GameObject("Viewport");
+        viewport.transform.SetParent(scrollView.transform, false);
+        RectTransform viewportRect = viewport.AddComponent<RectTransform>();
+        viewportRect.anchorMin = Vector2.zero;
+        viewportRect.anchorMax = Vector2.one;
+        viewportRect.pivot = new Vector2(0.5f, 1f);
+        viewportRect.sizeDelta = new Vector2(0, 0);
 
-        // Add Content Size Fitter for better layout handling
-        ContentSizeFitter sizeFitter = suggestionPanel.AddComponent<ContentSizeFitter>();
-        sizeFitter.verticalFit = ContentSizeFitter.FitMode.PreferredSize;
+        // Add Mask component to the viewport to hide content outside its bounds
+        Mask viewportMask = viewport.AddComponent<Mask>();
+        viewportMask.showMaskGraphic = false; // Hide the mask graphic itself
+
+        // Add background image to the viewport
+        Image viewportBg = viewport.AddComponent<Image>();
+        viewportBg.color = new Color(112f / 255f, 196f / 255f, 196f / 255f, 0.95f);
+
+        // Add border (optional)
+        Outline outline = viewport.AddComponent<Outline>();
+        outline.effectColor = Color.gray;
+        outline.effectDistance = new Vector2(1, -1);
+
+        // Create the Content panel (where suggestion buttons will be placed)
+        suggestionPanel = new GameObject("AutoSuggestionContent");
+        suggestionPanel.transform.SetParent(viewport.transform, false);
+        RectTransform contentRect = suggestionPanel.AddComponent<RectTransform>();
+        contentRect.anchorMin = new Vector2(0, 1);
+        contentRect.anchorMax = new Vector2(1, 1);
+        contentRect.pivot = new Vector2(0.5f, 1f);
+        contentRect.sizeDelta = new Vector2(0, 0);
 
         // Add Vertical Layout Group for automatic spacing
         VerticalLayoutGroup layoutGroup = suggestionPanel.AddComponent<VerticalLayoutGroup>();
@@ -87,20 +114,18 @@ public class AutocompleteInputField : MonoBehaviour
         layoutGroup.childForceExpandWidth = true;
         layoutGroup.spacing = 2f; // Small gap between suggestions
 
-        // Add background image
-        Image panelBg = suggestionPanel.AddComponent<Image>();
-        // Set panel background to hex #70c4c4 with alpha 0.95
-        panelBg.color = new Color(112f / 255f, 196f / 255f, 196f / 255f, 0.95f);
+        // Add Content Size Fitter to automatically adjust the content panel's height
+        ContentSizeFitter sizeFitter = suggestionPanel.AddComponent<ContentSizeFitter>();
+        sizeFitter.verticalFit = ContentSizeFitter.FitMode.PreferredSize;
 
-        // Add border (optional)
-        Outline outline = suggestionPanel.AddComponent<Outline>();
-        outline.effectColor = Color.gray;
-        outline.effectDistance = new Vector2(1, -1);
+        // Connect the ScrollRect to the Viewport and Content
+        scrollRect.viewport = viewportRect;
+        scrollRect.content = contentRect;
 
         // Hide initially
-        suggestionPanel.SetActive(false);
+        scrollView.SetActive(false);
 
-        Debug.Log("✅ Auto-created suggestion panel underneath input field");
+        Debug.Log("✅ Auto-created scrollable suggestion panel underneath input field");
     }
 
     private void PopulateCountryList()
@@ -186,17 +211,43 @@ public class AutocompleteInputField : MonoBehaviour
         }
     }
 
-    private void OnInputDeselected(string text)
+    // Implementing this interface method to detect clicks anywhere on the UI
+    public void OnPointerDown(PointerEventData eventData)
     {
-        // Delay hiding to allow suggestion selection
-        Invoke(nameof(HideSuggestions), 0.2f);
+        // This is the correct way to call the method
+        if (!EventSystem.current.IsPointerOverGameObject())
+        {
+            HideSuggestions();
+        }
+        // Alternatively, to check specifically if the click was on the input or suggestion panel
+        else if (!IsChildOf(eventData.pointerCurrentRaycast.gameObject, scrollView) && eventData.pointerCurrentRaycast.gameObject != inputField.gameObject)
+        {
+            HideSuggestions();
+        }
     }
+
+    // Helper method to check if a GameObject is a child of another
+    private bool IsChildOf(GameObject child, GameObject parent)
+    {
+        if (child == null || parent == null)
+            return false;
+
+        Transform current = child.transform;
+        while (current != null)
+        {
+            if (current == parent.transform)
+                return true;
+            current = current.parent;
+        }
+        return false;
+    }
+
 
     private void ShowSuggestions(List<string> suggestions)
     {
-        if (suggestionPanel == null)
+        if (scrollView == null)
         {
-            Debug.LogWarning("Suggestion panel not created!");
+            Debug.LogWarning("Suggestion scroll view not created!");
             return;
         }
 
@@ -210,7 +261,7 @@ public class AutocompleteInputField : MonoBehaviour
         }
 
         // Show the panel
-        suggestionPanel.SetActive(true);
+        scrollView.SetActive(true);
         isShowingSuggestions = true;
 
         Debug.Log($"✅ Showing {suggestions.Count} suggestions");
@@ -294,9 +345,9 @@ public class AutocompleteInputField : MonoBehaviour
     {
         if (!isShowingSuggestions) return; // Early exit if already hidden
 
-        if (suggestionPanel != null)
+        if (scrollView != null)
         {
-            suggestionPanel.SetActive(false);
+            scrollView.SetActive(false);
         }
 
         ClearSuggestions();
