@@ -59,7 +59,8 @@ public class CountryDataEditor : Editor
             if (countryData.countryInfo != null && countryData.countryInfo.Length > 0)
             {
                 var randomCluster = countryData.GetRandomCluster();
-                Debug.Log($"Random cluster: {string.Join(", ", randomCluster.countryName)}");
+                // UPDATED: Reads from the new 'countries' list
+                Debug.Log($"Random cluster: {string.Join(", ", randomCluster.countries.Select(c => c.countryName))}");
             }
             else
             {
@@ -90,10 +91,11 @@ public class CountryDataEditor : Editor
                 if (!string.IsNullOrEmpty(searchFilter))
                 {
                     bool matchFound = false;
-                    if (info.countryName != null)
+                    // UPDATED: Reads from the new 'countries' list
+                    if (info.countries != null)
                     {
-                        matchFound = info.countryName.Any(country => 
-                            country.ToLower().Contains(searchFilter.ToLower()));
+                        matchFound = info.countries.Any(countryDetail => 
+                            countryDetail.countryName.ToLower().Contains(searchFilter.ToLower()));
                     }
                     
                     if (!matchFound) continue;
@@ -118,10 +120,11 @@ public class CountryDataEditor : Editor
                 EditorGUILayout.BeginVertical();
                 
                 // Countries list
-                if (info.countryName != null && info.countryName.Count > 0)
+                // UPDATED: Reads from the new 'countries' list
+                if (info.countries != null && info.countries.Count > 0)
                 {
                     EditorGUILayout.LabelField($"Cluster {i + 1}:", EditorStyles.boldLabel);
-                    EditorGUILayout.LabelField(string.Join(", ", info.countryName), EditorStyles.wordWrappedLabel);
+                    EditorGUILayout.LabelField(string.Join(", ", info.countries.Select(c => c.countryName)), EditorStyles.wordWrappedLabel);
                 }
                 else
                 {
@@ -146,15 +149,15 @@ public class CountryDataEditor : Editor
         EditorGUILayout.Space();
         
         // Default inspector for the array (collapsed by default)
-        if (EditorGUILayout.Foldout(false, "Raw Data (Advanced)"))
-        {
-            DrawDefaultInspector();
-        }
-        
+        SerializedProperty countryInfoProp = serializedObject.FindProperty("countryInfo");
+        EditorGUILayout.PropertyField(countryInfoProp, true);
+
         // Mark as dirty if GUI changed
         if (GUI.changed)
         {
             EditorUtility.SetDirty(countryData);
         }
+        
+        serializedObject.ApplyModifiedProperties();
     }
 }

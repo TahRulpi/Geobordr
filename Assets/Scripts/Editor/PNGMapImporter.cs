@@ -3,6 +3,7 @@ using System.IO;
 using UnityEngine;
 using UnityEditor;
 using System.Text.RegularExpressions;
+using System.Linq; // THIS IS THE LINE THAT FIXES THE ERROR
 
 public class PNGMapImporter : EditorWindow
 {
@@ -53,7 +54,7 @@ public class PNGMapImporter : EditorWindow
         GUILayout.Space(20);
 
         // Preview
-        if (targetCountryData != null)
+        if (targetCountryData != null && targetCountryData.countryInfo != null)
         {
             GUILayout.Label($"Current entries: {targetCountryData.countryInfo.Length}", EditorStyles.helpBox);
             
@@ -66,9 +67,11 @@ public class PNGMapImporter : EditorWindow
                 
                 EditorGUILayout.ObjectField(info.gridImage, typeof(Sprite), false, GUILayout.Width(60));
                 
-                if (info.countryName != null && info.countryName.Count > 0)
+                // UPDATED: Reads from the new 'countries' list
+                if (info.countries != null && info.countries.Count > 0)
                 {
-                    EditorGUILayout.LabelField($"Countries: {string.Join(", ", info.countryName)}");
+                    // Use LINQ to select just the names from the list of CountryDetails
+                    EditorGUILayout.LabelField($"Countries: {string.Join(", ", info.countries.Select(c => c.countryName))}");
                 }
                 
                 EditorGUILayout.EndHorizontal();
@@ -99,7 +102,6 @@ public class PNGMapImporter : EditorWindow
             return;
         }
 
-        // Get PNG files
         string[] assetGuids = AssetDatabase.FindAssets("t:Texture2D", new[] { pngFolderPath });
         List<string> pngAssetPaths = new List<string>();
         
@@ -125,7 +127,6 @@ public class PNGMapImporter : EditorWindow
         {
             string fileName = Path.GetFileNameWithoutExtension(assetPath);
             
-            // Extract country names from filename
             List<string> countryNames = ExtractCountryNames(fileName);
             
             if (countryNames.Count == 0)
@@ -133,7 +134,6 @@ public class PNGMapImporter : EditorWindow
                 continue;
             }
 
-            // Load sprite
             Sprite sprite = AssetDatabase.LoadAssetAtPath<Sprite>(assetPath);
             
             if (sprite == null)
@@ -141,11 +141,14 @@ public class PNGMapImporter : EditorWindow
                 continue;
             }
 
-            // Create country info
+            // UPDATED: Convert the list of strings to a list of CountryDetail
+            List<CountryDetail> countryDetails = countryNames.Select(name => new CountryDetail { countryName = name, countryFlag = null }).ToList();
+
+            // Create country info using the new structure
             CountryInfo countryInfo = new CountryInfo
             {
                 gridImage = sprite,
-                countryName = countryNames,
+                countries = countryDetails, // Use the new list here
                 optionsPrefabs = CreateInputFieldPrefabs(countryNames.Count)
             };
 
@@ -153,7 +156,6 @@ public class PNGMapImporter : EditorWindow
             successCount++;
         }
 
-        // Assign to CountryData
         targetCountryData.countryInfo = countryInfoList.ToArray();
         
         EditorUtility.SetDirty(targetCountryData);
@@ -167,7 +169,6 @@ public class PNGMapImporter : EditorWindow
     {
         List<string> countryNames = new List<string>();
         
-        // Pattern: cluster_XXX_Country1_Country2_Country3
         string pattern = @"^cluster_\d+_(.+)$";
         Match match = Regex.Match(fileName, pattern);
         
