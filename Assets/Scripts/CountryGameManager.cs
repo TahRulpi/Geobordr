@@ -7,6 +7,9 @@ using DG.Tweening;
 
 public class CountryGameManager : MonoBehaviour
 {
+    public GameObject gameView; // Reference to the main game view (optional)
+
+
     [Header("Game Configuration")]
     public CountryData countryData;
     public RoundManager roundManager; // Use your existing RoundManager
@@ -216,6 +219,8 @@ public class CountryGameManager : MonoBehaviour
         totalAttempts++;
         int attemptsLeft = maxTotalAttempts - totalAttempts;
 
+
+
         Debug.Log($"Wrong answer! Total attempts: {totalAttempts}/{maxTotalAttempts}. {attemptsLeft} attempts remaining across all rounds.");
 
         // Update chance left display
@@ -421,4 +426,23 @@ public class CountryGameManager : MonoBehaviour
         popupSequence.Append(resultPanel.transform.DOScale(1f, 0.4f).SetEase(Ease.OutBack));
         popupSequence.Join(canvasGroup.DOFade(1f, 0.4f));
     }
+
+
+    //function to gameView object go a little bit up
+    public void MoveGameViewUp()
+    {
+        if (gameView != null)
+        {
+            gameView.transform.DOLocalMoveY(150f, 0.5f).SetEase(Ease.OutQuad);
+        }
+    }
+
+    public void MoveGameViewDown()
+    {
+        if (gameView != null)
+        {
+            gameView.transform.DOLocalMoveY(150f, 0.5f).SetEase(Ease.OutQuad);
+        }
+    }
+
 }

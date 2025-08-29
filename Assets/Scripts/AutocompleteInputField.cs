@@ -1,9 +1,10 @@
+using DG.Tweening;
 using System.Collections.Generic;
-using UnityEngine;
-using TMPro;
 using System.Linq;
-using UnityEngine.UI;
+using TMPro;
+using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
 {
@@ -325,7 +326,10 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
         // Add Button component
         Button buttonComponent = button.AddComponent<Button>();
         buttonComponent.targetGraphic = buttonBg;
-        
+
+        //when call click this button run debug log
+        buttonComponent.onClick.AddListener(() => MoveGameViewDown()); 
+
         // Add Layout Element for better size control
         LayoutElement layoutElement = button.AddComponent<LayoutElement>();
         layoutElement.minHeight = 120f; // Increased height for better visibility
@@ -523,6 +527,8 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
             return;
         }
 
+        
+
         string trimmedCountry = selectedCountry.Trim();
         bool isCompleteCountryName = availableCountries.Any(country => 
             string.Equals(country, trimmedCountry, System.StringComparison.OrdinalIgnoreCase));
@@ -596,5 +602,15 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
                 parentImage.color = color;
             }
         }
+    }
+
+    public void MoveGameViewUp()
+    {
+        countryGameManager.MoveGameViewUp();
+    }
+
+    public void MoveGameViewDown()
+    {
+        countryGameManager.MoveGameViewDown();
     }
 }
