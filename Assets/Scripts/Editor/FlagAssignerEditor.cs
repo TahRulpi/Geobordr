@@ -9,17 +9,21 @@ public class FlagAssignerEditor : EditorWindow
     private CountryData targetCountryData;
     private string flagsFolderPath = "Assets/Flags";
 
-    [MenuItem("Tools/Auto Flag Assigner")]
+    [MenuItem("Tools/Country Game/Flag Assigner and Importer")] // I renamed the menu item to be more descriptive
     public static void ShowWindow()
     {
-        GetWindow<FlagAssignerEditor>("Auto Flag Assigner");
+        GetWindow<FlagAssignerEditor>("Flag Assigner");
     }
 
     private void OnGUI()
     {
-        GUILayout.Label("Auto Flag Assigner", EditorStyles.boldLabel);
-        EditorGUILayout.HelpBox("This tool will automatically assign flag sprites to countries in your CountryData asset. Ensure your flag image filenames exactly match the country names (e.g., 'Germany.png', 'United States of America.png').", MessageType.Info);
-        
+        GUILayout.Label("Flag Assigner & Importer", EditorStyles.boldLabel);
+        EditorGUILayout.HelpBox(
+            "This tool does two things:\n\n" +
+            "1. Assigns flag sprites to existing countries in your data.\n" +
+            "2. Finds flags in the folder below that do NOT exist in your data and adds them as new entries.",
+            MessageType.Info);
+
         GUILayout.Space(10);
 
         targetCountryData = (CountryData)EditorGUILayout.ObjectField("Target Country Data", targetCountryData, typeof(CountryData), false);
@@ -29,25 +33,19 @@ public class FlagAssignerEditor : EditorWindow
 
         GUI.enabled = targetCountryData != null;
 
-        if (GUILayout.Button("Assign Flags Automatically", GUILayout.Height(40)))
+        if (GUILayout.Button("Assign Flags & Add Missing Countries", GUILayout.Height(40)))
         {
-            AssignFlags();
+            ProcessFlags();
         }
 
         GUI.enabled = true;
     }
 
-    private void AssignFlags()
+    private void ProcessFlags()
     {
-        if (targetCountryData == null)
+        if (targetCountryData == null || !AssetDatabase.IsValidFolder(flagsFolderPath))
         {
-            Debug.LogError("Flag Assigner: No CountryData asset selected.");
-            return;
-        }
-        
-        if (!AssetDatabase.IsValidFolder(flagsFolderPath))
-        {
-            Debug.LogError($"Flag Assigner: The folder '{flagsFolderPath}' was not found.");
+            Debug.LogError("Flag Assigner: Please assign a CountryData asset and a valid folder path.");
             return;
         }
 
@@ -64,67 +62,75 @@ public class FlagAssignerEditor : EditorWindow
                 flagSprites[sprite.name] = sprite;
             }
         }
+        Debug.Log($"Flag Assigner: Found {flagSprites.Count} flag sprites in '{flagsFolderPath}'.");
 
-        if (flagSprites.Count == 0)
-        {
-            Debug.LogWarning("Flag Assigner: No flag sprites found. Make sure your images are Texture Type 'Sprite (2D and UI)'.");
-            return;
-        }
+        Undo.RecordObject(targetCountryData, "Assign Flags and Add Missing Countries");
 
-        Debug.Log($"Flag Assigner: Found {flagSprites.Count} flag sprites to process.");
-        // NEW DEBUG LOG: Show a sample of the flag names it found
-        Debug.Log($"<color=cyan>Flag name sample: '{string.Join("', '", flagSprites.Keys.Take(5))}'</color>");
-
-
-        // --- Step 2: Iterate through all countries in the CountryData asset ---
+        // --- Step 2: Assign flags to existing countries ---
         int assignedCount = 0;
-        int notFoundCount = 0;
-        HashSet<string> notFoundFlags = new HashSet<string>();
-        
-        // NEW DEBUG LOG: Get a sample of country names from the data asset
-        var countryNameSample = targetCountryData.GetAllUniqueCountries().Take(5);
-        Debug.Log($"<color=yellow>CountryData name sample: '{string.Join("', '", countryNameSample)}'</color>");
-
-
-        Undo.RecordObject(targetCountryData, "Assign Country Flags");
-
-        for (int i = 0; i < targetCountryData.countryInfo.Length; i++)
+        foreach (var info in targetCountryData.countryInfo)
         {
-            for (int j = 0; j < targetCountryData.countryInfo[i].countries.Count; j++)
+            for (int i = 0; i < info.countries.Count; i++)
             {
-                CountryDetail countryDetail = targetCountryData.countryInfo[i].countries[j];
-
-                if (countryDetail.countryFlag != null) continue;
-
-                if (flagSprites.TryGetValue(countryDetail.countryName, out Sprite flagSprite))
+                var detail = info.countries[i];
+                // Only assign if the flag is missing
+                if (detail.countryFlag == null && flagSprites.TryGetValue(detail.countryName, out Sprite flagSprite))
                 {
-                    countryDetail.countryFlag = flagSprite;
-                    targetCountryData.countryInfo[i].countries[j] = countryDetail;
+                    detail.countryFlag = flagSprite;
+                    info.countries[i] = detail; // Re-assign because it's a struct
                     assignedCount++;
-                }
-                else
-                {
-                    if (notFoundFlags.Add(countryDetail.countryName))
-                    {
-                        notFoundCount++;
-                    }
                 }
             }
         }
-        
+        Debug.Log($"<color=green>Assigned {assignedCount} flags to existing countries.</color>");
+
+        // --- Step 3: Find and add missing countries ---
+        HashSet<string> existingCountries = new HashSet<string>(targetCountryData.GetAllUniqueCountries(), System.StringComparer.OrdinalIgnoreCase);
+        List<CountryInfo> newCountryInfos = new List<CountryInfo>();
+        int addedCount = 0;
+
+        foreach (var flagPair in flagSprites)
+        {
+            string countryName = flagPair.Key;
+            Sprite flagSprite = flagPair.Value;
+
+            // If a country with this flag name does NOT exist in our data, add it.
+            if (!existingCountries.Contains(countryName))
+            {
+                // Create a new CountryDetail for this missing country
+                CountryDetail newDetail = new CountryDetail
+                {
+                    countryName = countryName,
+                    countryFlag = flagSprite
+                };
+
+                // Create a new CountryInfo to hold it. This entry will have no map image.
+                CountryInfo newInfo = new CountryInfo
+                {
+                    gridImage = null, // No map image
+                    countries = new List<CountryDetail> { newDetail },
+                    optionsPrefabs = new GameObject[0] // No prefabs needed
+                };
+
+                newCountryInfos.Add(newInfo);
+                addedCount++;
+            }
+        }
+
+        // --- Step 4: Add the newly created CountryInfo objects to the main data asset ---
+        if (newCountryInfos.Count > 0)
+        {
+            List<CountryInfo> combinedList = targetCountryData.countryInfo.ToList();
+            combinedList.AddRange(newCountryInfos);
+            targetCountryData.countryInfo = combinedList.ToArray();
+            Debug.Log($"<color=cyan>Added {addedCount} new countries from flags (like '{newCountryInfos.First().countries.First().countryName}').</color>");
+        }
+
+        // --- Step 5: Save everything ---
         EditorUtility.SetDirty(targetCountryData);
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
 
-        // --- Step 3: Log the results ---
-        Debug.Log($"<color=green>Flag Assigner: Successfully assigned {assignedCount} flags!</color>");
-
-        if (notFoundCount > 0)
-        {
-            // UPDATED DEBUG LOG: Show ALL names that didn't have a match
-            Debug.LogWarning($"Flag Assigner: Could not find matching sprites for {notFoundCount} countries. Please check for naming differences. Examples of names not found: '{string.Join("', '", notFoundFlags.Take(20))}'...");
-        }
-
-        EditorUtility.DisplayDialog("Process Complete", $"Assigned {assignedCount} flags automatically.", "OK");
+        EditorUtility.DisplayDialog("Process Complete", $"Assigned {assignedCount} flags and added {addedCount} new countries.", "OK");
     }
 }

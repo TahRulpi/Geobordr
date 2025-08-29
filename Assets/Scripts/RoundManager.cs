@@ -46,12 +46,17 @@ public class RoundManager : MonoBehaviour
 
         for (int i = 0; i < numPrefabs; i++)
         {
-            // 3. Calculate position using the centering logic and the final offset.
-            Vector3 spawnPos = new Vector3(0, startY - (i * verticalSpacing) - yAxisOffset, 0);
+            // ✅ *** THIS IS THE FIX ***
+            // We add a check to make sure the prefab is not null before trying to create it.
+            if (roundInfo.optionsPrefabs[i] != null)
+            {
+                // 3. Calculate position using the centering logic and the final offset.
+                Vector3 spawnPos = new Vector3(0, startY - (i * verticalSpacing) - yAxisOffset, 0);
 
-            GameObject prefab = Instantiate(roundInfo.optionsPrefabs[i], spawnParent);
-            prefab.transform.localPosition = spawnPos;
-            _spawnedObjects.Add(prefab);
+                GameObject prefab = Instantiate(roundInfo.optionsPrefabs[i], spawnParent);
+                prefab.transform.localPosition = spawnPos;
+                _spawnedObjects.Add(prefab);
+            }
         }
     }
 

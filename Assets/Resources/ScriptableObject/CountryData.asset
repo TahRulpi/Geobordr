@@ -1780,5 +1780,767 @@ MonoBehaviour:
     - countryName: Cuba
       countryFlag: {fileID: 21300000, guid: fa63021bc8cf3c34fb7f859ac9710262, type: 3}
     sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Afghanistan
+      countryFlag: {fileID: 21300000, guid: 0a83170858827724aa037b084766315b, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Akrotiri Sovereign Base Area
+      countryFlag: {fileID: 21300000, guid: 30feb9dfb850593418ab348add4a7b7e, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Albania
+      countryFlag: {fileID: 21300000, guid: d6ef8aa25e0a5dc4c94456ce50fb31ec, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Anguilla
+      countryFlag: {fileID: 21300000, guid: e4d5e3572599b8743af985e7d8da88c6, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Antarctica
+      countryFlag: {fileID: 21300000, guid: 8166c68f6983c2e4d97469973a9ef2cb, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Antigua and Barbuda
+      countryFlag: {fileID: 21300000, guid: fce4e89d9064c0e4b873bb72e32972da, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Armenia
+      countryFlag: {fileID: 21300000, guid: 6a6760115fc204945bf82d1ee81bf849, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Ashmore and Cartier Islands
+      countryFlag: {fileID: 21300000, guid: 2f902487192f1014286b74283d5f9a18, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Austria
+      countryFlag: {fileID: 21300000, guid: 40f2aacd5b107e643a7c728072de929e, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Bahrain
+      countryFlag: {fileID: 21300000, guid: 8967be42a10aa7142ba82fde555b73ce, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Bajo Nuevo Bank (Petrel Is.)
+      countryFlag: {fileID: 21300000, guid: e312c0c5f49bc5041be6fb6d1c2dce66, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Barbados
+      countryFlag: {fileID: 21300000, guid: a481987ca573eb241a152a3a585a8006, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Baykonur Cosmodrome
+      countryFlag: {fileID: 21300000, guid: 506fc24a9483fa146bd3c21f2688a340, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Belarus
+      countryFlag: {fileID: 21300000, guid: ad292e18c945390439f5e991abebd60e, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Bermuda
+      countryFlag: {fileID: 21300000, guid: 096910dd71493a04191326979b547e6f, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Bhutan
+      countryFlag: {fileID: 21300000, guid: d08248d4edd449c4b891f1ffcc0da827, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Bir Tawil
+      countryFlag: {fileID: 21300000, guid: 8c3fd48b6de0c4d4097bf8dfb020eac1, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Bosnia and Herzegovina
+      countryFlag: {fileID: 21300000, guid: e65fae1f1620a924d9eb89e645c3bd18, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Botswana
+      countryFlag: {fileID: 21300000, guid: 8d3dd75fecd9cca49bd01a33498e87ba, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Brazilian Island
+      countryFlag: {fileID: 21300000, guid: 57e94f2c51946ce45a85ae238efa0c85, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: British Indian Ocean Territory
+      countryFlag: {fileID: 21300000, guid: bcafd490b0b96d3449192fbf6dec6c9b, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: British Virgin Islands
+      countryFlag: {fileID: 21300000, guid: 10a057453b39a1f40a9410ef19f5dbd1, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Bulgaria
+      countryFlag: {fileID: 21300000, guid: d4a97637f4ad2cd4c8e1fee09c86d230, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Burkina Faso
+      countryFlag: {fileID: 21300000, guid: aff64301f515ab542a1252d4e05a177a, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Burundi
+      countryFlag: {fileID: 21300000, guid: bf8c959aeccf49d48ba27b6cbbc99005, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Cabo Verde
+      countryFlag: {fileID: 21300000, guid: d04d9159cb2bcee44aba72d2d4048904, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Central African Republic
+      countryFlag: {fileID: 21300000, guid: b539bf0b67929ef42aa661bcc341f7e9, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Chad
+      countryFlag: {fileID: 21300000, guid: ff461433bbb7b194291c133c62fd7a5e, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Clipperton Island
+      countryFlag: {fileID: 21300000, guid: 8ca95736624dfb142808d577b2ad9740, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Comoros
+      countryFlag: {fileID: 21300000, guid: f7e19fc5e29e18b41a062832bda02a3e, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Cook Islands
+      countryFlag: {fileID: 21300000, guid: 9badf6f6931412c4583c3dd0c7e0700c, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Coral Sea Islands
+      countryFlag: {fileID: 21300000, guid: 8c769d32fa951284cad3a7e62980b3f2, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Croatia
+      countryFlag: {fileID: 21300000, guid: f8fddbd4af465534488a7ceaa7d34f57, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Cyprus No Mans Area
+      countryFlag: {fileID: 21300000, guid: 15412b1d8409a724cbbe6df70902bcda, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Cyprus
+      countryFlag: {fileID: 21300000, guid: cb68ff8336a17b44097c0438e04ad4fc, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Czechia
+      countryFlag: {fileID: 21300000, guid: 4c4871064fb33bb42882f76b04695ff1, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Democratic Republic of the Congo
+      countryFlag: {fileID: 21300000, guid: 96970b892d0da6545b03389935dfda63, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Dhekelia Sovereign Base Area
+      countryFlag: {fileID: 21300000, guid: 71dde1c9491b5974eb0be819f2b8b405, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Djibouti
+      countryFlag: {fileID: 21300000, guid: ff4e2fce94849134184062f4d2522a67, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Dominica
+      countryFlag: {fileID: 21300000, guid: f7ca152f1b65b7b479aaee95642363d3, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Estonia
+      countryFlag: {fileID: 21300000, guid: 5a13f9d0bb0c2204fa0ab31837acf2e1, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Falkland Islands
+      countryFlag: {fileID: 21300000, guid: 98a723039e21a2947884bd627f9424f7, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Faroe Islands
+      countryFlag: {fileID: 21300000, guid: f0a534002c959fc4aa4b5a1d3acdf0aa, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Federated States of Micronesia
+      countryFlag: {fileID: 21300000, guid: b168c67dbc873bc4aabe006b44e40604, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Fiji
+      countryFlag: {fileID: 21300000, guid: 3a4e94088f965884dbeee11fa6bddddb, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: French Polynesia
+      countryFlag: {fileID: 21300000, guid: 7c9cfdf56038b7048a679ff42e75b4c5, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Georgia
+      countryFlag: {fileID: 21300000, guid: 46da56c2cbe4c3b41983021cee396b90, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Grenada
+      countryFlag: {fileID: 21300000, guid: e870c99313367a64c95f9eedf556fe27, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Guam
+      countryFlag: {fileID: 21300000, guid: 589d58a73b7effe4cbace9155c89ead7, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Guernsey
+      countryFlag: {fileID: 21300000, guid: 52337b0052e04ae49984eeb1391079d9, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Heard Island and McDonald Islands
+      countryFlag: {fileID: 21300000, guid: 49261ea0839cddc4b922efafb9b414f0, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Honduras
+      countryFlag: {fileID: 21300000, guid: 8db0183bee49e934596124fd9da7a455, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Hong Kong S.A.R.
+      countryFlag: {fileID: 21300000, guid: 50f57deb0e2186f4283e40b9ba4cf917, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Hungary
+      countryFlag: {fileID: 21300000, guid: 3607a475bbb98e0439f0356d9154e507, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Iceland
+      countryFlag: {fileID: 21300000, guid: 479d5f69599db9746a9752db5cab04a4, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Indian Ocean Territories
+      countryFlag: {fileID: 21300000, guid: 33c97b3b2316e4f438eb09603bbc6eee, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Isle of Man
+      countryFlag: {fileID: 21300000, guid: aaca427070d9ad646a0b4af343e74616, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Israel
+      countryFlag: {fileID: 21300000, guid: 29696939ee48ee9459d111268349ab5e, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Jamaica
+      countryFlag: {fileID: 21300000, guid: 362edb5c45807994e9a5537d89262415, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Jersey
+      countryFlag: {fileID: 21300000, guid: 965293081d596104883954b0bd24b344, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Jordan
+      countryFlag: {fileID: 21300000, guid: e3b7ca37b273ef6468a3c38ef45ade64, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Kiribati
+      countryFlag: {fileID: 21300000, guid: f3b67e9d3aab4e549a4b11e63eea6cce, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Kosovo
+      countryFlag: {fileID: 21300000, guid: 5c70faf5d4344384b893e15083296095, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Kyrgyzstan
+      countryFlag: {fileID: 21300000, guid: a9bd72c726268224ba208d958fd5aec8, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Latvia
+      countryFlag: {fileID: 21300000, guid: 821f6bba844bfc540b727ca3d6c0a7a2, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Lebanon
+      countryFlag: {fileID: 21300000, guid: b1a875ae0b8e90943936ca640b105a63, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Liechtenstein
+      countryFlag: {fileID: 21300000, guid: 17a5145808bdae6488b333e70d22c403, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Lithuania
+      countryFlag: {fileID: 21300000, guid: 2195986e4bd204c45ad57c6d26e8c15f, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Luxembourg
+      countryFlag: {fileID: 21300000, guid: d745666e1fd0d424d9d0174eace5626c, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Macao S.A.R
+      countryFlag: {fileID: 21300000, guid: e917ea78de9e6d04abb9e22889da988c, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Mali
+      countryFlag: {fileID: 21300000, guid: 370c4baafd3fce14d8131208b0ef021f, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Marshall Islands
+      countryFlag: {fileID: 21300000, guid: 625c6eaa2ddf35743a0a6ff437972aa7, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Mongolia
+      countryFlag: {fileID: 21300000, guid: fe63d1b4bf47c404db00ddf4a5fef3f1, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Montenegro
+      countryFlag: {fileID: 21300000, guid: c37808ea3eb8b3f4da90f89b1f1bc4c8, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Montserrat
+      countryFlag: {fileID: 21300000, guid: 61ea7519adfc713409136409d6afae4a, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Nauru
+      countryFlag: {fileID: 21300000, guid: 41556bc7765942744b10650056a3d9ef, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Nepal
+      countryFlag: {fileID: 21300000, guid: 863ad73342d85904b8f6741d59adf868, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: New Zealand
+      countryFlag: {fileID: 21300000, guid: 3d485724cd0fcd644a91a9809b0875cc, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Nicaragua
+      countryFlag: {fileID: 21300000, guid: 7868451d1d5f07947a3e0ea4a4694258, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Niger
+      countryFlag: {fileID: 21300000, guid: 4bc1c6f7a2a177d4e8b1658f71d40622, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Niue
+      countryFlag: {fileID: 21300000, guid: 7e6bef8412c8ff14082e90d061b4fa90, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Norfolk Island
+      countryFlag: {fileID: 21300000, guid: f7a10f62f1fec7345940809c587fa932, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: North Macedonia
+      countryFlag: {fileID: 21300000, guid: 4b7b4f8c651f144469d29240980a0d2f, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Northern Cyprus
+      countryFlag: {fileID: 21300000, guid: 719c67a5415cf8f438462bb70af2a885, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Northern Mariana Islands
+      countryFlag: {fileID: 21300000, guid: f50c2354d22b00c4d947f8663c03e469, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Palau
+      countryFlag: {fileID: 21300000, guid: 4fd3a67f4c1e37344ab8d6557eade60e, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Palestine
+      countryFlag: {fileID: 21300000, guid: d7a69aa9691af8042bdca22935fe9bee, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Paraguay
+      countryFlag: {fileID: 21300000, guid: 6d1de32cefa240649ae41e67393788e8, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Pitcairn Islands
+      countryFlag: {fileID: 21300000, guid: c0c2968b4ebd32049b104b8664179202, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Poland
+      countryFlag: {fileID: 21300000, guid: e8f1e2ec8dee43747bdd11f5442ec643, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Qatar
+      countryFlag: {fileID: 21300000, guid: b7af01c8fd997ab48a855a84c741e0fc, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Republic of Serbia
+      countryFlag: {fileID: 21300000, guid: d361affe9fba81d4f9f6e1c8a3faa625, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Rwanda
+      countryFlag: {fileID: 21300000, guid: 08febe86ab2cfd24a81d0b77fe8304b1, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Saint Barthelemy
+      countryFlag: {fileID: 21300000, guid: 0c83c877fa0468c4d83f78ae490f3034, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Saint Helena
+      countryFlag: {fileID: 21300000, guid: a6397dc2e576d954ab98e7f8bf0abe76, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Saint Kitts and Nevis
+      countryFlag: {fileID: 21300000, guid: 862708fd0aebf2d43a195ccc29c904f4, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Saint Lucia
+      countryFlag: {fileID: 21300000, guid: 3a833bb69cb9b584bace980f71692b52, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Saint Martin
+      countryFlag: {fileID: 21300000, guid: 02ad6b1c41a2f614cacb18cb726d375c, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Saint Pierre and Miquelon
+      countryFlag: {fileID: 21300000, guid: 2fd93a9afae376142bf0b7e24196fe80, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Saint Vincent and the Grenadines
+      countryFlag: {fileID: 21300000, guid: ab673813e358a1e4387f9210b05e5bf4, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: San Marino
+      countryFlag: {fileID: 21300000, guid: ed182d74c325ddc40803ef0dcf4c3584, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Scarborough Reef
+      countryFlag: {fileID: 21300000, guid: 73a1db81d051fb0488d6b70ef60a5199, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Serranilla Bank
+      countryFlag: {fileID: 21300000, guid: b11b3a0796091fd46bb2c4d3388b5fa9, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Seychelles
+      countryFlag: {fileID: 21300000, guid: 8c0f42588a6ec7640b49cad4dea45d6d, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Siachen Glacier
+      countryFlag: {fileID: 21300000, guid: fc104b33a9cfc7c4490cc5d5114b7574, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Sint Maarten
+      countryFlag: {fileID: 21300000, guid: 617994e527d8e9d4f9b822c9715b56d3, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Slovakia
+      countryFlag: {fileID: 21300000, guid: 28b8e7df6064e094180b3ef4643cdbf3, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Slovenia
+      countryFlag: {fileID: 21300000, guid: 116c5ebae6695fe45ab6e0284860d817, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: South Georgia and the Islands
+      countryFlag: {fileID: 21300000, guid: 85c5f78fd62e86048bd143114c294a17, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: South Sudan
+      countryFlag: {fileID: 21300000, guid: 1f81bf378c72c4d46ad642f4c49e8966, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Southern Patagonian Ice Field
+      countryFlag: {fileID: 21300000, guid: 4699e1053ff4af646b34c0693f4c476b, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Spratly Islands
+      countryFlag: {fileID: 21300000, guid: 7341d13f8857add48a7738ab47169f0b, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Switzerland
+      countryFlag: {fileID: 21300000, guid: d0b97195b62f49d419710d4079ae4ec4, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Syria
+      countryFlag: {fileID: 21300000, guid: 5a4ea7181be04b6408842ba37a71d42e, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: "S\xE3o Tom\xE9 and Principe"
+      countryFlag: {fileID: 21300000, guid: d9596524ebd1b0d4d85a00437203e008, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Tajikistan
+      countryFlag: {fileID: 21300000, guid: d8b9727286e4ea845b3d3842eb38e8e5, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Tonga
+      countryFlag: {fileID: 21300000, guid: 67e3a92c447af6e4db12f3dbcce3a39a, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Trinidad and Tobago
+      countryFlag: {fileID: 21300000, guid: c8f6ff68279924244af5b5213653640c, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Turks and Caicos Islands
+      countryFlag: {fileID: 21300000, guid: 721ad8fa8931a3f4d953926e9b7833be, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Tuvalu
+      countryFlag: {fileID: 21300000, guid: a241c24571238c947bdbd763831071f7, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Uganda
+      countryFlag: {fileID: 21300000, guid: eeb9ca7d6fc53d7459285a2aa2681da6, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: United States Minor Outlying Islands
+      countryFlag: {fileID: 21300000, guid: 5abc6a809759993428bb6eda8758a1e6, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: United States Virgin Islands
+      countryFlag: {fileID: 21300000, guid: 31846d5f49a9dce44ac2ba98dcf1f1e5, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: United States
+      countryFlag: {fileID: 21300000, guid: 62a5e1ee0c12a5f4bbd9e9e211879716, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: US Naval Base Guantanamo Bay
+      countryFlag: {fileID: 21300000, guid: 6327949641859094f9dcfba685738a5b, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Wallis and Futuna
+      countryFlag: {fileID: 21300000, guid: f76b66aa32e1595448fcb16fd4bbf3d7, type: 3}
+    sourceFileName: 
+  - gridImage: {fileID: 0}
+    optionsPrefabs: []
+    countries:
+    - countryName: Zambia
+      countryFlag: {fileID: 21300000, guid: 2da32d3bf69ffb0478ca1c7c1d53c0ec, type: 3}
+    sourceFileName: 
   minCountriesPerRound: 2
   maxCountriesPerRound: 4
