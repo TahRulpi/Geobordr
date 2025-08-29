@@ -1,6 +1,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.Linq; // Add this line
+
+[Serializable]
+public struct CountryDetail // NEW: Struct to hold name and flag
+{
+    public string countryName;
+    public Sprite countryFlag;
+}
 
 [Serializable]
 public struct CountryInfo
@@ -12,27 +20,28 @@ public struct CountryInfo
     // The InputField component would be on this prefab.
     public GameObject[] optionsPrefabs;
 
-    // You can keep the list of country names as a string list.
-    public List<string> countryName;
+    // UPDATED: Replaced List<string> with List<CountryDetail> to include flags
+    public List<CountryDetail> countries; 
     
     // Optional: Store the original filename for reference
     [SerializeField] private string sourceFileName;
     
     // Helper property to get the number of countries in this cluster
-    public int CountryCount => countryName?.Count ?? 0;
+    public int CountryCount => countries?.Count ?? 0;
     
     // Helper method to check if a country is in this cluster
     public bool ContainsCountry(string country)
     {
-        if (countryName == null) return false;
-        return countryName.Exists(c => string.Equals(c, country, StringComparison.OrdinalIgnoreCase));
+        if (countries == null) return false;
+        // UPDATED: Check against the countryName in the CountryDetail struct
+        return countries.Exists(c => string.Equals(c.countryName, country, StringComparison.OrdinalIgnoreCase));
     }
     
     // Constructor for easier creation
-    public CountryInfo(Sprite sprite, List<string> countries, GameObject[] prefabs, string fileName = "")
+    public CountryInfo(Sprite sprite, List<CountryDetail> countryDetails, GameObject[] prefabs, string fileName = "")
     {
         gridImage = sprite;
-        countryName = countries;
+        countries = countryDetails;
         optionsPrefabs = prefabs;
         sourceFileName = fileName;
     }
@@ -84,23 +93,39 @@ public class CountryData : ScriptableObject
     // Get all unique country names across all clusters
     public List<string> GetAllUniqueCountries()
     {
+        if (countryInfo == null) return new List<string>();
+
+        // UPDATED: Extract country names from the new structure
         HashSet<string> uniqueCountries = new HashSet<string>();
         
-        if (countryInfo != null)
+        foreach (var info in countryInfo)
         {
-            foreach (var info in countryInfo)
+            if (info.countries != null)
             {
-                if (info.countryName != null)
+                foreach (var detail in info.countries)
                 {
-                    foreach (string country in info.countryName)
+                    if (!string.IsNullOrEmpty(detail.countryName))
                     {
-                        uniqueCountries.Add(country);
+                        uniqueCountries.Add(detail.countryName);
                     }
                 }
             }
         }
         
         return new List<string>(uniqueCountries);
+    }
+
+    // NEW HELPER: Get all unique country details (name and flag) for the autocomplete script
+    public List<CountryDetail> GetAllUniqueCountryDetails()
+    {
+        if (countryInfo == null) return new List<CountryDetail>();
+
+        return countryInfo
+            .SelectMany(info => info.countries)
+            .Where(detail => !string.IsNullOrEmpty(detail.countryName))
+            .GroupBy(detail => detail.countryName)
+            .Select(group => group.First())
+            .ToList();
     }
     
     // Get statistics about the data

@@ -275,7 +275,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &55628995
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1249,15 +1249,15 @@ RectTransform:
   m_GameObject: {fileID: 419609182}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.72, y: 1, z: 1}
+  m_LocalScale: {x: 1.72, y: 1.72, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 266593018}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -5.220398, y: -227.5}
-  m_SizeDelta: {x: 629.2095, y: 455}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 2}
+  m_SizeDelta: {x: -180, y: -34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &519420028
 GameObject:
@@ -2887,7 +2887,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1016385376
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4154,12 +4154,11 @@ MonoBehaviour:
   currentRoundInfo:
     gridImage: {fileID: 0}
     optionsPrefabs: []
-    countryName: []
+    countries: []
     sourceFileName: 
   currentRoundCountries: []
   isGameOver: 0
   totalCorrectGuesses: 0
-  correctGuessesThisRound: 0
   gamePanel: {fileID: 55628994}
   resultPanel: {fileID: 1416547947}
 --- !u!1 &1829420238
