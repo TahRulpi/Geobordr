@@ -3877,6 +3877,7 @@ GameObject:
   - component: {fileID: 1416547951}
   - component: {fileID: 1416547950}
   - component: {fileID: 1416547949}
+  - component: {fileID: 1416547953}
   m_Layer: 5
   m_Name: Result Panel
   m_TagString: Untagged
@@ -4060,6 +4061,18 @@ MonoBehaviour:
     parentTransformRect: {fileID: 0}
     parentTransform: {fileID: 0}
     partOfPrefab: 0
+--- !u!225 &1416547953
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416547947}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1429906469
 GameObject:
   m_ObjectHideFlags: 0
@@ -4487,7 +4500,7 @@ MonoBehaviour:
   minCountriesPerRound: 2
   maxCountriesPerRound: 5
   maxRounds: 10
-  maxTotalAttempts: 6
+  maxTotalAttempts: 1
   mapDisplayImage: {fileID: 419609183}
   roundDisplayText: {fileID: 1928407639}
   gameOverText: {fileID: 0}
