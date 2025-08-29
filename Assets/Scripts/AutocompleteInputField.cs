@@ -3,13 +3,14 @@ using UnityEngine;
 using TMPro;
 using System.Linq;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class AutocompleteInputField : MonoBehaviour
+public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
 {
     [Header("Settings")]
     public int maxSuggestions = 5;
 
-    [Header("UI References")] // NEW
+    [Header("UI References")] 
     public Image flagImage; // Assign the flag Image UI element from your prefab
     public Sprite defaultFlag; // Optional: A default image to show when no country is typed
 
@@ -17,11 +18,12 @@ public class AutocompleteInputField : MonoBehaviour
     [SerializeField] private List<string> availableCountries = new List<string>();
     [SerializeField] private List<GameObject> suggestionButtons = new List<GameObject>();
     
-    // NEW: Dictionary for quick flag lookups, ignoring case
+    // Dictionary for quick flag lookups, ignoring case
     private Dictionary<string, Sprite> countryFlags = new Dictionary<string, Sprite>(System.StringComparer.OrdinalIgnoreCase);
 
     private TMP_InputField inputField;
     private CountryGameManager countryGameManager;
+    private GameObject scrollView;
     private GameObject suggestionPanel;
     private bool isShowingSuggestions = false;
     private string lastValidatedAnswer = ""; // Track last validated answer to prevent duplicate point deductions
@@ -46,12 +48,11 @@ public class AutocompleteInputField : MonoBehaviour
         // Set up listeners
         inputField.onValueChanged.AddListener(OnInputChanged);
         inputField.onSelect.AddListener(OnInputSelected);
-        inputField.onDeselect.AddListener(OnInputDeselected);
         
         // Initialize country list
         PopulateCountryList();
         
-        // Create suggestion panel automatically
+        // Create scrollable suggestion panel
         CreateSuggestionPanel();
         
         // Set initial flag state
@@ -66,60 +67,106 @@ public class AutocompleteInputField : MonoBehaviour
 
     private void CreateSuggestionPanel()
     {
-        // Create the suggestion panel as a child of this GameObject
-        suggestionPanel = new GameObject("AutoSuggestionPanel");
-        suggestionPanel.transform.SetParent(transform, false);
-        
-        // Add RectTransform
-        RectTransform panelRect = suggestionPanel.AddComponent<RectTransform>();
-        
-        // Position it below the input field
+        Transform inputParent = transform.parent;
+        if (inputParent == null)
+        {
+            Debug.LogError("Input field must have a parent to create the suggestion panel.");
+            return;
+        }
+
+        // Create scrollable container
+        scrollView = new GameObject("AutoSuggestionScrollView");
+        scrollView.transform.SetParent(inputParent, false);
+
+        RectTransform scrollViewRect = scrollView.AddComponent<RectTransform>();
         RectTransform inputRect = inputField.GetComponent<RectTransform>();
-        panelRect.anchorMin = new Vector2(0, 0);
-        panelRect.anchorMax = new Vector2(1, 0);
-        panelRect.pivot = new Vector2(0.5f, 1f);
-        panelRect.anchoredPosition = new Vector2(0, -5f);
-        panelRect.sizeDelta = new Vector2(0, 150);
-        
-        // Add Canvas component with high sort order to ensure it appears above other UI elements
-        Canvas panelCanvas = suggestionPanel.AddComponent<Canvas>();
-        panelCanvas.overrideSorting = true;
-        panelCanvas.sortingOrder = 1000; // High value to appear above other UI elements
-        
-        // Add GraphicRaycaster for UI interaction
-        suggestionPanel.AddComponent<GraphicRaycaster>();
-        
-        // Add Content Size Fitter for better layout handling
-        ContentSizeFitter sizeFitter = suggestionPanel.AddComponent<ContentSizeFitter>();
-        sizeFitter.verticalFit = ContentSizeFitter.FitMode.PreferredSize;
-        
-        // Add Vertical Layout Group for automatic spacing
+
+        // Calculate position relative to input field
+        Vector3[] inputCorners = new Vector3[4];
+        inputRect.GetWorldCorners(inputCorners);
+
+        Vector3[] parentCorners = new Vector3[4];
+        inputParent.GetComponent<RectTransform>().GetWorldCorners(parentCorners);
+
+        Vector2 localBottomLeft;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(inputParent.GetComponent<RectTransform>(), inputCorners[0], null, out localBottomLeft);
+
+        Vector2 localBottomRight;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(inputParent.GetComponent<RectTransform>(), inputCorners[3], null, out localBottomRight);
+
+        Vector2 localTopRight;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(inputParent.GetComponent<RectTransform>(), inputCorners[2], null, out localTopRight);
+
+        scrollViewRect.pivot = new Vector2(0.5f, 1f);
+        scrollViewRect.anchorMin = new Vector2(0.5f, 0.5f);
+        scrollViewRect.anchorMax = new Vector2(0.5f, 0.5f);
+
+        float inputWidth = Vector2.Distance(localBottomLeft, localBottomRight);
+        float inputHeight = Vector2.Distance(localBottomRight, localTopRight);
+        Vector2 inputCenter = new Vector2((localBottomLeft.x + localBottomRight.x) / 2, (localBottomLeft.y + localTopRight.y) / 2);
+
+        scrollViewRect.sizeDelta = new Vector2(inputWidth, 350f); // Height for scrollable area
+        scrollViewRect.anchoredPosition = new Vector2(inputCenter.x, inputCenter.y - inputHeight / 2 - 5f);
+
+        // Add ScrollRect component
+        ScrollRect scrollRect = scrollView.AddComponent<ScrollRect>();
+        scrollRect.horizontal = false;
+        scrollRect.vertical = true;
+
+        // Create viewport
+        GameObject viewport = new GameObject("Viewport");
+        viewport.transform.SetParent(scrollView.transform, false);
+        RectTransform viewportRect = viewport.AddComponent<RectTransform>();
+        viewportRect.anchorMin = Vector2.zero;
+        viewportRect.anchorMax = Vector2.one;
+        viewportRect.pivot = new Vector2(0.5f, 1f);
+        viewportRect.sizeDelta = Vector2.zero;
+
+        Mask viewportMask = viewport.AddComponent<Mask>();
+        viewportMask.showMaskGraphic = false;
+
+        Image viewportBg = viewport.AddComponent<Image>();
+        viewportBg.color = new Color(112f / 255f, 196f / 255f, 196f / 255f, 0.95f);
+
+        Outline outline = viewport.AddComponent<Outline>();
+        outline.effectColor = Color.gray;
+        outline.effectDistance = new Vector2(1, -1);
+
+        // Create content panel
+        suggestionPanel = new GameObject("AutoSuggestionContent");
+        suggestionPanel.transform.SetParent(viewport.transform, false);
+        RectTransform contentRect = suggestionPanel.AddComponent<RectTransform>();
+        contentRect.anchorMin = new Vector2(0, 1);
+        contentRect.anchorMax = new Vector2(1, 1);
+        contentRect.pivot = new Vector2(0.5f, 1f);
+        contentRect.sizeDelta = Vector2.zero;
+
+        // Add layout components
         VerticalLayoutGroup layoutGroup = suggestionPanel.AddComponent<VerticalLayoutGroup>();
         layoutGroup.childControlHeight = true;
         layoutGroup.childControlWidth = true;
         layoutGroup.childForceExpandHeight = false;
         layoutGroup.childForceExpandWidth = true;
-        layoutGroup.spacing = 2f; // Small gap between suggestions
-        
-        // Add background image
-        Image panelBg = suggestionPanel.AddComponent<Image>();
-        panelBg.color = new Color(112f/255f, 196f/255f, 196f/255f, 0.95f);
-        
-        // Add border (optional)
-        Outline outline = suggestionPanel.AddComponent<Outline>();
-        outline.effectColor = Color.gray;
-        outline.effectDistance = new Vector2(1, -1);
-        
+        layoutGroup.spacing = 0f; // Increased spacing between suggestions
+        layoutGroup.padding = new RectOffset(0, 0, 16, 16); // Add top and bottom padding to each item
+
+        ContentSizeFitter sizeFitter = suggestionPanel.AddComponent<ContentSizeFitter>();
+        sizeFitter.verticalFit = ContentSizeFitter.FitMode.PreferredSize;
+
+        // Connect ScrollRect components
+        scrollRect.viewport = viewportRect;
+        scrollRect.content = contentRect;
+
         // Hide initially
-        suggestionPanel.SetActive(false);
+        scrollView.SetActive(false);
         
-        Debug.Log("✅ Auto-created suggestion panel underneath input field");
+        Debug.Log("✅ Auto-created scrollable suggestion panel underneath input field");
     }
 
     private void PopulateCountryList()
     {
         availableCountries.Clear();
-        countryFlags.Clear(); // UPDATED: Clear the dictionary
+        countryFlags.Clear(); // Clear the flag dictionary
         
         if (countryGameManager == null || countryGameManager.countryData == null)
         {
@@ -137,7 +184,7 @@ public class AutocompleteInputField : MonoBehaviour
         }
         else
         {
-            // UPDATED: Get all unique country details (name and flag)
+            // Get all unique country details (name and flag)
             var allCountryDetails = countryGameManager.countryData.GetAllUniqueCountryDetails();
             
             foreach (var detail in allCountryDetails)
@@ -169,7 +216,7 @@ public class AutocompleteInputField : MonoBehaviour
             // If user cleared the input, hide suggestions and reset any validation/visual feedback
             HideSuggestions();
             ResetValidationState();
-            UpdateFlag(inputText); // NEW: Update flag on input change
+            UpdateFlag(inputText); // Update flag on input change
             return;
         }
 
@@ -188,7 +235,7 @@ public class AutocompleteInputField : MonoBehaviour
             HideSuggestions();
         }
         
-        UpdateFlag(inputText); // NEW: Update flag on input change
+        UpdateFlag(inputText); // Update flag on input change
         Debug.Log($"Input: '{inputText}' - Found {matchingCountries.Count} matches");
     }
 
@@ -201,48 +248,73 @@ public class AutocompleteInputField : MonoBehaviour
         }
     }
 
-    private void OnInputDeselected(string text)
+    public void OnPointerDown(PointerEventData eventData)
     {
-        // Delay hiding to allow suggestion selection
-        Invoke(nameof(HideSuggestions), 0.2f);
+        // Hide suggestions when clicking outside of input field or suggestion panel
+        if (!EventSystem.current.IsPointerOverGameObject() ||
+            (!IsChildOf(eventData.pointerCurrentRaycast.gameObject, scrollView) && eventData.pointerCurrentRaycast.gameObject != inputField.gameObject))
+        {
+            HideSuggestions();
+        }
+    }
+
+    private bool IsChildOf(GameObject child, GameObject parent)
+    {
+        if (child == null || parent == null)
+            return false;
+        Transform current = child.transform;
+        while (current != null)
+        {
+            if (current == parent.transform)
+                return true;
+            current = current.parent;
+        }
+        return false;
     }
 
     private void ShowSuggestions(List<string> suggestions)
     {
-        if (suggestionPanel == null)
+        if (scrollView == null)
         {
-            Debug.LogWarning("Suggestion panel not created!");
+            Debug.LogWarning("Suggestion scroll view not created!");
             return;
         }
-
+        
+        // Ensure the scroll view appears above other UI elements
+        scrollView.transform.SetAsLastSibling();
+        
         // Clear existing suggestions
         ClearSuggestions();
 
-        // Create suggestion buttons directly
-        foreach (string suggestion in suggestions)
+        // Create suggestion buttons
+        for (int i = 0; i < suggestions.Count; i++)
         {
-            CreateSimpleSuggestionButton(suggestion);
+            CreateSimpleSuggestionButton(suggestions[i], i);
         }
 
         // Show the panel
-        suggestionPanel.SetActive(true);
+        scrollView.SetActive(true);
         isShowingSuggestions = true;
         
         Debug.Log($"✅ Showing {suggestions.Count} suggestions");
     }
 
-    private void CreateSimpleSuggestionButton(string countryName)
+    private void CreateSimpleSuggestionButton(string countryName, int index)
     {
         // Create button GameObject
         GameObject button = new GameObject($"Suggestion_{countryName}");
         button.transform.SetParent(suggestionPanel.transform, false);
         
         // Add RectTransform (Layout Group will handle positioning)
-        button.AddComponent<RectTransform>();
+        RectTransform buttonRect = button.AddComponent<RectTransform>();
         
-        // Add Image background
+        // Add Image background with alternating colors
         Image buttonBg = button.AddComponent<Image>();
-        buttonBg.color = new Color(112f/255f, 196f/255f, 196f/255f, 0.8f);
+        // Alternate between two contrasting shades for better visibility
+        Color bgColor = (index % 2 == 0) 
+            ? new Color(112f/255f, 196f/255f, 196f/255f, 0.9f) // Original color for even rows (slightly more opaque)
+            : new Color(85f/255f, 150f/255f, 150f/255f, 0.9f);  // Much darker for odd rows
+        buttonBg.color = bgColor;
         
         // Add Button component
         Button buttonComponent = button.AddComponent<Button>();
@@ -250,15 +322,42 @@ public class AutocompleteInputField : MonoBehaviour
         
         // Add Layout Element for better size control
         LayoutElement layoutElement = button.AddComponent<LayoutElement>();
-        layoutElement.minHeight = 35f;
-        layoutElement.preferredHeight = 35f;
+        layoutElement.minHeight = 80f; // Increased height for better visibility
+        layoutElement.preferredHeight = 80f;
         
-        // Set button colors for hover effect
+        // Set button colors for hover effect with alternating base colors
         ColorBlock colors = buttonComponent.colors;
-        colors.normalColor = new Color(112f/255f, 196f/255f, 196f/255f, 0.8f);
-        colors.highlightedColor = new Color(90f/255f, 220f/255f, 220f/255f, 1f);
-        colors.pressedColor = new Color(70f/255f, 170f/255f, 170f/255f, 1f);
+        colors.normalColor = bgColor; // Use the alternating background color
+        colors.highlightedColor = (index % 2 == 0) 
+            ? new Color(130f/255f, 210f/255f, 210f/255f, 1f)   // Brighter hover for even rows
+            : new Color(105f/255f, 170f/255f, 170f/255f, 1f);  // Darker hover for odd rows
+        colors.pressedColor = new Color(70f/255f, 170f/255f, 170f/255f, 1f); // Same pressed color for all
         buttonComponent.colors = colors;
+        
+        // Create flag image (if available)
+        GameObject flagObj = new GameObject("Flag");
+        flagObj.transform.SetParent(button.transform, false);
+        
+        RectTransform flagRect = flagObj.AddComponent<RectTransform>();
+        flagRect.anchorMin = new Vector2(0, 0.5f);
+        flagRect.anchorMax = new Vector2(0, 0.5f);
+        flagRect.pivot = new Vector2(0, 0.5f);
+        flagRect.sizeDelta = new Vector2(48, 36); // Flag size (4:3 aspect ratio)
+        flagRect.localScale = new Vector3(1.83000004f, 1.42771554f, 1.42771554f);
+        flagRect.anchoredPosition = new Vector2(50, 0); // Position from left edge
+        
+        Image flagImage = flagObj.AddComponent<Image>();
+        
+        // Try to get the flag for this country
+        if (countryFlags.TryGetValue(countryName, out Sprite flagSprite))
+        {
+            flagImage.sprite = flagSprite;
+        }
+        else
+        {
+            // If no flag available, use a placeholder or hide the image
+            flagObj.SetActive(false);
+        }
         
         // Create text
         GameObject textObj = new GameObject("Text");
@@ -268,12 +367,14 @@ public class AutocompleteInputField : MonoBehaviour
         textRect.anchorMin = Vector2.zero;
         textRect.anchorMax = Vector2.one;
         textRect.sizeDelta = Vector2.zero;
-        textRect.offsetMin = new Vector2(10, 0);
-        textRect.offsetMax = new Vector2(-10, 0);
+        // Adjust left padding to account for flag (flag width + some spacing)
+        float leftPadding = countryFlags.ContainsKey(countryName) ? 160f : 15f;
+        textRect.offsetMin = new Vector2(leftPadding, 0);
+        textRect.offsetMax = new Vector2(-15, 0);
         
         TextMeshProUGUI text = textObj.AddComponent<TextMeshProUGUI>();
         text.text = countryName;
-        text.fontSize = 14;
+        text.fontSize = 53; // Increased font size for better readability
         text.color = Color.black;
         text.verticalAlignment = VerticalAlignmentOptions.Middle;
         text.horizontalAlignment = HorizontalAlignmentOptions.Left;
@@ -301,7 +402,7 @@ public class AutocompleteInputField : MonoBehaviour
         // Perform real-time validation
         ValidateSelectionRealTime(countryName);
         
-        // NEW: Update flag when suggestion is clicked
+        // Update flag when suggestion is clicked
         UpdateFlag(countryName);
         
         Debug.Log($"✅ Selected country: {countryName}");
@@ -311,9 +412,9 @@ public class AutocompleteInputField : MonoBehaviour
     {
         if (!isShowingSuggestions) return; // Early exit if already hidden
         
-        if (suggestionPanel != null)
+        if (scrollView != null)
         {
-            suggestionPanel.SetActive(false);
+            scrollView.SetActive(false);
         }
         
         ClearSuggestions();
@@ -326,13 +427,13 @@ public class AutocompleteInputField : MonoBehaviour
         {
             if (button != null)
             {
-                Destroy(button); // Use Destroy instead of DestroyImmediate
+                Destroy(button); // Use Destroy instead of DestroyImmediate for better performance
             }
         }
         suggestionButtons.Clear();
     }
     
-    // NEW: Method to update the flag image based on the current input text
+    // Method to update the flag image based on the current input text
     private void UpdateFlag(string countryName)
     {
         if (flagImage == null) return;
@@ -405,7 +506,6 @@ public class AutocompleteInputField : MonoBehaviour
         {
             inputField.onValueChanged.RemoveAllListeners();
             inputField.onSelect.RemoveAllListeners();
-            inputField.onDeselect.RemoveAllListeners();
         }
     }
 
@@ -447,7 +547,7 @@ public class AutocompleteInputField : MonoBehaviour
         {
             SetInputFieldColor(new Color(0.7f, 1f, 0.7f, 1f));
             Debug.Log($"✅ CORRECT: '{trimmedCountry}' is valid for this round");
-            FindObjectOfType<CountryGameManager>().IncrementCorrectGuesses();
+            countryGameManager.IncrementCorrectGuesses();
         }
         else
         {

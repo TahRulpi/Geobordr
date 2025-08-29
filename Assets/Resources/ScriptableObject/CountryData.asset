@@ -262,7 +262,7 @@ MonoBehaviour:
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     countries:
     - countryName: e Swatini
-      countryFlag: {fileID: 0}
+      countryFlag: {fileID: 21300000, guid: 3b16c2b6fad299f4abdaa8074e994877, type: 3}
     - countryName: South Africa
       countryFlag: {fileID: 21300000, guid: bdf3c86dc7671834686a61fac7629d6b, type: 3}
     - countryName: Mozambique
@@ -1011,7 +1011,7 @@ MonoBehaviour:
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     countries:
     - countryName: French Southernand Antarctic Lands
-      countryFlag: {fileID: 0}
+      countryFlag: {fileID: 21300000, guid: 0c7871a6eb161b44fb8317b50ce13953, type: 3}
     - countryName: Madagascar
       countryFlag: {fileID: 21300000, guid: 6f5ab431d6edbaa4abcaf721a062a767, type: 3}
     sourceFileName: 
@@ -1101,7 +1101,7 @@ MonoBehaviour:
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     countries:
     - countryName: French Southernand Antarctic Lands
-      countryFlag: {fileID: 0}
+      countryFlag: {fileID: 21300000, guid: 0c7871a6eb161b44fb8317b50ce13953, type: 3}
     - countryName: France
       countryFlag: {fileID: 21300000, guid: 2e9b7b86802fa0e438f6515dab44dc46, type: 3}
     - countryName: Madagascar
@@ -1609,7 +1609,7 @@ MonoBehaviour:
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     countries:
     - countryName: French Southernand Antarctic Lands
-      countryFlag: {fileID: 0}
+      countryFlag: {fileID: 21300000, guid: 0c7871a6eb161b44fb8317b50ce13953, type: 3}
     - countryName: Mozambique
       countryFlag: {fileID: 21300000, guid: 4ebed6eb515f69446b3364d817d40556, type: 3}
     sourceFileName: 
