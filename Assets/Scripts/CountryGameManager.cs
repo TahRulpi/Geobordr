@@ -21,7 +21,8 @@ public class CountryGameManager : MonoBehaviour
     public TextMeshProUGUI gameOverText; // Reference to your game over text
     public TextMeshProUGUI chanceLeftText; // Reference to your "Chance Left: " text
     public NextRoundButton nextRoundButton; // Reference to reset input field colors
-
+    public GameObject nextRoundButtonObject;
+    
     [Header("Result Panel UI")] // Add this new header
     public TextMeshProUGUI finalScoreText;
 
@@ -34,7 +35,8 @@ public class CountryGameManager : MonoBehaviour
     [SerializeField] private bool isGameOver = false;
 
 
-    [SerializeField] private int totalCorrectGuesses = 0;
+    [SerializeField] private int correctGuessesInThisRound = 0;
+
     private System.Random random;
 
 
@@ -51,6 +53,10 @@ public class CountryGameManager : MonoBehaviour
 
     public void StartNewRound()
     {
+        // Add these two lines to reset the round and hide the button
+        correctGuessesInThisRound = 0;
+        if (nextRoundButtonObject != null) nextRoundButtonObject.SetActive(false);
+
         // Check if game is over
         if (isGameOver)
         {
@@ -237,9 +243,20 @@ public class CountryGameManager : MonoBehaviour
 
     public void IncrementCorrectGuesses()
     {
-        totalCorrectGuesses++;
-        Debug.Log($"Correct guess! Total correct guesses: {totalCorrectGuesses}");
+        correctGuessesInThisRound++;
+        Debug.Log($"Correct guess! Progress for this round: {correctGuessesInThisRound}/{currentRoundCountries.Count}");
+        
+        // Check if the round is complete
+        if (correctGuessesInThisRound >= currentRoundCountries.Count)
+        {
+            Debug.Log("🎉 Round Complete! Showing Next Round button.");
+            if (nextRoundButtonObject != null)
+            {
+                nextRoundButtonObject.SetActive(true);
+            }
+        }
     }
+
     private void DisplayMapImage()
     {
         if (mapDisplayImage != null && currentRoundInfo.gridImage != null)
@@ -286,7 +303,7 @@ public class CountryGameManager : MonoBehaviour
         currentGameRound = 1;
         isGameOver = false;
         currentRoundCountries = new List<string>();
-        totalCorrectGuesses = 0;
+        correctGuessesInThisRound = 0;
 
         // Reset RoundManager state
         if (roundManager != null)
@@ -372,8 +389,8 @@ public class CountryGameManager : MonoBehaviour
         if (finalScoreText != null)
         {
             // Display the total correct guesses on the result panel
-            finalScoreText.text = $"YOUR CORRECT GUESSES\n<size=150%>{totalCorrectGuesses}</size>";
-            Debug.Log($"Final Score Displayed: {totalCorrectGuesses} correct guesses.");
+            finalScoreText.text = $"YOUR CORRECT GUESSES\n<size=150%>{correctGuessesInThisRound}</size>";
+            Debug.Log($"Final Score Displayed: {correctGuessesInThisRound} correct guesses.");
         }
     }
 

@@ -313,7 +313,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 55628994}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
   m_Name: 
@@ -4147,6 +4147,7 @@ MonoBehaviour:
   gameOverText: {fileID: 0}
   chanceLeftText: {fileID: 2020022931}
   nextRoundButton: {fileID: 745820480}
+  nextRoundButtonObject: {fileID: 745820475}
   finalScoreText: {fileID: 16010728}
   currentRoundIndex: 0
   currentGameRound: 1
@@ -4158,7 +4159,7 @@ MonoBehaviour:
     sourceFileName: 
   currentRoundCountries: []
   isGameOver: 0
-  totalCorrectGuesses: 0
+  correctGuessesInThisRound: 0
   gamePanel: {fileID: 55628994}
   resultPanel: {fileID: 1416547947}
 --- !u!1 &1829420238
