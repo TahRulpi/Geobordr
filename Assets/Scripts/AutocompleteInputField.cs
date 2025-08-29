@@ -331,7 +331,7 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
         buttonComponent.targetGraphic = buttonBg;
 
         //when call click this button run debug log
-        buttonComponent.onClick.AddListener(() => MoveGameViewDown()); 
+        //buttonComponent.onClick.AddListener(() => MoveGameViewDown()); 
 
         // Add Layout Element for better size control
         LayoutElement layoutElement = button.AddComponent<LayoutElement>();
@@ -408,7 +408,9 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
         {
             inputField.text = countryName;
         }
-        
+
+        //MoveGameViewDown();
+
         // Hide suggestions
         HideSuggestions();
         

@@ -433,15 +433,16 @@ public class CountryGameManager : MonoBehaviour
     {
         if (gameView != null)
         {
-            gameView.transform.DOLocalMoveY(150f, 0.5f).SetEase(Ease.OutQuad);
+            gameView.transform.DOLocalMoveY(180f, 0.5f).SetEase(Ease.OutQuad);
         }
     }
 
+    // function to gameView object go back to original position
     public void MoveGameViewDown()
     {
         if (gameView != null)
         {
-            gameView.transform.DOLocalMoveY(150f, 0.5f).SetEase(Ease.OutQuad);
+            gameView.transform.DOLocalMoveY(0f, 0.5f).SetEase(Ease.OutQuad);
         }
     }
 
