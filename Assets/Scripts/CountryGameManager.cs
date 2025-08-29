@@ -24,7 +24,9 @@ public class CountryGameManager : MonoBehaviour
     public GameObject nextRoundButtonObject;
     
     [Header("Result Panel UI")] // Add this new header
-    public TextMeshProUGUI finalScoreText;
+    public TMP_Text finalScoreText;
+    public TMP_Text finalScoreText_2;
+
 
     [Header("Current Round Info")]
     [SerializeField] private int currentRoundIndex;
@@ -394,7 +396,10 @@ public class CountryGameManager : MonoBehaviour
         if (finalScoreText != null)
         {
             // Display the total correct guesses on the result panel
-            finalScoreText.text = $"YOUR CORRECT GUESSES\n<size=150%>{totalCorrectGuesses}</size>";
+            //finalScoreText.text = $"YOUR CORRECT GUESSES\n<size=150%>{totalCorrectGuesses}</size>";
+            
+            finalScoreText.text = $"{totalCorrectGuesses}";
+            finalScoreText_2.text = $"{totalCorrectGuesses}";
             Debug.Log($"Final Score Displayed: {totalCorrectGuesses} correct guesses.");
         }
     }

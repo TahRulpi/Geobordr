@@ -28,6 +28,11 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
     private bool isShowingSuggestions = false;
     private string lastValidatedAnswer = ""; // Track last validated answer to prevent duplicate point deductions
 
+    //take a color
+    public Color oddCardColor = new Color32(0, 255, 0, 255);
+    public Color evenCardColor = new Color32(0, 255, 0, 255);
+
+
     private void Start()
     {
         // Find components automatically
@@ -304,6 +309,7 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
         // Create button GameObject
         GameObject button = new GameObject($"Suggestion_{countryName}");
         button.transform.SetParent(suggestionPanel.transform, false);
+
         
         // Add RectTransform (Layout Group will handle positioning)
         RectTransform buttonRect = button.AddComponent<RectTransform>();
@@ -311,9 +317,9 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
         // Add Image background with alternating colors
         Image buttonBg = button.AddComponent<Image>();
         // Alternate between two contrasting shades for better visibility
-        Color bgColor = (index % 2 == 0) 
-            ? new Color(112f/255f, 196f/255f, 196f/255f, 0.9f) // Original color for even rows (slightly more opaque)
-            : new Color(85f/255f, 150f/255f, 150f/255f, 0.9f);  // Much darker for odd rows
+        Color bgColor = (index % 2 == 0)
+            ? oddCardColor// Light blue (even rows)
+            : evenCardColor; // Slightly darker blue (odd rows)
         buttonBg.color = bgColor;
         
         // Add Button component
@@ -322,8 +328,8 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
         
         // Add Layout Element for better size control
         LayoutElement layoutElement = button.AddComponent<LayoutElement>();
-        layoutElement.minHeight = 80f; // Increased height for better visibility
-        layoutElement.preferredHeight = 80f;
+        layoutElement.minHeight = 120f; // Increased height for better visibility
+        layoutElement.preferredHeight = 120f;
         
         // Set button colors for hover effect with alternating base colors
         ColorBlock colors = buttonComponent.colors;
@@ -374,7 +380,7 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
         
         TextMeshProUGUI text = textObj.AddComponent<TextMeshProUGUI>();
         text.text = countryName;
-        text.fontSize = 53; // Increased font size for better readability
+        text.fontSize = 65; // Increased font size for better readability
         text.color = Color.black;
         text.verticalAlignment = VerticalAlignmentOptions.Middle;
         text.horizontalAlignment = HorizontalAlignmentOptions.Left;
