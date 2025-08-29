@@ -37,6 +37,9 @@ public class CountryGameManager : MonoBehaviour
 
     [SerializeField] private int correctGuessesInThisRound = 0;
 
+    [Header("Score Tracking")]
+    [SerializeField] private int totalCorrectGuesses = 0; // Add this line
+
     private System.Random random;
 
 
@@ -244,6 +247,7 @@ public class CountryGameManager : MonoBehaviour
     public void IncrementCorrectGuesses()
     {
         correctGuessesInThisRound++;
+        totalCorrectGuesses++;
         Debug.Log($"Correct guess! Progress for this round: {correctGuessesInThisRound}/{currentRoundCountries.Count}");
         
         // Check if the round is complete
@@ -304,6 +308,7 @@ public class CountryGameManager : MonoBehaviour
         isGameOver = false;
         currentRoundCountries = new List<string>();
         correctGuessesInThisRound = 0;
+        totalCorrectGuesses = 0;
 
         // Reset RoundManager state
         if (roundManager != null)
@@ -389,8 +394,8 @@ public class CountryGameManager : MonoBehaviour
         if (finalScoreText != null)
         {
             // Display the total correct guesses on the result panel
-            finalScoreText.text = $"YOUR CORRECT GUESSES\n<size=150%>{correctGuessesInThisRound}</size>";
-            Debug.Log($"Final Score Displayed: {correctGuessesInThisRound} correct guesses.");
+            finalScoreText.text = $"YOUR CORRECT GUESSES\n<size=150%>{totalCorrectGuesses}</size>";
+            Debug.Log($"Final Score Displayed: {totalCorrectGuesses} correct guesses.");
         }
     }
 
