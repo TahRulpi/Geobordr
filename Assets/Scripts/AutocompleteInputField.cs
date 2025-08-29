@@ -91,9 +91,6 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
         Vector3[] inputCorners = new Vector3[4];
         inputRect.GetWorldCorners(inputCorners);
 
-        Vector3[] parentCorners = new Vector3[4];
-        inputParent.GetComponent<RectTransform>().GetWorldCorners(parentCorners);
-
         Vector2 localBottomLeft;
         RectTransformUtility.ScreenPointToLocalPointInRectangle(inputParent.GetComponent<RectTransform>(), inputCorners[0], null, out localBottomLeft);
 
@@ -103,16 +100,22 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
         Vector2 localTopRight;
         RectTransformUtility.ScreenPointToLocalPointInRectangle(inputParent.GetComponent<RectTransform>(), inputCorners[2], null, out localTopRight);
 
-        scrollViewRect.pivot = new Vector2(0.5f, 1f);
-        scrollViewRect.anchorMin = new Vector2(0.5f, 0.5f);
-        scrollViewRect.anchorMax = new Vector2(0.5f, 0.5f);
+        // --- THE CHANGES ARE BELOW ---
 
+        // Change the pivot to the bottom (0f). This means the panel will be positioned
+        // based on its bottom edge, which is what we want when placing it above another element.
+        scrollViewRect.pivot = new Vector2(0.5f, 0f);
+
+        // Calculate the position. We now add half the input field's height to the input's center Y,
+        // and a small offset, to place the panel above it.
         float inputWidth = Vector2.Distance(localBottomLeft, localBottomRight);
         float inputHeight = Vector2.Distance(localBottomRight, localTopRight);
         Vector2 inputCenter = new Vector2((localBottomLeft.x + localBottomRight.x) / 2, (localBottomLeft.y + localTopRight.y) / 2);
 
         scrollViewRect.sizeDelta = new Vector2(inputWidth, 350f); // Height for scrollable area
-        scrollViewRect.anchoredPosition = new Vector2(inputCenter.x, inputCenter.y - inputHeight / 2 - 5f);
+        scrollViewRect.anchoredPosition = new Vector2(inputCenter.x, inputCenter.y + inputHeight / 2 + 5f);
+
+        // --- END OF CHANGES ---
 
         // Add ScrollRect component
         ScrollRect scrollRect = scrollView.AddComponent<ScrollRect>();
@@ -153,8 +156,8 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
         layoutGroup.childControlWidth = true;
         layoutGroup.childForceExpandHeight = false;
         layoutGroup.childForceExpandWidth = true;
-        layoutGroup.spacing = 0f; // Increased spacing between suggestions
-        layoutGroup.padding = new RectOffset(0, 0, 16, 16); // Add top and bottom padding to each item
+        layoutGroup.spacing = 0f;
+        layoutGroup.padding = new RectOffset(0, 0, 16, 16);
 
         ContentSizeFitter sizeFitter = suggestionPanel.AddComponent<ContentSizeFitter>();
         sizeFitter.verticalFit = ContentSizeFitter.FitMode.PreferredSize;
@@ -165,8 +168,8 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
 
         // Hide initially
         scrollView.SetActive(false);
-        
-        Debug.Log("✅ Auto-created scrollable suggestion panel underneath input field");
+
+        Debug.Log("✅ Auto-created scrollable suggestion panel above input field");
     }
 
     private void PopulateCountryList()
