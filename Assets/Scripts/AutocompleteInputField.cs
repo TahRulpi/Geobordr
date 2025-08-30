@@ -28,7 +28,7 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
     private GameObject scrollView;
     private GameObject suggestionPanel;
     private bool isShowingSuggestions = false;
-    private string lastValidatedAnswer = ""; // Track last validated answer to prevent duplicate point deductions
+    private string _lastCorrectAnswerInThisField = ""; // Tracks the correct answer for this field only
 
     //take a color
     public Color oddCardColor = new Color32(0, 255, 0, 255);
@@ -506,7 +506,6 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
 
     public void ResetValidationState()
     {
-        lastValidatedAnswer = "";
         // Reset color to white
         if (inputField != null)
         {
@@ -570,54 +569,57 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
 
     private void ValidateSelectionRealTime(string selectedCountry)
     {
-        if (countryGameManager == null)
-        {
-            Debug.LogWarning("Cannot validate selection: CountryGameManager not found");
-            return;
-        }
-
-
+        if (countryGameManager == null) return;
 
         string trimmedCountry = selectedCountry.Trim();
-        bool isCompleteCountryName = availableCountries.Any(country =>
-            string.Equals(country, trimmedCountry, System.StringComparison.OrdinalIgnoreCase));
 
-        if (!isCompleteCountryName)
+        // If the current text is the same as the last successfully validated answer for THIS field, do nothing.
+        if (string.Equals(_lastCorrectAnswerInThisField, trimmedCountry, System.StringComparison.OrdinalIgnoreCase))
         {
-            Debug.Log($"Skipping validation - '{trimmedCountry}' is not a complete country name from dropdown");
             return;
         }
 
-        if (string.Equals(lastValidatedAnswer, trimmedCountry, System.StringComparison.OrdinalIgnoreCase))
+        // If the user clears the input, we must un-register the old answer.
+        if (string.IsNullOrEmpty(trimmedCountry))
         {
-            Debug.Log($"Skipping validation - already validated: '{trimmedCountry}'");
+            if (!string.IsNullOrEmpty(_lastCorrectAnswerInThisField))
+            {
+                countryGameManager.RemoveGuessedCountry(_lastCorrectAnswerInThisField);
+                _lastCorrectAnswerInThisField = ""; // Clear the stored answer
+            }
             return;
         }
+
+        bool isCompleteCountryName = availableCountries.Any(c => string.Equals(c, trimmedCountry, System.StringComparison.OrdinalIgnoreCase));
+        if (!isCompleteCountryName) return;
 
         var currentRoundCountries = countryGameManager.GetCurrentRoundCountries();
-        if (currentRoundCountries == null || currentRoundCountries.Count == 0)
-        {
-            Debug.LogWarning("No current round countries available for validation");
-            return;
-        }
-
-        bool isCorrect = currentRoundCountries.Any(country =>
-            string.Equals(country.Trim(), trimmedCountry, System.StringComparison.OrdinalIgnoreCase));
+        bool isCorrect = currentRoundCountries.Any(c => string.Equals(c.Trim(), trimmedCountry, System.StringComparison.OrdinalIgnoreCase));
 
         if (isCorrect)
         {
-            SetInputFieldColor(new Color(0.7f, 1f, 0.7f, 1f));
-            Debug.Log($"✅ CORRECT: '{trimmedCountry}' is valid for this round");
-            countryGameManager.IncrementCorrectGuesses();
+            bool wasAccepted = countryGameManager.IncrementCorrectGuesses(trimmedCountry);
+            if (wasAccepted)
+            {
+                // CORRECT and NEW
+                SetInputFieldColor(new Color(0.7f, 1f, 0.7f, 1f));
+                _lastCorrectAnswerInThisField = trimmedCountry; // Store the correct answer
+            }
+            else
+            {
+                // DUPLICATE
+                SetInputFieldColor(new Color32(253, 104, 104, 255));
+                countryGameManager.OnWrongAnswer();
+                _lastCorrectAnswerInThisField = ""; // This field is not correct, so clear it
+            }
         }
         else
         {
+            // INCORRECT
             SetInputFieldColor(new Color32(253, 104, 104, 255));
-            Debug.Log($"❌ INCORRECT: '{trimmedCountry}' is not valid for this round");
             countryGameManager.OnWrongAnswer();
+            _lastCorrectAnswerInThisField = ""; // This field is not correct, so clear it
         }
-
-        lastValidatedAnswer = trimmedCountry;
     }
 
     private void SetInputFieldColor(Color color)

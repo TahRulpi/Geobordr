@@ -38,6 +38,7 @@ public class CountryGameManager : MonoBehaviour
     [SerializeField] private CountryInfo currentRoundInfo;
     [SerializeField] private List<string> currentRoundCountries; // This still holds strings for validation
     [SerializeField] private bool isGameOver = false;
+    private List<string> _correctlyGuessedThisRound = new List<string>();
 
 
     [SerializeField] private int correctGuessesInThisRound = 0;
@@ -62,6 +63,7 @@ public class CountryGameManager : MonoBehaviour
     public void StartNewRound()
     {
         correctGuessesInThisRound = 0;
+        _correctlyGuessedThisRound.Clear();
         if (nextRoundButtonObject != null) nextRoundButtonObject.SetActive(false);
 
         if (isGameOver)
@@ -214,13 +216,41 @@ public class CountryGameManager : MonoBehaviour
         UpdateChanceLeftDisplay();
     }
 
-
-    public void IncrementCorrectGuesses()
+    public void RemoveGuessedCountry(string countryName)
     {
+        // Check if the country is actually in the list before trying to remove it.
+        if (_correctlyGuessedThisRound.Contains(countryName))
+        {
+            _correctlyGuessedThisRound.Remove(countryName);
+            correctGuessesInThisRound--;
+            totalCorrectGuesses--; // Decrement the overall score as well
+
+            Debug.Log($"Removed '{countryName}' from guessed list. Score adjusted.");
+
+            // Hide the 'Next Round' button if we no longer have all answers correct.
+            if (nextRoundButtonObject != null)
+            {
+                nextRoundButtonObject.SetActive(false);
+            }
+        }
+    }
+
+
+    public bool IncrementCorrectGuesses(string countryName)
+    {
+        // Check for duplicates (case-insensitive)
+        if (_correctlyGuessedThisRound.Any(guessedCountry => string.Equals(guessedCountry, countryName, System.StringComparison.OrdinalIgnoreCase)))
+        {
+            Debug.Log($"Already guessed '{countryName}' this round. It's a duplicate.");
+            return false; // Return FALSE because it was a duplicate.
+        }
+
+        // If it's a new correct guess, add it and increment scores.
+        _correctlyGuessedThisRound.Add(countryName);
         correctGuessesInThisRound++;
         totalCorrectGuesses++;
         Debug.Log($"Correct guess! Progress: {correctGuessesInThisRound}/{currentRoundCountries.Count}");
-        
+
         if (correctGuessesInThisRound >= currentRoundCountries.Count)
         {
             Debug.Log("🎉 Round Complete!");
@@ -229,6 +259,8 @@ public class CountryGameManager : MonoBehaviour
                 nextRoundButtonObject.SetActive(true);
             }
         }
+
+        return true; // Return TRUE because the guess was new and accepted.
     }
 
     private void DisplayMapImage()
