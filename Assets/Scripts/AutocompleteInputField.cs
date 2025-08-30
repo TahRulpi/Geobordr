@@ -71,6 +71,10 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
         }
         
         Debug.Log($"✅ AutocompleteInputField initialized with {availableCountries.Count} countries");
+        // This prevents the input field from darkening when disabled.
+        ColorBlock colors = inputField.colors;
+        colors.disabledColor = new Color(0.7f, 1f, 0.7f, 1f); // Set disabled color to the same light green
+        inputField.colors = colors;
     }
 
     private void CreateSuggestionPanel()
@@ -506,6 +510,8 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
 
     public void ResetValidationState()
     {
+        inputField.interactable = true; // Re-enable the input field
+        _lastCorrectAnswerInThisField = ""; // Also clear the answer memory
         // Reset color to white
         if (inputField != null)
         {
@@ -603,7 +609,8 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
             {
                 // CORRECT and NEW
                 SetInputFieldColor(new Color(0.7f, 1f, 0.7f, 1f));
-                _lastCorrectAnswerInThisField = trimmedCountry; // Store the correct answer
+                _lastCorrectAnswerInThisField = trimmedCountry;
+                inputField.interactable = false; // Disable the input field
             }
             else
             {
