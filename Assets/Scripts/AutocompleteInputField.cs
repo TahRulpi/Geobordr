@@ -34,42 +34,43 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
     public Color oddCardColor = new Color32(0, 255, 0, 255);
     public Color evenCardColor = new Color32(0, 255, 0, 255);
 
-
-    private void Start()
+    private void Awake()
     {
-        // Find components automatically
+        // Find components automatically. Awake() runs before Start(), ensuring
+        // the inputField is ready before other scripts try to access it.
         inputField = GetComponent<TMP_InputField>();
-        countryGameManager = FindObjectOfType<CountryGameManager>();
-        
         if (inputField == null)
         {
             inputField = GetComponentInChildren<TMP_InputField>();
         }
-        
+    }
+    private void Start()
+    {
+        countryGameManager = FindObjectOfType<CountryGameManager>();
         if (inputField == null)
         {
             Debug.LogError("No TMP_InputField found! Make sure this script is on a GameObject with TMP_InputField.");
             return;
         }
-        
+
         // Set up listeners
         inputField.onValueChanged.AddListener(OnInputChanged);
         inputField.onSelect.AddListener(OnInputSelected);
         inputField.onEndEdit.AddListener(ValidateSelectionRealTime);
-        
+
         // Initialize country list
         PopulateCountryList();
-        
+
         // Create scrollable suggestion panel
         CreateSuggestionPanel();
-        
+
         // Set initial flag state
         if (flagImage != null)
         {
             flagImage.sprite = defaultFlag;
             flagImage.gameObject.SetActive(defaultFlag != null); // Show only if a default is assigned
         }
-        
+
         Debug.Log($"✅ AutocompleteInputField initialized with {availableCountries.Count} countries");
         // This prevents the input field from darkening when disabled.
         ColorBlock colors = inputField.colors;
@@ -510,6 +511,7 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
 
     public void ResetValidationState()
     {
+        if (inputField == null) return; 
         inputField.interactable = true; // Re-enable the input field
         _lastCorrectAnswerInThisField = ""; // Also clear the answer memory
         // Reset color to white
