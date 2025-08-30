@@ -417,7 +417,7 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
         {
             text.font = suggestionFont;
         }
-        text.fontSize = 65; // Increased font size for better readability
+        text.fontSize = 55; // Increased font size for better readability
         text.color = Color.white;
         text.verticalAlignment = VerticalAlignmentOptions.Middle;
         text.horizontalAlignment = HorizontalAlignmentOptions.Left;
