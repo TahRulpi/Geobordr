@@ -642,6 +642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSuggestions: 5
+  suggestionFont: {fileID: 11400000, guid: 76a6e73977bf8f54b839178320322fa9, type: 2}
   flagImage: {fileID: 3031339360522318052}
   defaultFlag: {fileID: 0}
   availableCountries: []

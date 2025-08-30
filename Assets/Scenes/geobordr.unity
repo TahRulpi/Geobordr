@@ -4500,7 +4500,7 @@ MonoBehaviour:
   minCountriesPerRound: 2
   maxCountriesPerRound: 5
   maxRounds: 10
-  maxTotalAttempts: 1
+  maxTotalAttempts: 6
   mapDisplayImage: {fileID: 419609183}
   roundDisplayText: {fileID: 1928407639}
   gameOverText: {fileID: 0}

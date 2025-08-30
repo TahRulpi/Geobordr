@@ -12,6 +12,7 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
     public int maxSuggestions = 5;
 
     [Header("UI References")] 
+    public TMP_FontAsset suggestionFont;
     public Image flagImage; // Assign the flag Image UI element from your prefab
     public Sprite defaultFlag; // Optional: A default image to show when no country is typed
 
@@ -54,6 +55,7 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
         // Set up listeners
         inputField.onValueChanged.AddListener(OnInputChanged);
         inputField.onSelect.AddListener(OnInputSelected);
+        inputField.onEndEdit.AddListener(ValidateSelectionRealTime);
         
         // Initialize country list
         PopulateCountryList();
@@ -288,12 +290,31 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
             Debug.LogWarning("Suggestion scroll view not created!");
             return;
         }
-        
+
         // Ensure the scroll view appears above other UI elements
         scrollView.transform.SetAsLastSibling();
-        
+
         // Clear existing suggestions
         ClearSuggestions();
+
+        // ================== FIX STARTS HERE ==================
+        // This new block will dynamically resize the suggestion box.
+
+        RectTransform scrollViewRect = scrollView.GetComponent<RectTransform>();
+        float buttonHeight = 120f;      // The height of one suggestion button
+        float verticalPadding = 32f;     // 16px top + 16px bottom padding
+        float maxHeight = 350f;          // The original max height of the box
+
+        // Calculate the ideal height based on the number of suggestions.
+        float contentHeight = (suggestions.Count * buttonHeight) + verticalPadding;
+
+        // Use the ideal height, but don't let it get bigger than the max height.
+        float newHeight = Mathf.Min(contentHeight, maxHeight);
+
+        // Apply the new, correct height to the suggestion box.
+        scrollViewRect.sizeDelta = new Vector2(scrollViewRect.sizeDelta.x, newHeight);
+
+        // =================== FIX ENDS HERE ===================
 
         // Create suggestion buttons
         for (int i = 0; i < suggestions.Count; i++)
@@ -304,7 +325,7 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
         // Show the panel
         scrollView.SetActive(true);
         isShowingSuggestions = true;
-        
+
         Debug.Log($"✅ Showing {suggestions.Count} suggestions");
     }
 
@@ -387,6 +408,10 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
         
         TextMeshProUGUI text = textObj.AddComponent<TextMeshProUGUI>();
         text.text = countryName;
+        if (suggestionFont != null)
+        {
+            text.font = suggestionFont;
+        }
         text.fontSize = 65; // Increased font size for better readability
         text.color = Color.black;
         text.verticalAlignment = VerticalAlignmentOptions.Middle;
@@ -521,8 +546,27 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
         {
             inputField.onValueChanged.RemoveAllListeners();
             inputField.onSelect.RemoveAllListeners();
+            inputField.onEndEdit.RemoveAllListeners();
+        }
+
+        // ADD THIS BLOCK TO DESTROY THE LINGERING UI
+        if (scrollView != null)
+        {
+            Destroy(scrollView);
         }
     }
+    
+    private void OnDisable()
+    {
+        // Hide suggestions if the input field is disabled/deactivated
+        // to prevent them from lingering on screen.
+        if (isShowingSuggestions)
+        {
+            HideSuggestions();
+        }
+    }
+
+    
 
     private void ValidateSelectionRealTime(string selectedCountry)
     {
@@ -532,10 +576,10 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
             return;
         }
 
-        
+
 
         string trimmedCountry = selectedCountry.Trim();
-        bool isCompleteCountryName = availableCountries.Any(country => 
+        bool isCompleteCountryName = availableCountries.Any(country =>
             string.Equals(country, trimmedCountry, System.StringComparison.OrdinalIgnoreCase));
 
         if (!isCompleteCountryName)
@@ -557,7 +601,7 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
             return;
         }
 
-        bool isCorrect = currentRoundCountries.Any(country => 
+        bool isCorrect = currentRoundCountries.Any(country =>
             string.Equals(country.Trim(), trimmedCountry, System.StringComparison.OrdinalIgnoreCase));
 
         if (isCorrect)

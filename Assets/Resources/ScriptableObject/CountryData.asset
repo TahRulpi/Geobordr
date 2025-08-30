@@ -94,7 +94,7 @@ MonoBehaviour:
     - countryName: Canada
       countryFlag: {fileID: 21300000, guid: ddf65d28bed225c40872a58b84c9c08d, type: 3}
     - countryName: United States of America
-      countryFlag: {fileID: 0}
+      countryFlag: {fileID: 21300000, guid: 62a5e1ee0c12a5f4bbd9e9e211879716, type: 3}
     sourceFileName: 
   - gridImage: {fileID: 21300000, guid: acecea3bf938956439fa29c6a230ea38, type: 3}
     optionsPrefabs:
@@ -251,7 +251,7 @@ MonoBehaviour:
     - {fileID: 8844625059765949503, guid: 78d69404fe7625a4a9ab6a248f86b48b, type: 3}
     countries:
     - countryName: United States of America
-      countryFlag: {fileID: 0}
+      countryFlag: {fileID: 21300000, guid: 62a5e1ee0c12a5f4bbd9e9e211879716, type: 3}
     - countryName: Cuba
       countryFlag: {fileID: 21300000, guid: fa63021bc8cf3c34fb7f859ac9710262, type: 3}
     sourceFileName: 
@@ -309,7 +309,7 @@ MonoBehaviour:
     - countryName: Russia
       countryFlag: {fileID: 21300000, guid: 83187a87ff843be43bcf68ac1fda4470, type: 3}
     - countryName: United States of America
-      countryFlag: {fileID: 0}
+      countryFlag: {fileID: 21300000, guid: 62a5e1ee0c12a5f4bbd9e9e211879716, type: 3}
     sourceFileName: 
   - gridImage: {fileID: 21300000, guid: e5c4b20e9da35b64fa0939315d5c4733, type: 3}
     optionsPrefabs:
@@ -431,7 +431,7 @@ MonoBehaviour:
     - countryName: Mexico
       countryFlag: {fileID: 21300000, guid: 3f71e125cdc292e4eb3e45f815953884, type: 3}
     - countryName: United States of America
-      countryFlag: {fileID: 0}
+      countryFlag: {fileID: 21300000, guid: 62a5e1ee0c12a5f4bbd9e9e211879716, type: 3}
     sourceFileName: 
   - gridImage: {fileID: 21300000, guid: 2fb22cdb2a0cad545b43b31ea9dcbba0, type: 3}
     optionsPrefabs:
@@ -905,7 +905,7 @@ MonoBehaviour:
     - countryName: The Bahamas
       countryFlag: {fileID: 21300000, guid: b4e1ccece98164c4bbaa05403cac4110, type: 3}
     - countryName: United States of America
-      countryFlag: {fileID: 0}
+      countryFlag: {fileID: 21300000, guid: 62a5e1ee0c12a5f4bbd9e9e211879716, type: 3}
     sourceFileName: 
   - gridImage: {fileID: 21300000, guid: f0aeb270f214ebb4fa2ffeff1b2f2ab7, type: 3}
     optionsPrefabs:
@@ -1294,7 +1294,7 @@ MonoBehaviour:
     - countryName: The Bahamas
       countryFlag: {fileID: 21300000, guid: b4e1ccece98164c4bbaa05403cac4110, type: 3}
     - countryName: United States of America
-      countryFlag: {fileID: 0}
+      countryFlag: {fileID: 21300000, guid: 62a5e1ee0c12a5f4bbd9e9e211879716, type: 3}
     - countryName: Cuba
       countryFlag: {fileID: 21300000, guid: fa63021bc8cf3c34fb7f859ac9710262, type: 3}
     sourceFileName: 
@@ -2517,12 +2517,6 @@ MonoBehaviour:
     countries:
     - countryName: United States Virgin Islands
       countryFlag: {fileID: 21300000, guid: 31846d5f49a9dce44ac2ba98dcf1f1e5, type: 3}
-    sourceFileName: 
-  - gridImage: {fileID: 0}
-    optionsPrefabs: []
-    countries:
-    - countryName: United States
-      countryFlag: {fileID: 21300000, guid: 62a5e1ee0c12a5f4bbd9e9e211879716, type: 3}
     sourceFileName: 
   - gridImage: {fileID: 0}
     optionsPrefabs: []
