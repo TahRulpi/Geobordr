@@ -696,7 +696,7 @@ RectTransform:
   m_GameObject: {fileID: 331075752}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8055703, y: 4.199906, z: 1}
+  m_LocalScale: {x: 0.70487404, y: 3.5173793, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1541599850}
@@ -1976,9 +1976,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1416547948}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0.0000076294, y: 929}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.0000076294, y: 0}
   m_SizeDelta: {x: 675.3287, y: 2030.377}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &602160130
@@ -2057,7 +2057,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Your Score Is
+  m_text: 'Your Score Is:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 76a6e73977bf8f54b839178320322fa9, type: 2}
   m_sharedMaterial: {fileID: 4481722206264874867, guid: 76a6e73977bf8f54b839178320322fa9, type: 2}
@@ -2066,8 +2066,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4293765437
-  m_fontColor: {r: 0.2392157, g: 0.6627451, b: 0.9294118, a: 1}
+    rgba: 4286259967
+  m_fontColor: {r: 1, g: 0.13333334, b: 0.48235294, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2084,8 +2084,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 66.79
-  m_fontSizeBase: 66.79
+  m_fontSize: 60.88
+  m_fontSizeBase: 60.88
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2150,8 +2150,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.0000057, y: 35}
-  m_SizeDelta: {x: 519.1609, y: 99.0001}
+  m_AnchoredPosition: {x: -53.34906, y: 37.82973}
+  m_SizeDelta: {x: 627.859, y: 50.4332}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &745820475
 GameObject:
@@ -2335,8 +2335,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015259, y: -82.165855}
-  m_SizeDelta: {x: 250.281, y: 146.7134}
+  m_AnchoredPosition: {x: 231.86838, y: 39.795258}
+  m_SizeDelta: {x: 101.1543, y: 78.7777}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &803190270
 MonoBehaviour:
@@ -2385,8 +2385,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 170.4
-  m_fontSizeBase: 170.4
+  m_fontSize: 60.88
+  m_fontSizeBase: 60.88
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3020,7 +3020,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1016385376
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3228,10 +3228,10 @@ RectTransform:
   - {fileID: 1226813980}
   m_Father: {fileID: 1416547948}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -216, y: 752}
-  m_SizeDelta: {x: 323.9178, y: 163.9048}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -229, y: -195}
+  m_SizeDelta: {x: 323.9178, y: 138.7723}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1038705291
 MonoBehaviour:
@@ -3555,7 +3555,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 17, y: 12.6999}
+  m_AnchoredPosition: {x: 13, y: 9}
   m_SizeDelta: {x: 66.57, y: -2.3125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1226813981
@@ -3764,8 +3764,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.8, y: -89.234}
-  m_SizeDelta: {x: 250.281, y: 146.7134}
+  m_AnchoredPosition: {x: 233, y: 36}
+  m_SizeDelta: {x: 101.1543, y: 78.7777}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1386705530
 MonoBehaviour:
@@ -3796,8 +3796,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4284177243
-  m_fontColor: {r: 0.3584906, g: 0.3584906, b: 0.3584906, a: 1}
+    rgba: 5987163
+  m_fontColor: {r: 0.3584906, g: 0.3584906, b: 0.3584906, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3814,8 +3814,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 170.4
-  m_fontSizeBase: 170.4
+  m_fontSize: 60.88
+  m_fontSizeBase: 60.88
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3884,7 +3884,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1416547948
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4498,7 +4498,7 @@ MonoBehaviour:
   countryData: {fileID: 11400000, guid: d9b1741222692e2479df5058061ea17c, type: 2}
   roundManager: {fileID: 1973497652}
   minCountriesPerRound: 2
-  maxCountriesPerRound: 5
+  maxCountriesPerRound: 4
   maxRounds: 10
   maxTotalAttempts: 6
   mapDisplayImage: {fileID: 419609183}
@@ -4691,8 +4691,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1, y: 29.5}
-  m_SizeDelta: {x: 519.1609, y: 99.0001}
+  m_AnchoredPosition: {x: -54.558434, y: 36}
+  m_SizeDelta: {x: 627.859, y: 50.4332}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1837096233
 MonoBehaviour:
@@ -4714,7 +4714,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Your Score Is
+  m_text: 'Your Score Is:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 76a6e73977bf8f54b839178320322fa9, type: 2}
   m_sharedMaterial: {fileID: 4481722206264874867, guid: 76a6e73977bf8f54b839178320322fa9, type: 2}
@@ -4723,8 +4723,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 1854507401
-  m_fontColor: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 0.43137255}
+    rgba: 5987163
+  m_fontColor: {r: 0.35686275, g: 0.35686275, b: 0.35686275, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4741,8 +4741,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 66.79
-  m_fontSizeBase: 66.79
+  m_fontSize: 60.88
+  m_fontSizeBase: 60.88
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4825,7 +4825,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -4, y: -137.9418}
+  m_AnchoredPosition: {x: -4, y: -161}
   m_SizeDelta: {x: 505.1786, y: 107.0467}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1928407639
@@ -4959,10 +4959,10 @@ RectTransform:
   - {fileID: 983926492}
   m_Father: {fileID: 1416547948}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 207, y: 752}
-  m_SizeDelta: {x: 315.4907, y: 163.91}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 235, y: -191.78}
+  m_SizeDelta: {x: 315.4907, y: 132.34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1948941326
 MonoBehaviour:
@@ -5237,7 +5237,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 53, y: -217}
+  m_AnchoredPosition: {x: 53, y: -240.05829}
   m_SizeDelta: {x: 68.5184, y: 116.0863}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2020022931
@@ -5260,7 +5260,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Chance left:'
+  m_text: 'Chances left:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 76a6e73977bf8f54b839178320322fa9, type: 2}
   m_sharedMaterial: {fileID: 4481722206264874867, guid: 76a6e73977bf8f54b839178320322fa9, type: 2}

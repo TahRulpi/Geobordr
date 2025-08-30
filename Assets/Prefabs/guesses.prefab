@@ -641,7 +641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a887de00327cfd49bb5f8b5cc3c792f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSuggestions: 5
+  maxSuggestions: 20
   suggestionFont: {fileID: 11400000, guid: 76a6e73977bf8f54b839178320322fa9, type: 2}
   flagImage: {fileID: 3031339360522318052}
   defaultFlag: {fileID: 0}
