@@ -447,9 +447,6 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
         // Perform real-time validation
         ValidateSelectionRealTime(countryName);
         
-        // Update flag when suggestion is clicked
-        UpdateFlag(countryName);
-        
         Debug.Log($"✅ Selected country: {countryName}");
     }
 
@@ -512,12 +509,13 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
     public void ResetValidationState()
     {
         if (inputField == null) return; 
+        inputField.gameObject.SetActive(true);
         inputField.interactable = true; // Re-enable the input field
         _lastCorrectAnswerInThisField = ""; // Also clear the answer memory
         // Reset color to white
         if (inputField != null)
         {
-            SetInputFieldColor(Color.white);
+            // The color is no longer reset to white here
         }
     }
 
@@ -620,6 +618,8 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
                 SetInputFieldColor(new Color32(253, 104, 104, 255));
                 countryGameManager.OnWrongAnswer();
                 _lastCorrectAnswerInThisField = ""; // This field is not correct, so clear it
+                inputField.text = ""; // Clears the text
+                _lastCorrectAnswerInThisField = ""; // This field is not correct, so clear it
             }
         }
         else
@@ -627,6 +627,8 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
             // INCORRECT
             SetInputFieldColor(new Color32(253, 104, 104, 255));
             countryGameManager.OnWrongAnswer();
+            _lastCorrectAnswerInThisField = ""; // This field is not correct, so clear it
+            inputField.text = ""; // Clears the text
             _lastCorrectAnswerInThisField = ""; // This field is not correct, so clear it
         }
     }
