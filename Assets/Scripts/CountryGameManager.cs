@@ -14,7 +14,7 @@ public class CountryGameManager : MonoBehaviour
     public CountryData countryData;
     public RoundManager roundManager; // Use your existing RoundManager
     public int minCountriesPerRound = 2;
-    public int maxCountriesPerRound = 5;
+    public int maxCountriesPerRound = 4;
     public int maxRounds = 10; // Total number of rounds
     public int maxTotalAttempts = 6; // Total attempts across all rounds
     
@@ -170,7 +170,7 @@ public class CountryGameManager : MonoBehaviour
         if (chanceLeftText != null)
         {
             int chancesRemaining = maxTotalAttempts - totalAttempts;
-            chanceLeftText.text = $"Chance Left: {chancesRemaining}";
+            chanceLeftText.text = $"Chances Left: {chancesRemaining}";
         }
     }
 
@@ -196,6 +196,7 @@ public class CountryGameManager : MonoBehaviour
     {
         totalAttempts++;
         UpdateChanceLeftDisplay();
+         
 
         if (totalAttempts >= maxTotalAttempts)
         {
@@ -206,6 +207,8 @@ public class CountryGameManager : MonoBehaviour
             if (gamePanel != null) gamePanel.SetActive(false);
             ShowResultPopup();
             UpdateFinalScoreDisplay();
+            // make the input field unchanged
+
         }
     }
 

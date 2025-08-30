@@ -418,7 +418,7 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
             text.font = suggestionFont;
         }
         text.fontSize = 65; // Increased font size for better readability
-        text.color = Color.black;
+        text.color = Color.white;
         text.verticalAlignment = VerticalAlignmentOptions.Middle;
         text.horizontalAlignment = HorizontalAlignmentOptions.Left;
         
@@ -439,7 +439,7 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
             inputField.text = countryName;
         }
 
-        //MoveGameViewDown();
+        SetInputFieldColor(Color.white);
 
         // Hide suggestions
         HideSuggestions();
@@ -608,7 +608,7 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
             if (wasAccepted)
             {
                 // CORRECT and NEW
-                SetInputFieldColor(new Color(0.7f, 1f, 0.7f, 1f));
+                SetInputFieldColor(new Color32(0x71, 0xBF, 0x45, 0xFF));
                 _lastCorrectAnswerInThisField = trimmedCountry;
                 inputField.interactable = false; // Disable the input field
             }
@@ -625,7 +625,7 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
         else
         {
             // INCORRECT
-            SetInputFieldColor(new Color32(253, 104, 104, 255));
+            SetInputFieldColor(new Color32(0xFF, 0xB1, 0xB1, 0xFF));
             countryGameManager.OnWrongAnswer();
             _lastCorrectAnswerInThisField = ""; // This field is not correct, so clear it
             inputField.text = ""; // Clears the text
