@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f7f75ff34e20f884981bbcff1e9fc8ed
+guid: 16dc2b09bd84511428b54c3c2b6445a2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8409786805388266423
-    second: Start Panel (2)_0
+      213: 1736733904602213054
+    second: Splash Screen (4)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Start Panel (2)_0
+      name: Splash Screen (4)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 393
-        height: 852
+        width: 1179
+        height: 2556
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 944b01c157f6a4b80800000000000000
-      internalID: -8409786805388266423
+      spriteID: eba213dd84e1a1810800000000000000
+      internalID: 1736733904602213054
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Start Panel (2)_0: -8409786805388266423
+      Splash Screen (4)_0: 1736733904602213054
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

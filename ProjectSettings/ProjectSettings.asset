@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: Sparktech Agency
-  productName: Test_GEOBORDR
+  productName: GEOBORDR
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -263,7 +263,7 @@ PlayerSettings:
   useCustomProguardFile: 0
   AndroidTargetArchitectures: 3
   AndroidSplashScreenScale: 1
-  androidSplashScreen: {fileID: 2800000, guid: f7f75ff34e20f884981bbcff1e9fc8ed, type: 3}
+  androidSplashScreen: {fileID: 2800000, guid: 16dc2b09bd84511428b54c3c2b6445a2, type: 3}
   AndroidKeystoreName: 
   AndroidKeyaliasName: 
   AndroidEnableArmv9SecurityFeatures: 0
