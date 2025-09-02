@@ -122,7 +122,7 @@ public class CountryGameManager : MonoBehaviour
             .Select(c => c.countryName)
             .ToList();
         
-        Debug.Log($"Round {currentGameRound}/{maxRounds} started with {countriesToShow} countries: {string.Join(", ", currentRoundCountries)}");
+        
         
         CreateFilteredCountryData(countriesToShow);
         
@@ -131,6 +131,7 @@ public class CountryGameManager : MonoBehaviour
         StartCoroutine(ResetColorsAfterDelay());
         
         DisplayMapImage();
+        
     }
 
     private void CreateFilteredCountryData(int countriesToShow)
@@ -155,7 +156,9 @@ public class CountryGameManager : MonoBehaviour
         tempCountryData.countryInfo = new CountryInfo[] { filteredInfo };
 
         roundManager.CountryData = tempCountryData;
+        Debug.Log($"Round {currentGameRound}/{maxRounds} started with {countriesToShow} countries: {string.Join(", ", currentRoundCountries)}");
     }
+
 
     private void UpdateRoundDisplay(string text)
     {
@@ -163,6 +166,7 @@ public class CountryGameManager : MonoBehaviour
         {
             roundDisplayText.text = text;
         }
+        
     }
 
     private void UpdateChanceLeftDisplay()
@@ -273,7 +277,7 @@ public class CountryGameManager : MonoBehaviour
             // ✅ *** FIX #2 (Part A): If there is a map, make sure the image component is active. ***
             mapDisplayImage.gameObject.SetActive(true);
             mapDisplayImage.sprite = currentRoundInfo.gridImage;
-            Debug.Log($"Displaying map: {currentRoundInfo.gridImage.name}");
+           
         }
         else
         {

@@ -71,7 +71,7 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
             flagImage.gameObject.SetActive(defaultFlag != null); // Show only if a default is assigned
         }
 
-        Debug.Log($"✅ AutocompleteInputField initialized with {availableCountries.Count} countries");
+       
         // This prevents the input field from darkening when disabled.
         ColorBlock colors = inputField.colors;
         colors.disabledColor = new Color(0.7f, 1f, 0.7f, 1f); // Set disabled color to the same light green
@@ -176,7 +176,7 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
         // Hide initially
         scrollView.SetActive(false);
 
-        Debug.Log("✅ Auto-created scrollable suggestion panel above input field");
+        
     }
 
     private void PopulateCountryList()
@@ -222,7 +222,7 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
         // Sort alphabetically
         availableCountries.Sort();
         
-        Debug.Log($"Found {availableCountries.Count} unique countries for autocomplete");
+        
     }
 
     private void OnInputChanged(string inputText)
@@ -252,7 +252,7 @@ public class AutocompleteInputField : MonoBehaviour, IPointerDownHandler
         }
         
         UpdateFlag(inputText); // Update flag on input change
-        Debug.Log($"Input: '{inputText}' - Found {matchingCountries.Count} matches");
+        
     }
 
     private void OnInputSelected(string text)

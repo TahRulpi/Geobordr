@@ -35,12 +35,12 @@ public class NextRoundButton : MonoBehaviour
                 }
             }
         }
-        Debug.Log($"Reset colors and validation state for {resetCount} input fields");
+        
     }
 
     public void OnNextRoundClicked()
     {
-        Debug.Log("--- Next Round button clicked. Moving to next round. ---");
+        Debug.Log("--- Moving to next round. ---");
 
         // The button is only active when all answers are correct, so no
         // additional validation is needed here.

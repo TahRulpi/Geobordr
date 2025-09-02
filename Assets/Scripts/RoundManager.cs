@@ -32,7 +32,7 @@ public class RoundManager : MonoBehaviour
         if (roundInfo.gridImage != null)
         {
             gridSpriteDisplay = roundInfo.gridImage;
-            Debug.Log($"? Loaded new sprite for round {roundIndex}.");
+          
         }
 
         // --- Modified based on your requests ---
@@ -75,7 +75,7 @@ public class RoundManager : MonoBehaviour
         ClearCurrentRound();
         gridSpriteDisplay = null;
         CountryData = null; // so new filtered data is reassigned later
-        Debug.Log("?? RoundManager fully reset.");
+       
     }
 
     public int GetSpawnedObjectsCount()
